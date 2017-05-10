@@ -66,6 +66,45 @@ a:hover
    width: auto;
 }
 
+/******************************************************************************** */
+/* SearchBox                                                                 */
+/******************************************************************************** */
+
+.searchbox 
+{
+	position: absolute;
+   
+    width: 550px;
+    height: 25px;
+    margin: 100px 200px;
+    color: #666;
+    font-size: 14px;
+    line-height: 25px;
+    border: 1px solid #fff;
+    z-index: 999 !important;
+    top: 0;
+    display: inline-block;
+}
+
+.searchbtn
+{	
+	z-index: 999 !important;
+	display: inline-block;
+    width: 64px;
+    height: 48px;
+    margin: 100px 200px;
+    top: 0;
+    right: 0px;
+/*     overflow: hidden; */
+/*     text-indent: -9999px; */
+/*     border: 0; */
+/*     cursor: pointer; */
+    position: absolute;
+/*     cursor: pointer; */
+/*     background: url(../_res/new_img/main/btn_main_search.png) center center no-repeat; */
+}
+
+
 
 /******************************************************************************** */
 /* Image Style                                                                   */
@@ -723,7 +762,7 @@ margin-left:-390px;
 #slider .button
 {
    display: inline-block;
-   background: rgba(255,255,255,0.2);
+   background: rgba(255,255,255,0.00001);
    color: #ffffff;
    text-decoration: none;
    outline: 0;
