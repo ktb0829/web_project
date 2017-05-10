@@ -12,10 +12,10 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
+ 
 </head>
 <body>
-<!--  ********Seonmi****** -->
+
 <div id="header-wrapper">
    <div id="header" class="container">
       
@@ -24,6 +24,7 @@
       </div>
       
       <div id="menu">
+      
          <div id="menu_form">
          <ul>
             <li><a href="#" accesskey="2" title="">HOME</a></li>
@@ -33,17 +34,63 @@
          </ul><br/><br/>
          </div>
 
-         <div id="menu_top">
-         <ul>
-            <li class=""><a href="#" accesskey="1" title="">민원창구</a></li>
-            <li class=""><a href="#" accesskey="2" title="">참여이용안내</a></li>
-            <li class=""><a href="#" accesskey="3" title="">자료검색</a></li>
-            <li class=""><a href="#" accesskey="4" title="">온라인서비스</a></li>
-            <li class=""><a href="#" accesskey="5" title="">도서관소개</a></li>
-         </ul>
-         </div>
-      </div>
-   </div>
+         <div id="menu_top">    
+         	<ul>
+         		<li class="main_menu"><a href="#">민원창구</a><br/>
+         			<ul id="hide">
+         			<br/>
+         			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
+         			<li><a href="#">설문조사</a></li><br/>
+         			<li><a href="#">분실물 센터</a></li><br/>
+         			<li><a href="#">자유게시판</a></li><br/><br/>
+         			</ul> 
+         		</li>    
+         		<li class="main_menu"><a href="#">참여이용안내</a><br/>
+         			<ul id="hide">
+         			<br/>
+         			<li><a href="#">도서관 이용 안내</a></li><br/>	
+         			<li><a href="#">도서 기부</a></li><br/>
+         			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
+         			</ul>          			
+         		</li>
+         		<li class="main_menu"><a href="#">자료검색</a><br/>
+         			<ul id="hide">
+         			<br/>
+         			<li><a href="#">도서 자료 검색</a></li><br/>	
+         			<li><a href="#">신작 자료</a></li><br/>
+         			<li><a href="#">대출 베스트</a></li><br/><br/>
+         			</ul>
+         		</li>
+         		<li class="main_menu"><a href="#">온라인 서비스</a><br/>
+         			<ul id="hide">
+         			<br/>
+         			<li><a href="#">대출예약</a></li><br/>	
+         			<li><a href="#">대출조회/연기</a></li><br/>
+         			<li><a href="#">오디오 북</a></li><br/>
+         			<li><a href="#">열람실 좌석 현황</a></li><br/>
+         			<li><a href="#">택배 서비스</a></li><br/><br/>
+         			</ul>
+         		</li>
+         		<li class="main_menu"><a href="#">도서관소개</a><br/>
+         			<ul id="hide">
+         			<br/>
+         			<li><a href="#">인사말</a></li><br/>	
+         			<li><a href="#">시설현황</a></li><br/>
+         			<li><a href="#">자료현황</a></li><br/>
+         			<li><a href="#">찾아오시는 길</a></li><br/><br/>
+         			</ul>
+         		</li>        		         		         		  
+         	</ul>         	
+         </div>      
+                           
+      </div>   
+     
+     
+     
+     
+       
+   </div>  
+   
 </div>
 
 		<!-- ****************************************************************************************************************** -->
@@ -55,8 +102,6 @@
 
 
 
-
-
 			<div class="searchbox">
 				<input type="text" id="kwd" name="kwd" size="70"></input>
 			</div>
@@ -64,10 +109,6 @@
 				<button type="button" id="searchbtn" name="searchbtn">
 					검색</button>
 			</div>
-
-
-
-
 
 
 			<div class="reel">
