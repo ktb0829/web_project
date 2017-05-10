@@ -207,10 +207,14 @@ ul.style2
    list-style: none;
 }
 
+
+/* *************** link */
 ul.style2 li
 {
-   border-top: solid 1px #E5E5E5;
-   padding: 0.80em 0 0.80em 0;
+	display: inline-block;
+   padding: 80px;
+/*    border-top: solid 1px #E5E5E5; */
+/*    padding: 0.80em 0 0.80em 0; */
    font-family: 0.80em;
 }
 

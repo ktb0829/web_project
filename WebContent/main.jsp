@@ -306,6 +306,25 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- link part -->
+<!-- ************************************************************************* -->
+
+
+<div class="sbox1">
+					<ul class="style2">
+					
+						<li><a href="http://www.riss.kr/index.do"><img src="images/riss.PNG"></img></a></li>
+						<li><a href="https:www.naver.com"><img src="images/naver.PNG"></img></a></li>
+						<li><a href="http://www.nanet.go.kr/main.do"><img src="images/국회도서관.PNG"></img></a></li>
+						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
+						<li><a href="http://www.google.com"><img src="images/구글.PNG"></img></a></li>
+					</ul>
+				</div> 
+				
+				
+<!-- ************************************************************************ -->				
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
