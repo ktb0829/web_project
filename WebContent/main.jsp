@@ -362,7 +362,7 @@
 						<li><a href="https:www.naver.com"><img src="images/naver.PNG"></img></a></li>
 						<li><a href="http://www.nanet.go.kr/main.do"><img src="images/국회도서관.PNG"></img></a></li>
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
-						<li><a href="http://www.google.com"><img src="images/구글.PNG"></img></a></li>
+						<li><a href="http://www.google.com"><img src="images/google.PNG"></img></a></li>
 					</ul>
 				</div> 
 				
