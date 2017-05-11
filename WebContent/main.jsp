@@ -5,20 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
+
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.slidertron-1.3.js"></script>
+<script src="jquery.flexslider.js"></script>
+
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="flexslider.css" type="text/css">
+
  
 </head>
+
 <body>
 
 <div id="header-wrapper">
    <div id="header" class="container">
-      
+        
       <div id="logo">
          <h1><a href="#">KOSTA library</a></h1>
       </div>
@@ -336,19 +342,31 @@
 			<li class="more"><a href=""><img src="" alt="공지사항 더보기"></a></li>
 		</ul>
 		</div>
-		
-		<div id="popup">
-			<div class="popup-header">
-				<h3>팝업창</h3>
-			</div>
-			    <h2>1번글</h2><br/>
-				<h2>2번글</h2><br/>
-				<h2>3번글</h2><br/>
-				<h2>4번글</h2><br/>
-				<h2>5번글</h2><br/>
+					
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li><img src="images/도서관.png" /></li>
+		    <li><img src="images/열람실.png" /></li>
+		    <li><img src="images/도서관.png" /></li>
+		    <li><img src="images/열람실.png" /></li>
+		  </ul>
 		</div>
+		
+		<script type="text/javascript">
+		
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				minItems: 1,
+				maxItems: 1
+			
+			});
+		});
+
+		
+		</script>
 	</div>
 </div>
+
  
 
 <!-- link part -->
@@ -364,7 +382,7 @@
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
 						<li><a href="http://www.google.com"><img src="images/google.PNG"></img></a></li>
 					</ul>
-				</div> 
+</div> 
 				
 				
 <!-- ************************************************************************ -->				
