@@ -17,7 +17,7 @@
 <meta name="description" content="" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="loginpopup.css">
+<link rel="stylesheet" href="/web_project/css/loginpopup.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -73,9 +73,8 @@ $(document).ready(function() {
  
 </script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="default1.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
@@ -183,7 +182,7 @@ $(document).ready(function() {
 
 		<!-- ****************************************************************************************************************** -->
 <div class="picture">
-	<center><a href="#"><img src="images/c.jpg" alt="도서관 사진" /></a></center>
+	<center><a href="#"><img src="/web_project/images/c.jpg" alt="도서관 사진" /></a></center>
 </div>
 		<!-- ****************************************************************************************************************** -->
 
@@ -276,11 +275,11 @@ $(document).ready(function() {
 <div class="sbox1">
 					<ul class="style2">
 					
-						<li><a href="http://www.riss.kr/index.do"><img src="images/riss.PNG"></img></a></li>
-						<li><a href="https:www.naver.com"><img src="images/naver.PNG"></img></a></li>
-						<li><a href="http://www.nanet.go.kr/main.do"><img src="images/국회도서관.PNG"></img></a></li>
-						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
-						<li><a href="http://www.google.com"><img src="images/구글.PNG"></img></a></li>
+						<li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
+						<li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
+						<li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
+						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
+						<li><a href="http://www.google.com"><img src="/web_project/images/구글.PNG"></img></a></li>
 					</ul>
 				</div> 
 				

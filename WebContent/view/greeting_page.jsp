@@ -18,13 +18,12 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.slidertron-1.3.js"></script>
+<script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
  
-
 </head>
 <body>
 
@@ -99,7 +98,7 @@
       
      <div id="background_img">
      	<ul>     	
-     		<img src="images/캡처.png"/>
+     		<img src="/web_project/images/캡처.png"/>
      	</ul>
      </div>
      
@@ -122,11 +121,11 @@
 
      <table width="700" border="0" cellspacing="0" cellpadding="2" id="sub_print">
         <tr> 
-          <td id="sub_print_1"><img src="images/인사말.PNG" alt="" /></td>
+          <td id="sub_print_1"><img src="/web_project/images/인사말.PNG" alt="" /></td>
         </tr>
 
         <tr>
-          <td style="line-height:22px;"><img src="images/인사말2.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="90" />
+          <td style="line-height:22px;"><img src="/web_project/images/인사말2.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="90" />
 		    <p><font color="black" size="2"><b>kosta 도서관 홈페이지 방문을 진심으로 환영합니다.</b></font> 
             <p><font size="2" face="굴림체">&nbsp;&nbsp;kosta 도서관은 1922년 중구 율목동에서 '시립도서관'으로 개관하여 인천의 대표도서관으로<br>성장하기까지 인천시민의 지식과 지혜의 보고(寶庫)로 시민들과 함께 호흡해 왔으며 친숙한<br>문화공간으로서의 역할과 기능을 충실히 담당해 오고 있습니다.</font><p>
             </td>
@@ -144,7 +143,7 @@
 				시민 여러분의 따뜻한 관심과 많은 이용바랍니다.<p>
 				감사합니다.</font>
                  </td>			  
-                <td><img src="images/logo.png" alt="2014년 2월 인천광역시 kosta도서관장 이길주" /></td>			  
+                <td><img src="/web_project/images/logo.png" alt="2014년 2월 인천광역시 kosta도서관장 이길주" /></td>			  
               </tr>
             </table>
         </tr>
@@ -192,11 +191,11 @@
 <div class="sbox1">
 					<ul class="style2">
 					
-						<li><a href="http://www.riss.kr/index.do"><img src="images/riss.PNG"></img></a></li>
-						<li><a href="https:www.naver.com"><img src="images/naver.PNG"></img></a></li>
-						<li><a href="http://www.nanet.go.kr/main.do"><img src="images/국회도서관.PNG"></img></a></li>
-						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
-						<li><a href="http://www.google.com"><img src="images/google.PNG"></img></a></li>
+						<li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
+						<li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
+						<li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
+						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
+						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
 </div> 
 				

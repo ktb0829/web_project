@@ -15,13 +15,11 @@ import lib.command.CommandInput;
 import lib.command.CommandLoginCheck;
 import lib.command.CommandNull;
 
-
-
 public class TestControl extends HttpServlet  {
 	private static final long serialVersionUID = 1L;
 
 	private HashMap commandMap;
-	private String	jspDir = "/";
+	private String	jspDir = "/view/";
 	private String  error = "error.jsp";
     public TestControl() {
         super();

@@ -16,7 +16,7 @@ import library.command.CommandNull;
 
 public class LibraryControl extends HttpServlet{
 	private HashMap commandMap;
-	private String	jspDir = "/";
+	private String	jspDir = "/view/";
 	private String  error = "error.jsp";
 	
     public LibraryControl() {

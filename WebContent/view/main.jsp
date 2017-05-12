@@ -10,10 +10,10 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="login.css">
-<link rel="stylesheet" href="loginpopup.css">
-<link rel="stylesheet" href="flexslider.css">
-<link rel="stylesheet" href="defaulthee.css">
+<link rel="stylesheet" href="/web_project/css/login.css">
+<link rel="stylesheet" href="/web_project/css/loginpopup.css">
+<link rel="stylesheet" href="/web_project/css/flexslider.css">
+<link rel="stylesheet" href="/web_project/css/defaulthee.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
@@ -22,11 +22,10 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.slidertron-1.3.js"></script>
-<script src="jquery.flexslider.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
+<script src="/web_project/js/jquery.flexslider.js" type="text/javascript"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <script type="text/javascript">
@@ -73,7 +72,7 @@ function loginCheck(){
 <!--  ********Seonmi****** -->
 
 <!-- All the files that are required -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -263,15 +262,15 @@ return false;
          <div class="reel">
                   <div class="slide">
                      <a class="link" href="#">Full story ...</a>
-                     <img src="images/c.jpg" alt="" />
+                     <img src="/web_project/images/c.jpg" alt="" />
                   </div>
                   <div class="slide">
                      <a class="link" href="#">Full story ...</a>
-                     <img src="images/d.jpg" alt="" />
+                     <img src="/web_project/images/d.jpg" alt="" />
                   </div>
                   <div class="slide">
                      <a class="link" href="#">Full story ...</a>
-                     <img src="images/e.jpg" alt="" />
+                     <img src="/web_project/images/e.jpg" alt="" />
                   </div>
                </div>
             </div>
@@ -488,10 +487,10 @@ return false;
                
       <div class="flexslider">
         <ul class="slides">
-          <li><img src="images/도서관.png" /></li>
-          <li><img src="images/열람실.png" /></li>
-          <li><img src="images/도서관.png" /></li>
-          <li><img src="images/열람실.png" /></li>
+          <li><img src="/web_project/images/도서관.png" /></li>
+          <li><img src="/web_project/images/열람실.png" /></li>
+          <li><img src="/web_project/images/도서관.png" /></li>
+          <li><img src="/web_project/images/열람실.png" /></li>
         </ul>
       </div>
       
@@ -517,15 +516,13 @@ return false;
 <div class="sbox1">
                <ul class="style2">
                
-                  <li><a href="http://www.riss.kr/index.do"><img src="images/riss.PNG"></img></a></li>
-                  <li><a href="https:www.naver.com"><img src="images/naver.PNG"></img></a></li>
-                  <li><a href="http://www.nanet.go.kr/main.do"><img src="images/국회도서관.PNG"></img></a></li>
-                  <li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
-                  <li><a href="http://www.google.com"><img src="images/google.PNG"></img></a></li>
+                  <li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
+                  <li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
+                  <li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
+                  <li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
+                  <li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
                </ul>
             </div> 
-            
-            
 <!-- ************************************************************************ -->            
 <div id="copyright" class="container">
    <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
