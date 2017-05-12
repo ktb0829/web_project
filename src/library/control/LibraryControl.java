@@ -27,8 +27,10 @@ public class LibraryControl extends HttpServlet{
 	private void initCommand(){
 		commandMap = new HashMap();
 
+		commandMap.put("main-search", new CommandNull("search.jsp") );
 		commandMap.put("search", new CommandList("search.jsp") );
 		commandMap.put("reserve", new CommandList("search.jsp") );
+		
 		
 //		commandMap.put("insert", new CommandInput("BoardView.jsp") );
 //		commandMap.put("list", new CommandList("BoardList.jsp") );
