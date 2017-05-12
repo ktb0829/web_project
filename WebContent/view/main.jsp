@@ -240,11 +240,16 @@ return false;
             <div class="viewer">
 
 
-
+		
 
 
          <div class="searchbox">
-            <input type="text" id="kwd" name="kwd" size="70"></input>
+         	<select id='select' class="select" name="select" title="검색구분 선택">
+         		<option value="제목" selected="selected">제목</option>
+                <option value="저자">저자</option>
+                <option value="출판사">출판사</option>           
+            </select>
+            <input type="text" id="kwd" name="value" size="63" />
          </div>
          <div class="searchbtn">
             <button type="button" id="searchbtn" name="searchbtn">
