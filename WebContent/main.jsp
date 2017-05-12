@@ -17,7 +17,7 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="flexslider.css" type="text/css">
 
- 
+  
 </head>
 
 <body>
