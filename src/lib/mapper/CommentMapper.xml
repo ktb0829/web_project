@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CommentMapper">
+
+<insert id="insertComment" parameterType="book">
+	INSERT INTO member 
+	values(#{id}, #{name}, #{password}, #{addr}, #{tel}, #{email} , #{disabled}  )
+</insert>
+<select id="loginCheck" parameterType="hashmap" resultType="String">
+SELECT ID FROM MEMBER WHERE ID=#{username} and PASSWORD=#{password}
+</select>
+<!-- # : PreparedStatement형식 , $ : statement형식 -->
+
+<!-- <select id="selectComment" parameterType="hashmap" resultType="comment"> -->
+<!-- 	SELECT * -->
+<!-- 	FROM comment_tab -->
+<!-- 	<where> -->
+<!-- 		<if test="commentNo != null">  -->
+<!-- 			comment_no = #{commentNo } -->
+			
+		
+<!-- 		</if> -->
+<!-- 	</where> -->
+<!-- </select> -->
+
+
+
+<!-- <delete id="deleteComment" parameterType="hashmap" > -->
+<!--  	DELETE FROM comment_tab -->
+<!--  	where comment_no = #{commentNo} -->
+<!-- </delete> -->
+
+<!-- <update id="modifyComment" parameterType="hashmap"> -->
+<!-- 	UPDATE comment_tab  -->
+<!-- 	SET comment_content = #{commentContent}, user_id=#{userId}  -->
+<!-- 	where comment_no=#{commentNo}  -->
+<!-- </update> -->
+
+</mapper>

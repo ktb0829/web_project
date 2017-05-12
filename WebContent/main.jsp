@@ -1,102 +1,210 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html> 
+<html>
+
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="loginpopup.css">
+<link rel="stylesheet" href="flexslider.css">
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.slidertron-1.3.js"></script>
-<script src="jquery.flexslider.js"></script>
-
+<script src="jquery.flexslider.js" type="text/javascript"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="flexslider.css" type="text/css">
 
-  
+
+
 </head>
+<script type="text/javascript">
+function loginCheck(){
+	
+	$.ajax({
+		
+		url:'login.seonmi?cmd=login-do',
+		type:'post',
+		data:{
+			
+	        username:$('#username').val(),
+	        password:$('#password').val()
+		},
+		dataType:'text',
+		success:function(data){
+				
+			if( data.trim() =='loginFaile'){
+				
+				alert('로그인 실패');
+				
+			}else{
+				
+				$('#mask , .login-popup').fadeOut(300 , function() {
+				    $('#mask').remove();  
+				    
+				   $('#login').text('LOGOUT'); //값 바꾸어줌
+				   
+				    
+				}); 
+			}
+		},
+		error : function(request, status , error) {
+			
+			 alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		}
+				
+	});
+}
 
+
+</script>
 <body>
+<!--  ********Seonmi****** -->
+
+<!-- All the files that are required -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
+
+<!--  login popup -->
+
+<div id="login-box" class="login-popup">
+<a href="#" class="close"><img  class="btn_close" title="Close Window" alt="Close" /></a>
+  <form method="post" class="signin">
+        <fieldset class="textbox">
+        <label class="username">
+        <span>Id</span>
+        <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Id">
+        </label>
+        <label class="password">
+        <span>Password</span>
+        <input id="password" name="password" value="" type="password" placeholder="Password">
+        </label>
+<!--         <button class="submit button">Sign in</button> -->
+		<a href="javascript:loginCheck()" id="signInBtn">Sign in</a>
+		
+        <p>
+        <a class="forgot" href="#">Forgot your password?</a>
+        </p>        
+        </fieldset>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+
+	//sign up 버튼 눌렀을때 
+	$('#sign').click(function(){
+		//회원가입 화면 전환 
+		$(this).attr("href", 'xxx.seonmi?cmd=sign-page');
+	
+});
+
+	
+	//로그인 버튼 눌렀을때 팝업창으로 로그인 띄우기 
+	
+	
+	$('#login').click(function() {
+    		
+		
+
+	//Getting the variable's value from a link 
+    var loginBox = $(this).attr('href');
+  
+    //Fade in the Popup
+    $('.login-popup').fadeIn(300);        
+            
+    
+    //Set the center alignment padding + border see css style
+    var popMargTop = ($(loginBox).height() + 24) / 2; 
+    var popMargLeft = ($(loginBox).width() + 24) / 2; 
+    
+    $(loginBox).css({ 
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+    
+    // Add the mask to body
+    $('body').append('<div id="mask"></div>');
+    $('#mask').fadeIn(300);
+    
+    return false;
+});
+
+		
+// When clicking on the button close or the mask layer the popup closed
+$('a.close, #mask').bind('click', function() { 
+  $('#mask , .login-popup').fadeOut(300 , function() {
+    $('#mask').remove();  
+}); 
+return false;
+});
+
+
+});
+
+</script>
+<!--  end login popup  -->
+
+
 
 <div id="header-wrapper">
    <div id="header" class="container">
-        
+      
       <div id="logo">
          <h1><a href="#">KOSTA library</a></h1>
       </div>
       
       <div id="menu">
-      
          <div id="menu_form">
          <ul>
             <li><a href="#" accesskey="2" title="">HOME</a></li>
-            <li><a href="#" accesskey="3" title="">LOGIN</a></li>
-            <li><a href="#" accesskey="4" title="">SIGN UP</a></li>
+            <li><a id = "login" href="#" accesskey="3" title="">LOGIN</a></li>        
+            <li><a id = "sign" href="#" accesskey="4" title="">SIGN UP</a></li>
             <li><a href="#" accesskey="5" title="">ENG</a></li>
          </ul><br/><br/>
          </div>
 
-         <div id="menu_top">    
-         	<ul>
-         		<li class="main_menu"><a href="#">민원창구</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
-         			<li><a href="#">설문조사</a></li><br/>
-         			<li><a href="#">분실물 센터</a></li><br/>
-         			<li><a href="#">자유게시판</a></li><br/><br/>
-         			</ul> 
-         		</li>    
-         		<li class="main_menu"><a href="#">참여이용안내</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">도서관 이용 안내</a></li><br/>	
-         			<li><a href="#">도서 기부</a></li><br/>
-         			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
-         			</ul>          			
-         		</li>
-         		<li class="main_menu"><a href="#">자료검색</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">도서 자료 검색</a></li><br/>	
-         			<li><a href="#">신작 자료</a></li><br/>
-         			<li><a href="#">대출 베스트</a></li><br/><br/>
-         			</ul>
-         		</li>
-         		<li class="main_menu"><a href="#">온라인 서비스</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">대출예약</a></li><br/>	
-         			<li><a href="#">대출조회/연기</a></li><br/>
-         			<li><a href="#">오디오 북</a></li><br/>
-         			<li><a href="#">열람실 좌석 현황</a></li><br/>
-         			<li><a href="#">택배 서비스</a></li><br/><br/>
-         			</ul>
-         		</li>
-         		<li class="main_menu"><a href="#">도서관소개</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">인사말</a></li><br/>	
-         			<li><a href="#">시설현황</a></li><br/>
-         			<li><a href="#">자료현황</a></li><br/>
-         			<li><a href="#">찾아오시는 길</a></li><br/><br/>
-         			</ul>
-         		</li>        		         		         		  
-         	</ul>         	
-         </div>      
-                           
-      </div>   
-     
-     
-     
-     
-       
-   </div>  
-   
+         <div id="menu_top">
+         <ul>
+            <li class=""><a href="#" accesskey="1" title="">민원창구</a></li>
+            <li class=""><a href="#" accesskey="2" title="">참여이용안내</a></li>
+            <li class=""><a href="#" accesskey="3" title="">자료검색</a></li>
+            <li class=""><a href="#" accesskey="4" title="">온라인서비스</a></li>
+            <li class=""><a href="#" accesskey="5" title="">도서관소개</a></li>
+         </ul>
+         </div>
+      </div>
+   </div>
 </div>
 
 		<!-- ****************************************************************************************************************** -->
@@ -108,6 +216,8 @@
 
 
 
+
+
 			<div class="searchbox">
 				<input type="text" id="kwd" name="kwd" size="70"></input>
 			</div>
@@ -115,6 +225,10 @@
 				<button type="button" id="searchbtn" name="searchbtn">
 					검색</button>
 			</div>
+
+
+
+
 
 
 			<div class="reel">
@@ -281,7 +395,7 @@
 		</div>
 	</div>
 	
-	<div id="page" class="container">
+<div id="page" class="container">
 		<div id="content">
 		</div>
 		
@@ -352,22 +466,20 @@
 		  </ul>
 		</div>
 		
-		<script type="text/javascript">
+ 		<script type="text/javascript"> 
 		
-		$(window).load(function() {
-			$('.flexslider').flexslider({
-				minItems: 1,
-				maxItems: 1
+ 		$(window).load(function() {
+ 			$('.flexslider').flexslider({ 
+ 				minItems: 1,
+ 				maxItems: 1
 			
-			});
-		});
-
+ 			}); 
+ 		}); 		
+ 		</script> 
 		
-		</script>
 	</div>
 </div>
 
- 
 
 <!-- link part -->
 <!-- ************************************************************************* -->
@@ -382,7 +494,7 @@
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="images/국립중앙도서관.PNG"></img></a></li>
 						<li><a href="http://www.google.com"><img src="images/google.PNG"></img></a></li>
 					</ul>
-</div> 
+				</div> 
 				
 				
 <!-- ************************************************************************ -->				
