@@ -12,7 +12,6 @@
 <script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<!-- <link href="/web_project/css/default.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -25,14 +24,14 @@
    <div id="header" class="container">
         
       <div id="logo">
-         <h1><a href="#">KOSTA library</a></h1>
+         <h1><a href="library.library?cmd=home">KOSTA library</a></h1>
       </div>
       
       <div id="menu">
       
          <div id="menu_form">
          <ul>
-            <li><a href="#" accesskey="2" title="">HOME</a></li>
+            <li><a href="library.library?cmd=home" accesskey="2" title="">HOME</a></li>
             <li><a href="#" accesskey="3" title="">LOGIN</a></li>
             <li><a href="#" accesskey="4" title="">SIGN UP</a></li>
             <li><a href="#" accesskey="5" title="">ENG</a></li>

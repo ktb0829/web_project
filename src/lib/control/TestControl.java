@@ -30,7 +30,6 @@ public class TestControl extends HttpServlet  {
     private void initCommand(){
     	
     	commandMap = new HashMap();
-    	System.out.println("controll 접속 ");
     	commandMap.put("sign-page",	new CommandNull("signup.jsp") );
     	commandMap.put("main-page", new CommandInput("main.jsp"));
     	commandMap.put("login-page",new CommandNull("main.jsp"));

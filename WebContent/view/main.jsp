@@ -54,7 +54,6 @@ function loginCheck(){
                 
                $('#login').text('LOGOUT'); //값 바꾸어줌
                
-                
             }); 
          }
       },
@@ -76,8 +75,6 @@ function loginCheck(){
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-
 
 
 <!--  login popup -->
@@ -168,13 +165,13 @@ return false;
    <div id="header" class="container">
       
       <div id="logo">
-         <h1><a href="#">KOSTA library</a></h1>
+         <h1><a href="library.library?cmd=home">KOSTA library</a></h1>
       </div>
       
       <div id="menu">
          <div id="menu_form">
          <ul>
-            <li><a href="#" accesskey="2" title="">HOME</a></li>
+            <li><a href="library.library?cmd=home" accesskey="2" title="">HOME</a></li>
             <li><a id = "login" href="#" accesskey="3" title="">LOGIN</a></li>        
             <li><a id = "sign" href="#" accesskey="4" title="">SIGN UP</a></li>
             <li><a href="#" accesskey="5" title="">ENG</a></li>
@@ -218,7 +215,7 @@ return false;
                   <li><a href="#">택배 서비스</a></li><br/><br/>
                   </ul>
                </li>
-               <li class="main_menu"><a href="#">도서관소개</a><br/>
+               <li class="main_menu"><a href="library.library?cmd=greeting_page">도서관소개</a><br/>
                   <ul id="hide">
                   <br/>
                   <li><a href="#">인사말</a></li><br/>   

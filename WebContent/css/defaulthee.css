@@ -3,7 +3,7 @@ html, body
 {
    height: 100%;
 }
- 
+
 body
 {
    margin: 0px;
@@ -14,7 +14,7 @@ body
    font-weight: 300;
    color: #6c6c6c;
 }
-
+ 
 #theader, th, tr, td
 {
    font-family: 'Open Sans', sans-serif;
@@ -928,6 +928,11 @@ ul.contact li a.icon-rss:before
    height: 900px;
 }
 
+#menu_bar
+{
+	margin-left: 10%
+}
+
 #menu_bar ul
 {
 	display: inline;
@@ -950,15 +955,21 @@ ul.contact li a.icon-rss:before
 
 #menu_service
 {
-	 display : center;
+	 display : inline;
 	 padding-left :85%;
 	 border: medium;
 }
 
 
+
 #featured_ {
     border: 6px double #34b8bf;
     block-size: 800px;
+    width: 10%;
+    position: absolute;
+    margin: 0;
+    right: 5%;
+    top: 512px;
 }
 
 #featured_ .icon
@@ -991,10 +1002,7 @@ ul.contact li a.icon-rss:before
     margin-top: 15px;
 }
 
-
-
-
-
-
-
-
+table
+{
+	margin-left: 10%;
+}

@@ -115,13 +115,13 @@ $(document).ready(function() {
    <div id="header" class="container">
       
       <div id="logo">
-         <h1><a href="#">KOSTA library</a></h1>
+         <h1><a href="library.library?cmd=home">KOSTA library</a></h1>
       </div>
       
       <div id="menu">
          <div id="menu_form">
          <ul>
-            <li><a href="#" accesskey="2" title="">HOME</a></li>
+            <li><a href="library.library?cmd=home" accesskey="2" title="">HOME</a></li>
             <li><a href="#" accesskey="3" title="">LOGIN</a></li>
             <li><a href="#" accesskey="4" title="">SIGN UP</a></li>
             <li><a href="#" accesskey="5" title="">ENG</a></li>
@@ -196,7 +196,7 @@ $(document).ready(function() {
 
          <!--START 검색바  -->
          <div class="datasearch_sub_main">
-            <form method="post" name="main_search" id="main_search" class="sub_search" action="xxx.library?cmd=search">
+            <form method="post" name="main_search" id="main_search" class="sub_search" action="library.library?cmd=search">
                   <legend>검색</legend>
                   <h5 class="section_sch_tlt">
                      <span>소장자료</span>
