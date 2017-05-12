@@ -13,4 +13,14 @@
       <url-pattern>*.seonmi</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>LibraryControl</servlet-name>
+    <servlet-class>library.control.LibraryControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LibraryControl</servlet-name>
+    <url-pattern>/LibraryControl</url-pattern>
+    <url-pattern>*.library</url-pattern>
+  </servlet-mapping>
+  
   </web-app>

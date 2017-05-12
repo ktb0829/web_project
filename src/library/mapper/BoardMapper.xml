@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="library.mapper.BoardMapper">
+
+<!-- <resultMap type="board" id="boardMap"> -->
+<!-- 	<id column = "article_id" property = "articleId" /> -->
+<!-- 	<result column = "group_id" property = "groupId" /> -->
+<!-- 	<result column = "sequence_no" property = "sequenceNo" /> -->
+<!-- 	<result column = "posting_date" property = "postingDate" /> -->
+<!-- 	<result column = "read_count" property = "readCount" /> -->
+<!-- 	<result column = "writer_name" property = "writerName" /> -->
+<!-- 	<result column = "password" property = "password" /> -->
+<!-- 	<result column = "title" property = "title" /> -->
+<!-- 	<result column = "content" property = "content" /> -->
+<!-- </resultMap> -->
+
+<!-- <insert id="insertBoard" parameterType="board"> -->
+<!-- 	INSERT INTO article -->
+<!-- 	VALUES(SEQ_ARTICLE_ID_ARTICLE.nextval, #{groupId}, #{sequenceNo}, sysdate, 0, #{writerName}, #{password}, #{title}, #{content}) -->
+<!-- </insert> -->
+
+<select id="selectBoardByTitle" parameterType="hashmap" resultType="lib_book">
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
+	FROM book								  
+	<where>
+		<if test=" bookTitle != null ">
+			book_title like '%'||#{bookTitle}||'%'
+		</if>
+	</where>
+	ORDER BY book_num
+</select>
+
+<select id="selectBoardByWriter" parameterType="hashmap" resultType="lib_book">
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
+	FROM book								  
+	<where>
+		<if test=" bookWriter != null ">
+			book_writer like '%'||#{bookWriter}||'%'
+		</if>
+	</where>
+	ORDER BY book_num
+</select>
+
+<select id="selectBoardByPublisher" parameterType="hashmap" resultType="lib_book">
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
+	FROM book								  
+	<where>
+		<if test=" bookPublisher != null ">
+			book_publisher like '%'||#{bookPublisher}||'%'
+		</if>
+	</where>
+	ORDER BY book_num
+</select>
+
+<!-- <select id="getGroupId" resultType="int"> -->
+<!-- 	SELECT SEQ_GROUP_ID_ARTICLE.nextval as group_id FROM dual -->
+<!-- </select> -->
+
+<!-- <select id="getArticleId" resultType='int'> -->
+<!-- 	SELECT SEQ_ARTICLE_ID_ARTICLE.currval as article_id FROM dual -->
+<!-- </select> -->
+
+</mapper>
