@@ -29,9 +29,9 @@ public class LibraryControl extends HttpServlet{
 		commandMap = new HashMap();
 
 		commandMap.put("home", new CommandNull("main.jsp") );
-		commandMap.put("main-search", new CommandNull("search.jsp") );
-		commandMap.put("search", new CommandList("search.jsp") );
-		commandMap.put("reserve", new CommandReserve("search.jsp") );
+		commandMap.put("main-search", new CommandNull("searchbook.jsp") );
+		commandMap.put("search", new CommandList("searchbook.jsp") );
+		commandMap.put("reserve", new CommandReserve("searchbook.jsp") );
 		commandMap.put("greeting_page", new CommandNull("greeting_page.jsp") );
 		
 //		commandMap.put("insert", new CommandInput("BoardView.jsp") );
@@ -43,6 +43,7 @@ public class LibraryControl extends HttpServlet{
 //		commandMap.put("modify", new CommandModify("BoardModify.jsp") );
 //		commandMap.put("reply-form", new CommandNull("BoardReplyForm.jsp") );
 //		commandMap.put("reply", new CommandReply("BoardReply.jsp") );
+
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

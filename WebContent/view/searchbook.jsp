@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.util.*"%>
 <%@ page import ="library.model.Book" %>
 <%
@@ -16,16 +17,18 @@
 		value = "검색어를 입력하세요.";
 	}
 %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>KOSTA LIBRARY</title>
+<title>자료검색</title>
+
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="/web_project/css/loginpopup.css">
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+<link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -80,45 +83,10 @@ $(document).ready(function() {
     return false;
     });
 });
- 
 </script>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
-
-<!--  login popup -->
-
-<div id="login-box" class="login-popup">
-<a class="close"><img class="btn_close" title="Close Window" alt="Close" /></a>
-  <form method="post" class="signin" action="library.library?cmd=reserve">
-        <fieldset class="textbox">
-        <label class="bookNum">
-        <span>책번호</span>
-        <input id="bookNum" name="bookNum" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookTitle">
-        <span>책제목</span>
-        <input id="bookTitle" name="bookTitle" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookWriter">
-        <span>글쓴이</span>
-        <input id="bookWriter" name="bookWriter" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookPublisher">
-        <span>출판사</span>
-        <input id="bookPublisher" name="bookPublisher" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookGenre">
-        <span>장르</span>
-        <input id="bookGenre" name="bookGenre" value="" type="text" autocomplete="on">
-        </label>
-        <button class='submit button' id='reserve' type='button'>RESERVE</button>
-        </fieldset>
-  </form>
-</div>
 
 <div id="header-wrapper">
    <div id="header" class="container">
@@ -180,7 +148,7 @@ $(document).ready(function() {
          			<ul id="hide">
          			<br/>
          			<li><a href="#">인사말</a></li><br/>	
-         			<li><a >시설현황</a></li><br/>
+         			<li><a href="#">시설현황</a></li><br/>
          			<li><a href="#">자료현황</a></li><br/>
          			<li><a href="#">찾아오시는 길</a></li><br/><br/>
          			</ul>
@@ -195,7 +163,23 @@ $(document).ready(function() {
      	</ul>
      </div>
      
-<div id="wrapper">
+   <div id ="wrapper2">
+   
+	   <div id="menu_bar"><br/>
+	   	 <ul>
+	        <li><a href="#">도서 자료 검색</a></li>
+	        <li>|</li>
+	        <li><a href="#">신작 자료</a></li>
+	        <li>|</li>
+	        <li><a href="#">대출 베스트</a></li>	        
+	    </ul>
+	   </div>
+	   
+	   
+	  <!-- 본문 내용 -->
+	  <!-- *********************************************************************** -->
+	  <br/><br/>
+	 <div id="wrapper">
 	<div id="page" class="container">
 		
 		<div class="lo_1000" id="contentsArea">
@@ -278,23 +262,62 @@ $(document).ready(function() {
    </div>
 </div>
 	</div>
-
+	  
+	  <!-- *********************************************************************** -->
+	 <div id="menu_service">
+		<div id="featured_" class="container">
+			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
+				<div class="title">
+					<h2>민원</h2>					
+				</div>
+			</div>
+			<div class="column_2"> <span class="icon icon-glass"></span><br/>
+				<div class="title
+				">
+					<h2>대출연장,예약</h2>
+				</div>
+			</div>
+			<div class="column_3"> <span class="icon icon-music"></span><br/>
+				<div class="title">
+					<h2>희망도서신청</h2>
+				</div>
+			</div>
+			<div class="column_4"> <span class="icon icon-group"></span><br/>
+				<div class="title">
+					<h2>열람실좌석정보</h2>
+				</div>
+			</div>
+			
+			<div class="column_5"> <span class="icon icon-book"></span><br/>
+				<div class="title">
+					<h2>택배서비스</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
 <!-- link part -->
 <!-- ************************************************************************* -->
 
+
 <div class="sbox1">
 					<ul class="style2">
+					
 						<li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
 						<li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
 						<li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
-						<li><a href="http://www.google.com"><img src="/web_project/images/구글.PNG"></img></a></li>
+						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
-				</div> 
+</div> 
+				
 				
 <!-- ************************************************************************ -->				
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>	
+
 </div>
 </body>
 </html>
