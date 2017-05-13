@@ -134,16 +134,16 @@ $(document).ready(function() {
          </ul><br/><br/>
          </div>
 
-         <div id="menu_top">    
+         <div id="menu_top">
          	<ul>
          		<li class="main_menu"><a href="#">민원창구</a><br/>
          			<ul id="hide">
          			<br/>
-         			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
+         			<li><a href="#">개선 및 건의사항</a></li><br/>	
          			<li><a href="#">설문조사</a></li><br/>
          			<li><a href="#">분실물 센터</a></li><br/>
          			<li><a href="#">자유게시판</a></li><br/><br/>
-         			</ul> 
+         			</ul>
          		</li>
          		<li class="main_menu"><a href="#">참여이용안내</a><br/>
          			<ul id="hide">

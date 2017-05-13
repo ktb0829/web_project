@@ -29,7 +29,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test=" bookTitle != null ">
 			book_title like '%'||#{bookTitle}||'%' AND book_num = num(+)
 		</if>
-	</where>
+	</where> 
 	ORDER BY book_num
 </select>
 
