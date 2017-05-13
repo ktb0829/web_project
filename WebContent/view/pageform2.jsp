@@ -39,82 +39,82 @@
          </div>
 
          <div id="menu_top">    
-         	<ul>
-         		<li class="main_menu"><a href="#">민원창구</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
-         			<li><a href="#">설문조사</a></li><br/>
-         			<li><a href="#">분실물 센터</a></li><br/>
-         			<li><a href="#">자유게시판</a></li><br/><br/>
-         			</ul> 
-         		</li>    
-         		<li class="main_menu"><a href="#">참여이용안내</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">도서관 이용 안내</a></li><br/>	
-         			<li><a href="#">도서 기부</a></li><br/>
+            <ul>
+               <li class="main_menu"><a href="#">민원창구</a><br/>
+                  <ul id="hide">
+                  <br/>
+                  <li><a href="#">개선 및 건의사항</a></li><br/>                    
+                  <li><a href="#">설문조사</a></li><br/>
+                  <li><a href="#">분실물 센터</a></li><br/>
+                  <li><a href="#">자유게시판</a></li><br/><br/>
+                  </ul> 
+               </li>    
+               <li class="main_menu"><a href="#">참여이용안내</a><br/>
+                  <ul id="hide">
+                  <br/>
+                  <li><a href="#">도서관 이용 안내</a></li><br/>   
+                  <li><a href="#">도서 기부</a></li><br/>
        
-         			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
-         			</ul>          			
-         		</li>
-         		<li class="main_menu"><a href="#">자료검색</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">도서 자료 검색</a></li><br/>	
-         			<li><a href="#">신작 자료</a></li><br/>
-         			<li><a href="#">대출 베스트</a></li><br/><br/>
-         			</ul>
-         		</li>
-         		<li class="main_menu"><a href="#">온라인 서비스</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">대출예약</a></li><br/>	
-         			<li><a href="#">대출조회/연기</a></li><br/>
-         			<li><a href="#">오디오 북</a></li><br/>
-         			<li><a href="#">열람실 좌석 현황</a></li><br/>
-         			<li><a href="#">택배 서비스</a></li><br/><br/>
-         			</ul>
-         		</li>
-         		<li class="main_menu"><a href="#">도서관소개</a><br/>
-         			<ul id="hide">
-         			<br/>
-         			<li><a href="#">인사말</a></li><br/>	
-         			<li><a href="#">시설현황</a></li><br/>
-         			<li><a href="#">자료현황</a></li><br/>
-         			<li><a href="#">찾아오시는 길</a></li><br/><br/>
-         			</ul>
-         		</li>        		         		         		  
-         	</ul>         	
+                  <li><a href="#">독서 커뮤니티</a></li><br/><br/>
+                  </ul>                   
+               </li>
+               <li class="main_menu"><a href="#">자료검색</a><br/>
+                  <ul id="hide">
+                  <br/>
+                  <li><a href="#">도서 자료 검색</a></li><br/>   
+                  <li><a href="#">신작 자료</a></li><br/>
+                  <li><a href="#">대출 베스트</a></li><br/><br/>
+                  </ul>
+               </li>
+               <li class="main_menu"><a href="#">온라인 서비스</a><br/>
+                  <ul id="hide">
+                  <br/>
+                  <li><a href="#">대출예약</a></li><br/>   
+                  <li><a href="#">대출조회/연기</a></li><br/>
+                  <li><a href="#">오디오 북</a></li><br/>
+                  <li><a href="#">열람실 좌석 현황</a></li><br/>
+                  <li><a href="#">택배 서비스</a></li><br/><br/>
+                  </ul>
+               </li>
+               <li class="main_menu"><a href="#">도서관소개</a><br/>
+                  <ul id="hide">
+                  <br/>
+                  <li><a href="#">인사말</a></li><br/>   
+                  <li><a href="#">시설현황</a></li><br/>
+                  <li><a href="#">자료현황</a></li><br/>
+                  <li><a href="#">찾아오시는 길</a></li><br/><br/>
+                  </ul>
+               </li>                                              
+            </ul>            
          </div>   
      </div>
       
      <div id="background_img">
-     	<ul>     	
-     		<img src="/web_project/images/캡처.png"/>
-     	</ul>
+        <ul>        
+           <img src="/web_project/images/캡처.png"/>
+        </ul>
      </div>
      
    <div id ="wrapper2">
    
-	   <div id="menu_bar"><br/>
-	   	 <ul>
-	        <li><a href="#">열람실 좌석 현황</a></li>
-	        <li>|</li>
-	        <li><a href="#">자유게시판</a></li>
-	        <li>|</li>
-	        <li><a href="#">분실물센터</a></li>	        
-	    </ul>
-	   </div>
-	   
-	   
-	  <!-- 본문 내용 -->
-	  <!-- *********************************************************************** -->
-	  <br/><br/>
-	  <table id="seat" width="650" border="0" cellspacing="10" cellpadding="0" align="center" class="bor_4" >
-<!-- 		    <caption>열람실 좌석현황</caption> -->
+      <div id="menu_bar"><br/>
+          <ul>
+           <li><a href="#">열람실 좌석 현황</a></li>
+           <li>|</li>
+           <li><a href="#">자유게시판</a></li>
+           <li>|</li>
+           <li><a href="#">분실물센터</a></li>           
+       </ul>
+      </div>
+      
+      
+     <!-- 본문 내용 -->
+     <!-- *********************************************************************** -->
+     <br/><br/>
+     <table id="seat" width="650" border="0" cellspacing="10" cellpadding="0" align="center" class="bor_4" >
+<!--           <caption>열람실 좌석현황</caption> -->
         <tbody><tr> 
-          <td width="112"><a href="seat01.jsp" onclick="window.open(this.href,'1th','width=680,height=500');return false;"><img src="/web_project/images/1열람실.PNG" border="0" alt="1열람실 현황보기(새창)" value="1열람실 현황보기"></a></td>
+          <td width="112"><a href="xxx.seonmi?cmd=1th-page" onclick="window.open(this.href,'1th','width=680,height=500');return false;"><img src="/web_project/images/1열람실.PNG" border="0" alt="1열람실 현황보기(새창)" value="1열람실 현황보기"></a></td>
           <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">36</td>
           <td width="8"><img align="absmiddle" alt=""></td>
           <td class="seat_comm"><img align="absmiddle" alt="총좌석수">90</td>
@@ -123,7 +123,7 @@
           <td colspan="4" class="line_gray" height="1"></td>
         </tr>
         <tr> 
-          <td><a href="seat02.jsp" onclick="window.open(this.href,'2th','width=680,height=500');return false;"><img src="/web_project/images/2열람실.PNG" border="0" alt="2열람실 현황보기(새창)"></a></td>
+          <td><a href="xxx.seonmi?cmd=2th-page" onclick="window.open(this.href,'2th','width=680,height=500');return false;"><img src="/web_project/images/2열람실.PNG" border="0" alt="2열람실 현황보기(새창)"></a></td>
           <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">49</td>
           <td><img  align="absmiddle" alt=""></td>
           <td class="seat_comm"><img  align="absmiddle" alt="총좌석수">120</td>
@@ -132,7 +132,7 @@
           <td colspan="4" class="line_gray" height="1"></td>
         </tr>
         <tr> 
-          <td><a href="seat03.jsp" onclick="window.open(this.href,'3th','width=680,height=500');return false;" onkeypress="window.open(this.href,'3th','width=680,height=500');return false;">
+          <td><a href="xxx.seonmi?cmd=3th-page" onclick="window.open(this.href,'3th','width=680,height=500');return false;" onkeypress="window.open(this.href,'3th','width=680,height=500');return false;">
           <img src="/web_project/images/3열람실.PNG" border="0" alt="3열람실 현황보기(새창)"></a></td>
           <td class="seat_comm green"><img  align="absmiddle" alt="잔여좌석">97</td>
           <td><img align="absmiddle" alt=""></td>
@@ -144,69 +144,73 @@
       </tbody></table>
       <div>
       <tr>
-      	<table width="500" border="0" cellspacing="0" cellpadding="2">
-      	<td>
-      	 <img src="/web_project/images/열람실내용.PNG">
-      	</td>
-      	</table>
-      	</tr>
+         <table width="500" border="0" cellspacing="0" cellpadding="2">
+         <td>
+          <img src="/web_project/images/열람실내용.PNG">
+         </td>
+         </table>
+         </tr>
       </div>
-	  
-	  
-	  <!-- *********************************************************************** -->
-	 <div id="menu_service">
-		<div id="featured_" class="container">
-			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
-				<div class="title">
-					<h2>민원</h2>					
-				</div>
-			</div>
-			<div class="column_2"> <span class="icon icon-glass"></span><br/>
-				<div class="title
-				">
-					<h2>대출연장,예약</h2>
-				</div>
-			</div>
-			<div class="column_3"> <span class="icon icon-music"></span><br/>
-				<div class="title">
-					<h2>희망도서신청</h2>
-				</div>
-			</div>
-			<div class="column_4"> <span class="icon icon-group"></span><br/>
-				<div class="title">
-					<h2>열람실좌석정보</h2>
-				</div>
-			</div>
-			
-			<div class="column_5"> <span class="icon icon-book"></span><br/>
-				<div class="title">
-					<h2>택배서비스</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	
+     
+     
+     <!-- *********************************************************************** -->
+
+
+
+
+    <div id="menu_service">
+      <div id="featured_" class="container">
+         <div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
+            <div class="title">
+               <h2>민원</h2>               
+            </div>
+         </div>
+         <div class="column_2"> <span class="icon icon-glass"></span><br/>
+            <div class="title
+            ">
+               <h2>대출연장,예약</h2>
+            </div>
+         </div>
+         <div class="column_3"> <span class="icon icon-music"></span><br/>
+            <div class="title">
+               <h2>희망도서신청</h2>
+            </div>
+         </div>
+         <div class="column_4"> <span class="icon icon-group"></span><br/>
+            <div class="title">
+               <h2>열람실좌석정보</h2>
+            </div>
+         </div>
+         
+         <div class="column_5"> <span class="icon icon-book"></span><br/>
+            <div class="title">
+               <h2>택배서비스</h2>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   
 <!-- link part -->
 <!-- ************************************************************************* -->
 
 
 <div class="sbox1">
-					<ul class="style2">
-					
-						<li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
-						<li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
-						<li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
-						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
-						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
-					</ul>
+               <ul class="style2">
+               
+                  <li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
+                  <li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
+                  <li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>
+                  <li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
+                  <li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
+               </ul>
 </div> 
-				
-				
-<!-- ************************************************************************ -->				
+            
+            
+<!-- ************************************************************************ -->            
 <div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>	
+   <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>   
 
 </div>
   
