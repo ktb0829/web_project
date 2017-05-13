@@ -195,7 +195,7 @@ return false;
                   <li><a href="#">도서관 이용 안내</a></li><br/>   
                   <li><a href="#">도서 기부</a></li><br/>
                   <li><a href="#">독서 커뮤니티</a></li><br/><br/>
-                  </ul>                   
+                  </ul>
                </li>
                <li class="main_menu"><a href="library.library?cmd=main-search">자료검색</a><br/>
                   <ul id="hide">
@@ -239,11 +239,8 @@ return false;
             <a href="#" class="button next-button"><span class="icon icon-double-angle-right"></span></a>
             <div class="viewer">
 
-
-		
-
-
          <div class="searchbox">
+         <form method="post" name="main_search" id="main_search" action="library.library?cmd=search">
          	<select id='select' class="select" name="select" title="검색구분 선택">
          		<option value="제목" selected="selected">제목</option>
                 <option value="저자">저자</option>
@@ -252,14 +249,9 @@ return false;
             <input type="text" id="kwd" name="value" size="63" />
          </div>
          <div class="searchbtn">
-            <button type="button" id="searchbtn" name="searchbtn">
-               검색</button>
+            <input type="submit" id="searchbtn" name="value" value="검색">
+         </form>
          </div>
-
-
-
-
-
 
          <div class="reel">
                   <div class="slide">

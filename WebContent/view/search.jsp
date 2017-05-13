@@ -7,6 +7,14 @@
 		flag = false;
 	}
 	List list = (List)request.getAttribute("list");
+	
+	String select = request.getParameter("select");
+	String value = request.getParameter("value");
+	
+	if(select == null || value == null) {
+		select = "제목";
+		value = "검색어를 입력하세요.";
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -22,6 +30,7 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+	$('#select').val($('#hide_select').val());
     //검색어 입력
     $("div.srch input.input_txt").focus(function() {
        if ($(this).val() == '검색어를 입력하세요.') {
@@ -208,9 +217,10 @@ $(document).ready(function() {
                            <option value="저자">저자</option>
                            <option value="출판사">출판사</option>
                            
-                        </select> <input id="akcKwd" name = "input" type="text" class="input_txt"
-                           value="검색어를 입력하세요." title="검색어입력">
+                        </select> <input id="akcKwd" name = "value" type="text" class="input_txt"
+                           value="<%=value %>" title="검색어입력">
                            <input type="submit" value="검색" />
+                           <input type="hidden" id="hide_select" value="<%=select %>" />
                      </div>
                   </div>
             </form>

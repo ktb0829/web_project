@@ -18,7 +18,7 @@ public class CommandList implements Command
 	public String execute( HttpServletRequest request ) throws CommandException {
 		try {
 			String select = request.getParameter("select");
-			String value = request.getParameter("input");
+			String value = request.getParameter("value");
 			
 			LibraryRepository repo = new LibraryRepository();
 			List list = null;

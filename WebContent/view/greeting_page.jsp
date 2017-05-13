@@ -23,7 +23,7 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" />
- 
+
 </head>
 <body>
 
@@ -197,7 +197,7 @@
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
 						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
-</div> 
+</div>
 				
 				
 <!-- ************************************************************************ -->				
