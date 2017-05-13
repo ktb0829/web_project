@@ -91,13 +91,13 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		return list;
 	}
 	
-	public void updateRentState(String bookNum) {
+	public void updateRentStateReserve(String bookNum) {
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{	
 			HashMap map = new HashMap();
 			map.put("bookNum", bookNum);
 			
-			int result = sqlSess.update(namespace+".updateRentState", map);
+			int result = sqlSess.update(namespace+".updateRentStateReserve", map);
 			
 			if( result > 0 ) {
 				sqlSess.commit();

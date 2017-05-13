@@ -55,7 +55,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	ORDER BY book_num
 </select>
 
-<update id="updateRentState" parameterType="hashmap">
+<update id="updateRentStateReserve" parameterType="hashmap">
 	UPDATE rent
 	SET rent_state = '예약중'
 	WHERE num = #{bookNum}

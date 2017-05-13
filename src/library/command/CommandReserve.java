@@ -18,7 +18,7 @@ public class CommandReserve implements Command
 		try {
 			String bookNum = request.getParameter("bookNum");
 			LibraryRepository repo = new LibraryRepository();
-			repo.updateRentState(bookNum);
+			repo.updateRentStateReserve(bookNum);
 			
 			repo.reserve(bookNum);
 			
