@@ -151,7 +151,7 @@ $(document).ready(function() {
          			<li><a href="#">도서관 이용 안내</a></li><br/>	
          			<li><a href="#">도서 기부</a></li><br/>
          			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
-         			</ul>          			
+         			</ul>           			
          		</li>
          		<li class="main_menu"><a href="#">자료검색</a><br/>
          			<ul id="hide">
