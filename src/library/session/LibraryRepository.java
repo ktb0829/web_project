@@ -91,6 +91,52 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		return list;
 	}
 	
+	public void updateRentState(String bookNum) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{	
+			HashMap map = new HashMap();
+			map.put("bookNum", bookNum);
+			
+			int result = sqlSess.update(namespace+".updateRentState", map);
+			
+			if( result > 0 ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}	
+		} finally {
+			sqlSess.close();
+		}
+	}
+	
+	public void reserve(String bookNum) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{	
+			HashMap map = new HashMap();
+			map.put("bookNum", bookNum);
+			
+			String rentNum = sqlSess.selectOne(namespace+".selectRentNumByBookNum", map);
+			
+			if( rentNum != null ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+			
+			map.put("rentNum", rentNum);
+			
+			int result = sqlSess.insert(namespace+".reserve", map);
+			
+			if( result > 0 ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}	
+		} finally {
+			sqlSess.close();
+		}
+	}
+	
 	
 //	public Board insertBoard(Board board) {
 //		// JDBC : Connection, Mybatis : SqlSession

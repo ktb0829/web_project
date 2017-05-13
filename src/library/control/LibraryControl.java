@@ -13,6 +13,7 @@ import library.command.Command;
 import library.command.CommandException;
 import library.command.CommandList;
 import library.command.CommandNull;
+import library.command.CommandReserve;
 
 public class LibraryControl extends HttpServlet{
 	private HashMap commandMap;
@@ -30,7 +31,7 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("home", new CommandNull("main.jsp") );
 		commandMap.put("main-search", new CommandNull("search.jsp") );
 		commandMap.put("search", new CommandList("search.jsp") );
-		commandMap.put("reserve", new CommandList("search.jsp") );
+		commandMap.put("reserve", new CommandReserve("search.jsp") );
 		commandMap.put("greeting_page", new CommandNull("greeting_page.jsp") );
 		
 //		commandMap.put("insert", new CommandInput("BoardView.jsp") );
@@ -42,7 +43,6 @@ public class LibraryControl extends HttpServlet{
 //		commandMap.put("modify", new CommandModify("BoardModify.jsp") );
 //		commandMap.put("reply-form", new CommandNull("BoardReplyForm.jsp") );
 //		commandMap.put("reply", new CommandReply("BoardReply.jsp") );
-		// �������� �߰��ϱ�
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

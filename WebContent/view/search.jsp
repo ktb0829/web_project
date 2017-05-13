@@ -42,6 +42,10 @@ $(document).ready(function() {
        }
     });
     
+    $('#reserve').click(function() {
+    	$('.signin').submit();
+    });
+    
     $('.reserve').click(function() {
     		$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
     		$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
@@ -89,7 +93,7 @@ $(document).ready(function() {
 
 <div id="login-box" class="login-popup">
 <a class="close"><img class="btn_close" title="Close Window" alt="Close" /></a>
-  <form method="post" class="signin">
+  <form method="post" class="signin" action="library.library?cmd=reserve">
         <fieldset class="textbox">
         <label class="bookNum">
         <span>책번호</span>
@@ -111,8 +115,7 @@ $(document).ready(function() {
         <span>장르</span>
         <input id="bookGenre" name="bookGenre" value="" type="text" autocomplete="on">
         </label>
-             
-        <button class="submit button" type="button">Reserve</button>
+        <button class='submit button' id='reserve' type='button'>RESERVE</button>
         </fieldset>
   </form>
 </div>

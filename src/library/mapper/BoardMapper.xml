@@ -55,6 +55,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	ORDER BY book_num
 </select>
 
+<update id="updateRentState" parameterType="hashmap">
+	UPDATE rent
+	SET rent_state = '예약중'
+	WHERE num = #{bookNum}
+</update>
+
+<insert id="reserve" parameterType="hashmap">
+	INSERT INTO reserve
+	VALUES (seq_reserve.nextval, '태범', #{rentNum}, sysdate, '예약중')
+</insert>
+
+<select id="selectRentNumByBookNum" parameterType="hashmap" resultType="String">
+	SELECT rent_num FROM rent WHERE num = #{bookNum}
+</select>
+
 <!-- <select id="getGroupId" resultType="int"> -->
 <!-- 	SELECT SEQ_GROUP_ID_ARTICLE.nextval as group_id FROM dual -->
 <!-- </select> -->
