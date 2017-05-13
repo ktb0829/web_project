@@ -4,16 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>인사말</title>
-
-<style type="text/css">
-#sub_print_1{
-	padding-left: 20px;
-	padding-top:40px;
-	padding-bottom: 30px;
-}
- 
-</style>
+<title>게시판 틀</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -21,40 +12,13 @@
 <script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" />
-<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+
+ 
 </head>
 <body>
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-
-
-   //인사말 버튼 눌렀을때 
-	$('#greeting').click(function(){
-     $(this).attr("href" ,"xxx.seonmi?cmd=greeting-page");
-	});
-   //시설현황 버튼 눌렀을때 
-   $('#facility').click(function(){
-     $(this).attr("href", 'xxx.seonmi?cmd=facility-page');
-   	});
-    
-   //자료현황 버튼 눌렀을때
-   $('#data').click(function(){
-	   
-	  $(this).attr("href", 'xxx.seonmi?cmd=data-page'); 
-   });
-   
-   //찾아오시는길 버튼 눌렀을때 
-   $('#load').click(function(){
-	  $(this).attr("href", 'xxx.seonmi?cmd=load-page'); 
-   });
-   
-   
-});
-</script>
 
 <div id="header-wrapper">
    <div id="header" class="container">
@@ -135,40 +99,65 @@ $(document).ready(function() {
    
 	   <div id="menu_bar"><br/>
 	   	 <ul>
-	        <li><a href="#" id="greeting" >인사말</a></li>
+	        <li><a href="#">열람실 좌석 현황</a></li>
 	        <li>|</li>
-	        <li><a href="#" id="facility">시설현황</a></li>
+	        <li><a href="#">자유게시판</a></li>
 	        <li>|</li>
-	        <li><a href="#" id="data">자료현황</a></li>
-	        <li>|</li>
-	        <li><a href="#" id="load">찾아 오시는 길</a></li>
+	        <li><a href="#">분실물센터</a></li>	        
 	    </ul>
 	   </div>
-	 
-	 <!-- 인사말  -->
-	 <!-- *********************************************************************** -->
-
-     <table width="700" border="0" cellspacing="0" cellpadding="2" id="sub_print">
+	   
+	   
+	  <!-- 본문 내용 -->
+	  <!-- *********************************************************************** -->
+	  <br/><br/>
+	  <table id="seat" width="650" border="0" cellspacing="10" cellpadding="0" align="center" class="bor_4" >
+<!-- 		    <caption>열람실 좌석현황</caption> -->
+        <tbody><tr> 
+          <td width="112"><a href="seat01.jsp" onclick="window.open(this.href,'1th','width=680,height=500');return false;"><img src="/web_project/images/1열람실.PNG" border="0" alt="1열람실 현황보기(새창)" value="1열람실 현황보기"></a></td>
+          <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">36</td>
+          <td width="8"><img align="absmiddle" alt=""></td>
+          <td class="seat_comm"><img align="absmiddle" alt="총좌석수">90</td>
+        </tr>
         <tr> 
-          <td id="sub_print_1"><img src="/web_project/images/자료현황.PNG" alt="" /></td>
-        </tr>
-
-        <tr>
-          <td style="line-height:22px;"><img src="/web_project/images/자료현황1.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="550" /> &nbsp;&nbsp;
-          <td style="line-height:22px;"><img src="/web_project/images/자료현황2.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="550" />  
-            </td>
+          <td colspan="4" class="line_gray" height="1"></td>
         </tr>
         <tr> 
-		  <table width="700" border="0" cellspacing="0" cellpadding="2">
-              <tr>
-<!--               <td style="line-height:22px;"><img src="/web_project/images/1층.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="500" /> -->
-              </tr>
-            </table>
+          <td><a href="seat02.jsp" onclick="window.open(this.href,'2th','width=680,height=500');return false;"><img src="/web_project/images/2열람실.PNG" border="0" alt="2열람실 현황보기(새창)"></a></td>
+          <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">49</td>
+          <td><img  align="absmiddle" alt=""></td>
+          <td class="seat_comm"><img  align="absmiddle" alt="총좌석수">120</td>
         </tr>
+        <tr> 
+          <td colspan="4" class="line_gray" height="1"></td>
+        </tr>
+        <tr> 
+          <td><a href="seat03.jsp" onclick="window.open(this.href,'3th','width=680,height=500');return false;" onkeypress="window.open(this.href,'3th','width=680,height=500');return false;">
+          <img src="/web_project/images/3열람실.PNG" border="0" alt="3열람실 현황보기(새창)"></a></td>
+          <td class="seat_comm green"><img  align="absmiddle" alt="잔여좌석">97</td>
+          <td><img align="absmiddle" alt=""></td>
+          <td class="seat_comm"><img  align="absmiddle" alt="총좌석수">120</td>
+        </tr>
+        <tr> 
+          <td colspan="4" class="line_gray" height="1"></td>
+        </tr>
+      </tbody></table>
+      <div>
+      <tr>
+      	<table width="500" border="0" cellspacing="0" cellpadding="2">
+      	<td>
+      	 <img src="/web_project/images/열람실내용.PNG">
+      	</td>
+      	</table>
+      	</tr>
+      </div>
+	  
+	  
+	  <!-- *********************************************************************** -->
 
-     </table>
-	 
-	 <!-- *********************************************************************** -->
+
+
+
 	 <div id="menu_service">
 		<div id="featured_" class="container">
 			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
@@ -215,7 +204,7 @@ $(document).ready(function() {
 						<li><a href="http://www.nl.go.kr/nl/index.jsp"><img src="/web_project/images/국립중앙도서관.PNG"></img></a></li>
 						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
-</div>
+</div> 
 				
 				
 <!-- ************************************************************************ -->				
