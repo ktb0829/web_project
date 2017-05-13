@@ -34,6 +34,11 @@ public class TestControl extends HttpServlet  {
     	commandMap.put("main-page", new CommandInput("main.jsp"));
     	commandMap.put("login-page",new CommandNull("main.jsp"));
     	commandMap.put("login-do", new CommandLoginCheck("main.jsp"));
+    	commandMap.put("greeting-page",new CommandNull("greeting_page.jsp"));
+    	commandMap.put("facility-page", new CommandNull("facility_page.jsp"));
+    	commandMap.put("data-page", new CommandNull("data_page.jsp"));
+    	commandMap.put("load-page", new CommandNull("load_page.jsp"));
+    	
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
