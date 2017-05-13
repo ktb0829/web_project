@@ -246,8 +246,6 @@ $(document).ready(function() {
                 	  if(book.getRentState()==null)
                 	  {
                 		  state = "대여가능";                		  
-                	  } else {
-                		  state = book.getRentState();
                 	  }
                   %>
                   	<tr>
