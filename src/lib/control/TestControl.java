@@ -38,6 +38,9 @@ public class TestControl extends HttpServlet  {
     	commandMap.put("facility-page", new CommandNull("facility_page.jsp"));
     	commandMap.put("data-page", new CommandNull("data_page.jsp"));
     	commandMap.put("load-page", new CommandNull("load_page.jsp"));
+    	commandMap.put("1th-page", new CommandNull("1th.jsp"));
+    	commandMap.put("2th-page", new CommandNull("2th.jsp"));
+    	commandMap.put("3th-page", new CommandNull("3th.jsp"));
     	
     }
     
