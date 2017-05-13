@@ -20,7 +20,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title></title>
+<title>KOSTA LIBRARY</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -42,9 +42,7 @@ $(document).ready(function() {
        }
     });
     
-    
-    $('#reserve').click(function() {
-    	$('#reserve').each(function() {
+    $('.reserve').click(function() {
     		$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
     		$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
     		$('#bookWriter').val($(this).parent().parent().find('td:eq(2)').text());
@@ -69,7 +67,6 @@ $(document).ready(function() {
         	// Add the mask to body
         	$('body').append('<div id="mask"></div>');
         	$('#mask').fadeIn(300);
-    	});
     });
     // When clicking on the button close or the mask layer the popup closed
     $('.close, #mask').bind('click', function() { 
@@ -251,24 +248,24 @@ $(document).ready(function() {
             			<th> 글쓴이 </th>
             			<th> 출판사 </th>
             			<th> 장  르 </th>
-            			<th> 위  치 </th>
             			<th> 상  태 </th>
             			<th> 예  약 </th>
          			</tr>
-         			</thead>                  
+         			</thead>       
                   <%
                 	  for ( int i = 0 ; i < list.size() ; i++ ) {
                 	  Book book = (Book)list.get(i);
-                  %> 
+                  %>
                   	<tr>
             			<td><%=book.getBookNum() %></td>
             			<td><%=book.getBookTitle() %></td>
             			<td><%=book.getBookWriter() %></td>
             			<td><%=book.getBookPublisher() %></td>
             			<td><%=book.getBookGenre() %></td>
-            			<td><%=book.getBookLocation() %> </td>
-            			<td><%=book.getBookState() %> </td>
-            			<td><input type='button' id='reserve' value="예약" /></td>
+            			<td><%=book.getRentState() %></td>
+            			<%  if ( book.getRentState() != null) {
+            				if ( book.getRentState().equals("대여중") ) { %><td><input type='button' class='reserve' value="예약" /></td>
+            			<% } } %>
          			</tr>
                   <% } } %>
                   </table>
@@ -284,7 +281,6 @@ $(document).ready(function() {
 
 <div class="sbox1">
 					<ul class="style2">
-					
 						<li><a href="http://www.riss.kr/index.do"><img src="/web_project/images/riss.PNG"></img></a></li>
 						<li><a href="https:www.naver.com"><img src="/web_project/images/naver.PNG"></img></a></li>
 						<li><a href="http://www.nanet.go.kr/main.do"><img src="/web_project/images/국회도서관.PNG"></img></a></li>

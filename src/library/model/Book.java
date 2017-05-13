@@ -6,23 +6,21 @@ public class Book {
 	private String bookWriter;
 	private String bookPublisher;
 	private String bookGenre;
-	private String bookLocation;
 	private String recoNum;
-	private String bookState;
+	private String rentState;
 	
 	public Book() {}
 
 	public Book(String bookNum, String bookTitle, String bookWriter, String bookPublisher, String bookGenre,
-			String bookLocation, String recoNum, String bookState) {
+			String recoNum, String rentState) {
 		super();
 		this.bookNum = bookNum;
 		this.bookTitle = bookTitle;
 		this.bookWriter = bookWriter;
 		this.bookPublisher = bookPublisher;
 		this.bookGenre = bookGenre;
-		this.bookLocation = bookLocation;
 		this.recoNum = recoNum;
-		this.bookState = bookState;
+		this.rentState = rentState;
 	}
 
 	public String getBookNum() {
@@ -65,14 +63,6 @@ public class Book {
 		this.bookGenre = bookGenre;
 	}
 
-	public String getBookLocation() {
-		return bookLocation;
-	}
-
-	public void setBookLocation(String bookLocation) {
-		this.bookLocation = bookLocation;
-	}
-
 	public String getRecoNum() {
 		return recoNum;
 	}
@@ -81,11 +71,11 @@ public class Book {
 		this.recoNum = recoNum;
 	}
 
-	public String getBookState() {
-		return bookState;
+	public String getRentState() {
+		return rentState;
 	}
 
-	public void setBookState(String bookState) {
-		this.bookState = bookState;
-	}
+	public void setRentState(String rentState) {
+		this.rentState = rentState;
+	}	
 }

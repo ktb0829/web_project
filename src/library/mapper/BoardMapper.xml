@@ -23,19 +23,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- </insert> -->
 
 <select id="selectBoardByTitle" parameterType="hashmap" resultType="lib_book">
-	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
-	FROM book								  
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, reco_num, rent_state
+	FROM book, rent
 	<where>
 		<if test=" bookTitle != null ">
-			book_title like '%'||#{bookTitle}||'%'
+			book_title like '%'||#{bookTitle}||'%' AND book_num = num(+)
 		</if>
 	</where>
 	ORDER BY book_num
 </select>
 
 <select id="selectBoardByWriter" parameterType="hashmap" resultType="lib_book">
-	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
-	FROM book								  
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, reco_num
+	FROM book
 	<where>
 		<if test=" bookWriter != null ">
 			book_writer like '%'||#{bookWriter}||'%'
@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 <select id="selectBoardByPublisher" parameterType="hashmap" resultType="lib_book">
-	SELECT book_num, book_title, book_writer, book_publisher, book_genre, book_location, reco_num, book_state
+	SELECT book_num, book_title, book_writer, book_publisher, book_genre, reco_num
 	FROM book								  
 	<where>
 		<if test=" bookPublisher != null ">
