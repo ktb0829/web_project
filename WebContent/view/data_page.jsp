@@ -27,16 +27,15 @@
 </head>
 <body>
 
-
 <script type="text/javascript">
 
 $(document).ready(function() {
 
-	//인사말 버튼 눌렀을때 
-   $('#greeting').click(function(){
-	$(this).attr("href" ,"xxx.seonmi?cmd=greeting-page");
+
+   //인사말 버튼 눌렀을때 
+	$('#greeting').click(function(){
+     $(this).attr("href" ,"xxx.seonmi?cmd=greeting-page");
 	});
-	
    //시설현황 버튼 눌렀을때 
    $('#facility').click(function(){
      $(this).attr("href", 'xxx.seonmi?cmd=facility-page');
@@ -51,9 +50,6 @@ $(document).ready(function() {
    $('#load').click(function(){
 	  $(this).attr("href", 'xxx.seonmi?cmd=load-page'); 
    });
-   
-   
-   
    
    
 });
@@ -119,7 +115,7 @@ $(document).ready(function() {
          			<ul id="hide">
          			<br/>
          			<li><a href="#">인사말</a></li><br/>	
-         			<li><a >시설현황</a></li><br/>
+         			<li><a href="#">시설현황</a></li><br/>
          			<li><a href="#">자료현황</a></li><br/>
          			<li><a href="#">찾아오시는 길</a></li><br/><br/>
          			</ul>
@@ -144,7 +140,7 @@ $(document).ready(function() {
 	        <li>|</li>
 	        <li><a href="#" id="data">자료현황</a></li>
 	        <li>|</li>
-	        <li><a href="#" id="load">찾아 오시는 길</a></li>	        
+	        <li><a href="#" id="load">찾아 오시는 길</a></li>
 	    </ul>
 	   </div>
 	 
@@ -153,29 +149,18 @@ $(document).ready(function() {
 
      <table width="700" border="0" cellspacing="0" cellpadding="2" id="sub_print">
         <tr> 
-          <td id="sub_print_1"><img src="/web_project/images/인사말.PNG" alt="" /></td>
+          <td id="sub_print_1"><img src="/web_project/images/자료현황.PNG" alt="" /></td>
         </tr>
 
         <tr>
-          <td style="line-height:22px;"><img src="/web_project/images/인사말2.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="90" />
-		    <p><font color="black" size="2"><b>kosta 도서관 홈페이지 방문을 진심으로 환영합니다.</b></font> 
-            <p><font size="2" face="굴림체">&nbsp;&nbsp;kosta 도서관은 1922년 중구 율목동에서 '시립도서관'으로 개관하여 인천의 대표도서관으로<br>성장하기까지 인천시민의 지식과 지혜의 보고(寶庫)로 시민들과 함께 호흡해 왔으며 친숙한<br>문화공간으로서의 역할과 기능을 충실히 담당해 오고 있습니다.</font><p>
+          <td style="line-height:22px;"><img src="/web_project/images/자료현황1.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="550" /> &nbsp;&nbsp;
+          <td style="line-height:22px;"><img src="/web_project/images/자료현황2.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="550" />  
             </td>
-        </tr>
-        <tr>
-          <td style="line-height:22px;"><font size="2" face="굴림체">
-            &nbsp;&nbsp;또한, 시민들의 삶의 질 향상과 정서순화를 위해 평생학습 교육, 어린이 참여 프로그램, 문화행사,<br>영화상영 등 다양한 교육·문화 프로그램을 운영하여 시민 여러분의 적극적인 참여와 높은 호응을<br>얻고 있습니다.</font>
-          </td>
         </tr>
         <tr> 
 		  <table width="700" border="0" cellspacing="0" cellpadding="2">
               <tr>
-                <td valign="top" style="line-height:22px;"><font size="2" face="굴림체">
-				&nbsp;&nbsp;앞으로도 우리 kosta 도서관은 지식·정보의 전달자로서 시민<br>누구나 학습과 문화생활을 즐기고 정보를 공유하고 소통하는데<br>불편함이 없도록"<font color="blue">지식은 나누고</font>,<font color="green"> 행복은 더하는</font>" 종합문화<br>공간으로서의 역할을 성실히 수행할 것을 약속드립니다.<p>
-				시민 여러분의 따뜻한 관심과 많은 이용바랍니다.<p>
-				감사합니다.</font>
-                 </td>			  
-                <td><img src="/web_project/images/logo.png" alt="2014년 2월 인천광역시 kosta도서관장 이길주" /></td>			  
+<!--               <td style="line-height:22px;"><img src="/web_project/images/1층.PNG" alt="지식은 나누고 행복은 더하는 kosta 도서관" width="640" height="500" /> -->
               </tr>
             </table>
         </tr>
