@@ -28,12 +28,12 @@
 <meta name="description" content="" />
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/web_project/css/loginpopup.css">
+<link rel="stylesheet" href="/web_project/css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-
 $(document).ready(function() {
 	$('#select').val($('#hide_select').val());
     //검색어 입력
@@ -89,7 +89,6 @@ $(document).ready(function() {
 
 </head>
 <body>
-
 <!--  login popup -->
 
 <div id="login-box" class="login-popup">
@@ -121,6 +120,7 @@ $(document).ready(function() {
         </fieldset>
   </form>
 </div>
+
 
 <div id="header-wrapper">
    <div id="header" class="container">
@@ -190,6 +190,9 @@ $(document).ready(function() {
          	</ul>         	
          </div>   
      </div>
+</div>
+</div>
+
       
      <div id="background_img">
      	<ul>     	
@@ -245,6 +248,7 @@ $(document).ready(function() {
          </div>
       </div>
    </div>
+</div>
 
 
    <!-- 검색 리스트가 나오는 부분  -->
@@ -276,12 +280,8 @@ $(document).ready(function() {
                   <%
                 	  for ( int i = 0 ; i < list.size() ; i++ ) {
                 	  Book book = (Book)list.get(i);
-                	  if(book.getRentState()==null)
-                	  {
-                		  state = "대여가능";                		  
-                	  } else {
-                		  state = book.getRentState();
-                	  }
+                	  if(book.getRentState()==null) state = "대여가능";                		  
+                	  else state = book.getRentState();
                   %>
                   	<tr>
             			<td><%=book.getBookNum() %></td>
@@ -290,9 +290,8 @@ $(document).ready(function() {
             			<td><%=book.getBookPublisher() %></td>
             			<td><%=book.getBookGenre() %></td>
             			<td><%=state %></td>
-            			<%  if ( book.getRentState() != null) {
-            				if ( book.getRentState().equals("대여중") ) { %><td><input type='button' class='reserve' value="예약" /></td>
-            			<% } } %>
+            			<%  if ( state.equals("대여중") ) { %><td><input type='button' class='reserve' value="예약" /></td>
+            			<% } %>
          			</tr>
                   <% } } %>
                   </table>
@@ -351,6 +350,8 @@ $(document).ready(function() {
 						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
 </div> 
+				
+				
 <!-- ************************************************************************ -->				
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
