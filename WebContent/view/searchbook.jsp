@@ -28,7 +28,7 @@
 <meta name="description" content="" />
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/web_project/css/loginpopup.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -264,7 +264,7 @@ $(document).ready(function() {
                   else 
                   {	%>
                                       
-                    <table class="table" border="0">
+                    <table class="table" border="0" cellspacing="0" cellpadding="10">
                   	<thead>
          			<tr>
             			<th> 책번호 </th>

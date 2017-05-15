@@ -63,7 +63,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="reserve" parameterType="hashmap">
 	INSERT INTO reserve
-	VALUES (seq_reserve.nextval, '태범', #{rentNum}, sysdate, '예약중')
+	VALUES (seq_reserve.nextval, '태범', #{rentNum}, to_char(sysdate, 'YYYY-mm-dd'), '예약중')
 </insert>
 
 <select id="selectRentNumByBookNum" parameterType="hashmap" resultType="String">
@@ -75,7 +75,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 <select id="selectReserveById" parameterType="hashmap" resultType="reserve">
-	SELECT reserve.reserve_num, reserve.id, book.book_num, book.book_title, reserve.reserve_date, rent.return_schedule, reserve.reserve_state
+	SELECT reserve.reserve_num, reserve.id, book.book_num, book.book_title, to_char(reserve.reserve_date, 'YYYY-MM-DD') reserve_date, to_char(rent.return_schedule, 'YYYY-MM-DD') return_schedule, reserve.reserve_state
 	FROM reserve, rent, book
 	WHERE reserve.id = #{id} AND reserve.RENT_NUM = rent.RENT_NUM AND rent.num = book.BOOK_NUM
 </select>
