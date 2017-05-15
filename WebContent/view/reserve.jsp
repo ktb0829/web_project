@@ -30,7 +30,6 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="/web_project/css/loginpopup.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -89,38 +88,6 @@ $(document).ready(function() {
 
 </head>
 <body>
-
-<!--  login popup -->
-
-<div id="login-box" class="login-popup">
-<a class="close"><img class="btn_close" title="Close Window" alt="Close" /></a>
-  <form method="post" class="signin">
-        <fieldset class="textbox">
-        <label class="bookNum">
-        <span>책번호</span>
-        <input id="bookNum" name="bookNum" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookTitle">
-        <span>책제목</span>
-        <input id="bookTitle" name="bookTitle" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookWriter">
-        <span>글쓴이</span>
-        <input id="bookWriter" name="bookWriter" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookPublisher">
-        <span>출판사</span>
-        <input id="bookPublisher" name="bookPublisher" value="" type="text" autocomplete="on">
-        </label>
-        <label class="bookGenre">
-        <span>장르</span>
-        <input id="bookGenre" name="bookGenre" value="" type="text" autocomplete="on">
-        </label>
-             
-        <button class="submit button" type="button">Reserve</button>
-        </fieldset>
-  </form>
-</div>
 
 <div id="header-wrapper">
    <div id="header" class="container">
@@ -279,8 +246,6 @@ $(document).ready(function() {
                 	  if(book.getRentState()==null)
                 	  {
                 		  state = "대여가능";                		  
-                	  } else {
-                		  state = book.getRentState();
                 	  }
                   %>
                   	<tr>
@@ -351,6 +316,8 @@ $(document).ready(function() {
 						<li><a href="http://www.google.com"><img src="/web_project/images/google.PNG"></img></a></li>
 					</ul>
 </div> 
+				
+				
 <!-- ************************************************************************ -->				
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
