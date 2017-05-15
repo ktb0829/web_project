@@ -46,7 +46,7 @@ public class CommentRepository {
 			String id = sqlSess.selectOne(namespace+".loginCheck", map );
 			if(id!=null) return id;
 			else{
-				return "loginFaile";
+				return "loginFail";
 			}
 			
 		}finally{

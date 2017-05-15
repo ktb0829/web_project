@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 
@@ -25,12 +24,11 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 <script src="/web_project/js/jquery.flexslider.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web_project/js/jquery.session.js"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
-
-
 
 <script type="text/javascript">
 
@@ -43,39 +41,25 @@ $('#btnlogout').click(function(){
 });
 
 function loginCheck(){
-   
    $.ajax({
-      
       url:'login.seonmi?cmd=login-do',
       type:'post',
       data:{
-         
            username:$('#username').val(),
            password:$('#password').val()
       },
       dataType:'text',
       success:function(data){
-            
          if( data.trim() =='loginFaile'){
-            
             alert('로그인 실패');
-            
          }else{
-            
-        	
-        	
             $('#mask , .login-popup').fadeOut(300 , function() {
                 $('#mask').remove();  
-                
-       
-                
                $('#login').text('LOGOUT'); //값 바꾸어줌
-
             }); 
          }
       },
       error : function(request, status , error) {
-         
           alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
       }
             
@@ -151,8 +135,6 @@ $(document).ready(function() {
    //로그인 버튼 눌렀을때 팝업창으로 로그인 띄우기 
 
    $('#login').click(function(){
-	 
-	   
 	   if(  $('#login').text() == 'LOGIN'){
 		 //Getting the variable's value from a link 
 		    var loginBox = $(this).attr('href');
@@ -222,10 +204,6 @@ $(document).ready(function() {
 
 </script>
 <!--  end login popup  -->
-
-
-
-
 
 <div id="header-wrapper">
    <div id="header" class="container">

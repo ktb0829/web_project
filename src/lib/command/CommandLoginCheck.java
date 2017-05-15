@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import lib.session.CommentRepository;
 
@@ -13,7 +14,7 @@ public class CommandLoginCheck implements Command {
 	
 	public CommandLoginCheck(String next) {
 
-		this.next=next;
+		this.next=next; 
 	}
 	
 	@Override
@@ -26,7 +27,12 @@ public class CommandLoginCheck implements Command {
 		CommentRepository repo = new CommentRepository();
 		String id = repo.loginCheck(username,password);
 		
-		 try {
+		if( !id.equals("loginFail")) {
+		HttpSession session = request.getSession();
+		session.setAttribute("id",id);
+		}
+		
+		try {
 			response.getWriter().print(id);
 		} catch (IOException e) {
 			throw new CommandException();
