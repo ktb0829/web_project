@@ -13,7 +13,7 @@
 
 <style type="text/css">
 #sub_print_1{
-	padding-left: 20px;
+	padding-left: 20px;n
 	padding-top:40px;
 	padding-bottom: 30px;
 }

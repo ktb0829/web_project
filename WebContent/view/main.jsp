@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% 
+	System.out.println(session.getAttribute("id"));
+%>
 <!DOCTYPE html>
 <html>
 
@@ -34,9 +37,12 @@
 
 $(document).ready(function(){
 $('#btnlogout').click(function(){
+
+
 	$('.logout-popup').fadeOut();
 	$("#mask").remove();
 	$('#login').text('LOGIN');
+	$(location).attr("href", 'xxx.seonmi?cmd=logout-page');
 });
 });
 

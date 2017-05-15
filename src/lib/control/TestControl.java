@@ -14,6 +14,7 @@ import lib.command.CommandException;
 import lib.command.CommandInput;
 import lib.command.CommandLoginCheck;
 import lib.command.CommandNull;
+import lib.command.CommandRemoveSession;
 
 public class TestControl extends HttpServlet  {
 	private static final long serialVersionUID = 1L;
@@ -42,6 +43,8 @@ public class TestControl extends HttpServlet  {
     	commandMap.put("2th-page", new CommandNull("2th.jsp"));
     	commandMap.put("3th-page", new CommandNull("3th.jsp"));
     	commandMap.put("smain-page",new CommandNull("main.jsp"));
+    	commandMap.put("logout-page",new CommandRemoveSession("main.jsp"));
+    	
     	
     }
     
