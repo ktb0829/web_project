@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -14,11 +15,23 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
  
+ <script type="text/javascript">
+
+$(document).ready(function(){
+	
+
+$('#smain-page').click(function(){
+      //회원가입 화면 전환 
+      alert("확인");
+      $(location).attr("href", 'xxx.seonmi?cmd=login-page');
+   
+	});
+});
+</script>
 
 
 </head>
 <body>
-
 
 
  <div id = "signup" class="col-md-12">
@@ -94,22 +107,15 @@
             	</label>
             	<br />
 			</div> <br/>
-		</div>
+		</div>          
           
-          
-<!--           <label class="col-sm-3 control-label" for="inputAgree">약관 동의</label> -->
-<!--             <div class="col-sm-6" data-toggle="buttons"> -->
-<!--               <label class="btn btn-warning active"> -->
-<!--                 <input id="agree" type="checkbox" autocomplete="off" chacked> -->
-<!--                   <span class="fa fa-check"></span> -->
-<!--               </label> -->
-<!--               <a href="#">이용약관</a> 에 동의 합니다. -->
-<!--             </div> -->
-<!--           </div> -->
+
         <div class="form-group">
           <div class="col-sm-12 text-center">
             <button class="btn btn-primary" type="submit">회원가입<i class="fa fa-check spaceLeft"></i></button>
-            <button class="btn btn-danger" type="submit">가입취소<i class="fa fa-times spaceLeft"></i></button>
+       
+            <input type="button"  id="smain-page" class="btn btn-danger" value="가입취소"><i class="fa fa-times spaceLeft"></i>
+            
           </div>
           
           </div>

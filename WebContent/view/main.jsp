@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" href="/web_project/css/login.css">
 <link rel="stylesheet" href="/web_project/css/loginpopup.css">
+<link rel="stylesheet" href="/web_project/css/logoutpopup.css">
 <link rel="stylesheet" href="/web_project/css/flexslider.css">
 <link rel="stylesheet" href="/web_project/css/defaulthee.css">
 
@@ -28,7 +29,19 @@
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
+
+
+
 <script type="text/javascript">
+
+$(document).ready(function(){
+$('#btnlogout').click(function(){
+	$('.logout-popup').fadeOut();
+	$("#mask").remove();
+	$('#login').text('LOGIN');
+});
+});
+
 function loginCheck(){
    
    $.ajax({
@@ -49,11 +62,15 @@ function loginCheck(){
             
          }else{
             
+        	
+        	
             $('#mask , .login-popup').fadeOut(300 , function() {
                 $('#mask').remove();  
                 
+       
+                
                $('#login').text('LOGOUT'); //값 바꾸어줌
-               
+
             }); 
          }
       },
@@ -68,6 +85,8 @@ function loginCheck(){
 
 </script>
 <body>
+
+
 <!--  ********Seonmi****** -->
 
 <!-- All the files that are required -->
@@ -76,6 +95,20 @@ function loginCheck(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+<!--  logout popup -->
+
+<div id="logout-box" class="logout-popup">
+<a href="#" class="close"><img  class="btn_close" title="Close Window" alt="Close" /></a>
+  <form method="post" class="logout">
+        <fieldset class="textbox">
+        <label class="logout">
+        <span>로그아웃 하시겠습니까?</span>
+        <input id="btnlogout" name="logout" value="logout" type="button" autocomplete="on" >
+        </label>
+       </fieldset>
+       </form>
+       </div>
+       
 
 <!--  login popup -->
 
@@ -103,61 +136,94 @@ function loginCheck(){
 
 <script type="text/javascript">
 
+
 $(document).ready(function() {
 
-
+	
    //sign up 버튼 눌렀을때 
    $('#sign').click(function(){
       //회원가입 화면 전환 
       $(this).attr("href", 'xxx.seonmi?cmd=sign-page');
    
-});
+	});
 
    
    //로그인 버튼 눌렀을때 팝업창으로 로그인 띄우기 
-   
-   
-   $('#login').click(function() {
-          
+
+   $('#login').click(function(){
+	 
+	   
+	   if(  $('#login').text() == 'LOGIN'){
+		 //Getting the variable's value from a link 
+		    var loginBox = $(this).attr('href');
+		  
+		    //Fade in the Popup
+		    $('.login-popup').fadeIn(300);        
+		   // $('.logout-popup').hide();        
+		    
+		    //Set the center alignment padding + border see css style
+		    var popMargTop = ($(loginBox).height() + 24) / 2; 
+		    var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		    
+		    $(loginBox).css({ 
+		        'margin-top' : -popMargTop,
+		        'margin-left' : -popMargLeft
+		    });
+		    
+		    // Add the mask to body
+		    $('body').append('<div id="mask"></div>');
+		    $('#mask').fadeIn(300);
+		    
+		 // When clicking on the button close or the mask layer the popup closed
+			$('a.close, #mask').bind('click', function() { 
+			  $('#mask , .login-popup').fadeOut(300 , function() {
+			    $('#mask').remove();  
+				}); 
+			return false;
+			});
+		    
+	   }else if(  $('#login').text() == 'LOGOUT' ){
+		   
+
+		   //Getting the variable's value from a link 
+		    var logoutBox = $(this).attr('href');
+		  
+		    //Fade in the Popup
+		    $('.logout-popup').fadeIn(300);        
+		            
+		    
+		    //Set the center alignment padding + border see css style
+		    var popMargTop = ($(logoutBox).height() + 24) / 2; 
+		    var popMargLeft = ($(logoutBox).width() + 24) / 2; 
+		    
+		    $(logoutBox).css({ 
+		        'margin-top' : -popMargTop,
+		        'margin-left' : -popMargLeft
+		    });
+		    
+		    // Add the mask to body
+		    $('body').append('<div id="mask"></div>');
+		    $('#mask').fadeIn(300);
+		    
+		 // When clicking on the button close or the mask layer the popup closed
+			$('a.close, #mask').bind('click', function() { 
+			  $('#mask , .logout-popup').fadeOut(300 , function() {
+			    $('#mask').remove();  
+			    			    
+			    
+				}); 
+			return false;
+			});
+	   }
+	});	//end of #login.click(function
+
       
-
-   //Getting the variable's value from a link 
-    var loginBox = $(this).attr('href');
-  
-    //Fade in the Popup
-    $('.login-popup').fadeIn(300);        
-            
-    
-    //Set the center alignment padding + border see css style
-    var popMargTop = ($(loginBox).height() + 24) / 2; 
-    var popMargLeft = ($(loginBox).width() + 24) / 2; 
-    
-    $(loginBox).css({ 
-        'margin-top' : -popMargTop,
-        'margin-left' : -popMargLeft
-    });
-    
-    // Add the mask to body
-    $('body').append('<div id="mask"></div>');
-    $('#mask').fadeIn(300);
-    
-    return false;
-});
-
-      
-// When clicking on the button close or the mask layer the popup closed
-$('a.close, #mask').bind('click', function() { 
-  $('#mask , .login-popup').fadeOut(300 , function() {
-    $('#mask').remove();  
-}); 
-return false;
-});
-
-
-});
+});	//end of document ready
 
 </script>
 <!--  end login popup  -->
+
+
 
 
 
@@ -494,8 +560,7 @@ return false;
           $('.flexslider').flexslider({ 
              minItems: 1,
              maxItems: 1
-         
-          }); 
+                   }); 
        });       
        </script> 
       
