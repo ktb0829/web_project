@@ -924,6 +924,7 @@ ul.contact li a.icon-rss:before
 
 #wrapper2 
 {
+   overflow: scroll;
    background: #FFF;
    height: 900px;
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import library.session.LibraryRepository;
+import library.model.Reserve;
 
 public class CommandReserve implements Command 
 {
@@ -19,8 +20,12 @@ public class CommandReserve implements Command
 			String bookNum = request.getParameter("bookNum");
 			LibraryRepository repo = new LibraryRepository();
 			repo.updateRentStateReserve(bookNum);
-			
 			repo.reserve(bookNum);
+			
+			List<Reserve> list = null;
+			list = repo.reserveView(bookNum);
+			
+			request.setAttribute("reserve", list);
 			
 		}catch( Exception ex ){
 			throw new CommandException("CommandReserve.java < 예약시 > " + ex.toString() ); 

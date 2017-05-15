@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import library.model.Book;
+import library.model.Reserve;
 
 public class LibraryRepository {
 String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespace 하고 같아야함
@@ -109,6 +110,35 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		}
 	}
 	
+	public List <Reserve> reserveView(String bookNum) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		List list = null;
+		try{	
+			HashMap map = new HashMap();
+			map.put("bookNum", bookNum);
+			
+			String id = sqlSess.selectOne(namespace+".selectIdByBookNum", map);
+			
+			if( id != null ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+			map.put("id", id);
+			
+			list = (List)sqlSess.selectList(namespace+".selectReserveById", map);
+			
+			if( list.size() == 0 ) {
+				sqlSess.rollback();
+			} else {
+				sqlSess.commit();
+			}
+		} finally {
+			sqlSess.close();
+		}
+		return list;
+	}
+	
 	public void reserve(String bookNum) {
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{	
@@ -123,6 +153,7 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 				sqlSess.rollback();
 			}
 			
+			
 			map.put("rentNum", rentNum);
 			
 			int result = sqlSess.insert(namespace+".reserve", map);
@@ -136,87 +167,4 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 			sqlSess.close();
 		}
 	}
-	
-	
-//	public Board insertBoard(Board board) {
-//		// JDBC : Connection, Mybatis : SqlSession
-//		SqlSession sqlSess = getSelSessionFactory().openSession();
-//		try {
-//			int groupId = getGroupId();
-//			board.setGroupId(groupId);
-//			
-//			DecimalFormat dformat = new DecimalFormat("0000000000");
-//			board.setSequenceNo( dformat.format(groupId) + "999999");
-//			
-//			String statement = namespace + ".insertBoard";
-//			int result = sqlSess.insert(statement, board);
-//			
-//			if ( result > 0) {
-//				sqlSess.commit();
-//				// JDBC : auto-commit, Mybatis : not auto-commit
-//			} else {
-//				sqlSess.rollback();
-//			}
-//			
-//			int articleId = (Integer)sqlSess.selectOne(namespace+".getArticleId");
-//			sqlSess.commit();
-//			
-//			board.setArticleId(articleId);
-//		} finally {
-//			sqlSess.close();
-//		}
-//		return board;
-//	}
-//	
-//	public Board selectBoardById(int articleId) {
-//		SqlSession sqlSess = getSelSessionFactory().openSession();
-//		Board board = null;
-//		try {
-//			HashMap map = new HashMap();
-//			map.put("articleId", articleId);
-//			board = (Board)sqlSess.selectOne(namespace+".selectBoard", map);
-//			if( board == null ) {
-//				sqlSess.rollback();
-//			} else {
-//				sqlSess.commit();
-//			}
-//		} finally {
-//			sqlSess.close();
-//		}
-//		return board;
-//	}
-//	
-//	public int getGroupId()
-//	{
-//		SqlSession sqlSess = getSelSessionFactory().openSession();
-//		int groupId;
-//		try{
-//			groupId = (Integer)sqlSess.selectOne(namespace+".getGroupId");
-//			if( groupId == 0 ) {
-//				groupId = 1;
-//				sqlSess.rollback();
-//			} else { 
-//				sqlSess.commit();
-//			}
-//		} finally {
-//			sqlSess.close();
-//		}
-//		return groupId;
-//	}
-//	
-//	public List <Board> selectBoard() {
-//		SqlSession sqlSess = getSelSessionFactory().openSession();
-//		List list = null;
-//		try{
-//			list = (List)sqlSess.selectList(namespace+".selectBoard");
-//			if( list == null ) {
-//				sqlSess.rollback();
-//			} else { 
-//				sqlSess.commit();
-//			}
-//		} finally {
-//			sqlSess.close();
-//		}
-//		return list;
-//	}
 }

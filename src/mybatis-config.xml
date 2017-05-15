@@ -15,6 +15,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <typeAliases>
 	<typeAlias type="lib.model.Book" alias='book'/>
 	<typeAlias type="library.model.Book" alias='lib_book' />
+	<typeAlias type="library.model.Reserve" alias='reserve' />
 </typeAliases>
 
 <environments default="development">

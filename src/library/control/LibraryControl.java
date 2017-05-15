@@ -31,7 +31,7 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("home", new CommandNull("main.jsp") );
 		commandMap.put("main-search", new CommandNull("searchbook.jsp") );
 		commandMap.put("search", new CommandList("searchbook.jsp") );
-		commandMap.put("reserve", new CommandReserve("searchbook.jsp") );
+		commandMap.put("reserve", new CommandReserve("reserve.jsp") );
 		commandMap.put("greeting_page", new CommandNull("greeting_page.jsp") );
 		
 //		commandMap.put("insert", new CommandInput("BoardView.jsp") );

@@ -1,90 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.util.*"%>
-<%@ page import ="library.model.Book" %>
+<%@ page import ="library.model.Reserve" %>
 <%
-	String state = null;
 	boolean flag = true;
-	if( (List)request.getAttribute("list") == null ) {
+	if( (List)request.getAttribute("reserve") == null ) {
 		flag = false;
 	}
-	List list = (List)request.getAttribute("list");
-	
-	String select = request.getParameter("select");
-	String value = request.getParameter("value");
-	
-	if(select == null || value == null) {
-		select = "제목";
-		value = "검색어를 입력하세요.";
-	}
+	List list = (List)request.getAttribute("reserve");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>자료검색</title>
+<title>예약페이지</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-$(document).ready(function() {
-	$('#select').val($('#hide_select').val());
-    //검색어 입력
-    $("div.srch input.input_txt").focus(function() {
-       if ($(this).val() == '검색어를 입력하세요.') {
-          $(this).val('');
-       }
-    }).blur(function() {
-       if ($(this).val() == '') {
-          $(this).val('검색어를 입력하세요.');
-       }
-    });
-    
-    $('#reserve').click(function() {
-    	$('.signin').submit();
-    });
-    
-    $('.reserve').click(function() {
-    		$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
-    		$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
-    		$('#bookWriter').val($(this).parent().parent().find('td:eq(2)').text());
-    		$('#bookPublisher').val($(this).parent().parent().find('td:eq(3)').text());
-    		$('#bookGenre').val($(this).parent().parent().find('td:eq(4)').text());
-    		
-        	//Getting the variable's value from a link
-        	var loginBox = $(this).attr('href');
-      
-        	//Fade in the Popup
-        	$('.login-popup').fadeIn(300);
-               
-        	//Set the center alignment padding + border see css style
-        	var popMargTop = ($(loginBox).height() + 24) / 2; 
-       	 	var popMargLeft = ($(loginBox).width() + 24) / 2; 
-        
-        	$(loginBox).css({ 
-            	'margin-top' : -popMargTop,
-            	'margin-left' : -popMargLeft
-        	});
-        
-        	// Add the mask to body
-        	$('body').append('<div id="mask"></div>');
-        	$('#mask').fadeIn(300);
-    });
-    // When clicking on the button close or the mask layer the popup closed
-    $('.close, #mask').bind('click', function() { 
-      $('#mask, .login-popup').fadeOut(300 , function() {
-        $('#mask').remove();
-    });
-    return false;
-    });
-});
-</script>
 
 </head>
 <body>
@@ -168,55 +106,18 @@ $(document).ready(function() {
    
 	   <div id="menu_bar"><br/>
 	   	 <ul>
-	        <li><a href="#">도서 자료 검색</a></li>
+	        <li><a href="#">대출예약</a></li>
 	        <li>|</li>
-	        <li><a href="#">신작 자료</a></li>
+	        <li><a href="#">대출조회/연기</a></li>
 	        <li>|</li>
-	        <li><a href="#">대출 베스트</a></li>	        
+	        <li><a href="#">열람실 좌석 현황</a></li>	
+	        <li>|</li>
+	        <li><a href="#">택배 서비스</a></li>	        
 	    </ul>
 	   </div>
-	   
-	   
 	  <!-- 본문 내용 -->
 	  <!-- *********************************************************************** -->
-	  <br/><br/>
-	 <div id="wrapper">
-	<div id="page" class="container">
-		
-		<div class="lo_1000" id="contentsArea">
-      <!-- ========== 내용시작부분 ========== -->
-
-      <div class="sub_datasearch_collection">
-
-         <!--START 검색바  -->
-         <div class="datasearch_sub_main">
-            <form method="post" name="main_search" id="main_search" class="sub_search" action="library.library?cmd=search">
-                  <legend>검색</legend>
-                  <h5 class="section_sch_tlt">
-                     <span>소장자료</span>
-                  </h5>
-                  <div class="srchBox">
-                     <div class="srch">
-                        <select id='select' class="select" name="select" title="검색구분 선택">
-                           <option value="제목" selected="selected">제목</option>
-                           <option value="저자">저자</option>
-                           <option value="출판사">출판사</option>
-                           
-                        </select> <input id="akcKwd" name = "value" type="text" class="input_txt"
-                           value="<%=value %>" title="검색어입력">
-                           <input type="submit" value="검색" />
-                           <input type="hidden" id="hide_select" value="<%=select %>" />
-                     </div>
-                  </div>
-            </form>
-         </div>
-      </div>
-   </div>
-
-
-   <!-- 검색 리스트가 나오는 부분  -->
-   <br/>
-   <div class="search_line">
+	  <div class="search_line">
 
       <!-- 리스트창  -->
       <div class="search">
@@ -231,33 +132,27 @@ $(document).ready(function() {
                     <table class="table" border="0">
                   	<thead>
          			<tr>
+            			<th> 예약번호 </th>
+            			<th> 아이디 </th>
             			<th> 책번호 </th>
             			<th> 책제목 </th>
-            			<th> 글쓴이 </th>
-            			<th> 출판사 </th>
-            			<th> 장  르 </th>
-            			<th> 상  태 </th>
-            			<th> 예  약 </th>
+            			<th> 예약날짜 </th>
+            			<th> 반납예정일 </th>
+            			<th> 예약상태 </th>
          			</tr>
          			</thead>       
                   <%
                 	  for ( int i = 0 ; i < list.size() ; i++ ) {
-                	  Book book = (Book)list.get(i);
-                	  if(book.getRentState()==null)
-                	  {
-                		  state = "대여가능";                		  
-                	  }
+                	  Reserve reserve = (Reserve)list.get(i);
                   %>
                   	<tr>
-            			<td><%=book.getBookNum() %></td>
-            			<td><%=book.getBookTitle() %></td>
-            			<td><%=book.getBookWriter() %></td>
-            			<td><%=book.getBookPublisher() %></td>
-            			<td><%=book.getBookGenre() %></td>
-            			<td><%=state %></td>
-            			<%  if ( book.getRentState() != null) {
-            				if ( book.getRentState().equals("대여중") ) { %><td><input type='button' class='reserve' value="예약" /></td>
-            			<% } } %>
+            			<td><%=reserve.getReserveNum() %></td>
+            			<td><%=reserve.getId() %></td>
+            			<td><%=reserve.getBookNum() %></td>
+            			<td><%=reserve.getBookTitle() %></td>
+            			<td><%=reserve.getReserveDate() %></td>
+            			<td><%=reserve.getReturnSchedule() %></td>
+            			<td><%=reserve.getReserveState() %></td>
          			</tr>
                   <% } } %>
                   </table>
@@ -265,10 +160,13 @@ $(document).ready(function() {
                </div>
       </div>
    </div>
-</div>
-	</div>
+	  
 	  
 	  <!-- *********************************************************************** -->
+
+
+
+
 	 <div id="menu_service">
 		<div id="featured_" class="container">
 			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
@@ -324,5 +222,9 @@ $(document).ready(function() {
 </div>	
 
 </div>
+  
+
+     
+     
 </body>
 </html>

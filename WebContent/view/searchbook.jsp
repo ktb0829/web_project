@@ -31,7 +31,6 @@
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/web_project/css/loginpopup.css">
-<link rel="stylesheet" href="/web_project/css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -93,7 +92,7 @@ $(document).ready(function() {
 
 <div id="login-box" class="login-popup">
 <a class="close"><img class="btn_close" title="Close Window" alt="Close" /></a>
-  <form method="post" class="signin">
+  <form method="post" class="signin" action="library.library?cmd=reserve">
         <fieldset class="textbox">
         <label class="bookNum">
         <span>책번호</span>
@@ -116,7 +115,7 @@ $(document).ready(function() {
         <input id="bookGenre" name="bookGenre" value="" type="text" autocomplete="on">
         </label>
              
-        <button class="submit button" type="button">Reserve</button>
+        <button class="submit button" id="reserve" type="button">Reserve</button>
         </fieldset>
   </form>
 </div>
