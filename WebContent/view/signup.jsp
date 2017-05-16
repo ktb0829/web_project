@@ -116,10 +116,13 @@ $('#smain-page').click(function(){
 	  <!-- *********************************************************************** -->
 	  <div id = "signup" class="col-md-12">
         <div class="page-header">
-    	    <h1>회원가입 <small>Sign Up</small></h1>
+        	  <br/><br/>
+	     	    <h1>회원가입 <small>Sign Up</small></h1>
         </div>
         <form class="form-horizontal" method="post" action="xxx.seonmi?cmd=main-page">
-        
+  
+        <br/>
+        <br/>
         <div class="form-group">        	
           <label class="col-sm-3 control-label" for="inputEmail">ID</label>
         <div class="col-sm-6">
@@ -195,17 +198,19 @@ $('#smain-page').click(function(){
             <button class="btn btn-primary" type="submit">회원가입<i class="fa fa-check spaceLeft"></i></button>
        
             <input type="button"  id="smain-page" class="btn btn-danger" value="가입취소"><i class="fa fa-times spaceLeft"></i>
-            
+              <br/><br/>
+              <br/><br/>
+	  
           </div>
           
           </div>
         
         
         </form>
-          <hr>
+
         </div>
       </article>
-	  
+    
 	  
 	  <!-- *********************************************************************** -->
 
