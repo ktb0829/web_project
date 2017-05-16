@@ -80,4 +80,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE seat_num like 01||'%' AND seat_state = 'true'
 </select>
 
+<select id="rentListById" parameterType="hashmap" resultType="rent">
+	SELECT rent_num, num, book_title, to_char(rent_day, 'YYYY-MM-DD') rent_day, to_char(return_schedule, 'YYYY-MM-DD') return_schedule, rent_extension, rent_state
+	FROM rent, book
+	WHERE rent.num=book.book_num AND id = #{id}
+</select>
+
+<update id="extend" parameterType="hashmap">
+	UPDATE rent
+	SET rent_extension = '불가능' ,return_schedule = to_char(return_schedule+7, 'YYYY-MM-DD')
+	WHERE rent_num = #{rentNum}
+</update>
+
 </mapper>

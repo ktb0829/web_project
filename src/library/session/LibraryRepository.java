@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import library.model.Book;
+import library.model.Rent;
 import library.model.Reserve;
 import library.model.Seat;
 
@@ -244,5 +245,40 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 			sqlSess.close();
 		}
 		return seatNum;
+	}
+	
+	public List<Rent> rentListById(String id) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		List<Rent> list = null;
+		try{	
+			HashMap map = new HashMap();
+			map.put("id", id);
+			list = sqlSess.selectList(namespace+".rentListById", map);
+			
+			if( list != null ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
+		return list;
+	}
+	
+	public void extend(String rentNum) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{	
+			HashMap map = new HashMap();
+			map.put("rentNum", rentNum);
+			int result = sqlSess.update(namespace+".extend", map);
+			if( result > 0 ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
 	}
 }

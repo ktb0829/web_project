@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import library.command.Command;
 import library.command.CommandException;
+import library.command.CommandExtend;
 import library.command.CommandList;
 import library.command.CommandNull;
+import library.command.CommandRent;
 import library.command.CommandReserve;
 import library.command.CommandReserveMain;
 import library.command.CommandSeat;
@@ -41,17 +43,8 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("study", new CommandSeatNum("pageform2.jsp") );
 		commandMap.put("1th-page", new CommandSeat("1th.jsp") );
 		commandMap.put("1seat-input", new CommandSeatInput("1th.jsp") );
-		
-//		commandMap.put("insert", new CommandInput("BoardView.jsp") );
-//		commandMap.put("list", new CommandList("BoardList.jsp") );
-//		commandMap.put("view", new CommandView("BoardView.jsp") );
-//		commandMap.put("delete-form", new CommandNull("BoardDeleteForm.jsp") );
-//		commandMap.put("delete", new CommandDelete("BoardDelete.jsp") );
-//		commandMap.put("modify-form", new CommandView("BoardModifyForm.jsp") );
-//		commandMap.put("modify", new CommandModify("BoardModify.jsp") );
-//		commandMap.put("reply-form", new CommandNull("BoardReplyForm.jsp") );
-//		commandMap.put("reply", new CommandReply("BoardReply.jsp") );
-
+		commandMap.put("rent", new CommandRent("extend.jsp") );
+		commandMap.put("extend", new CommandExtend("extend.jsp") );
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -69,7 +62,7 @@ public class LibraryControl extends HttpServlet{
 		String nextPage = "";
 		String cmdKey	= request.getParameter("cmd");
 		if( cmdKey == null ){
-			cmdKey = "main-page";
+			cmdKey = "home";
 		}
 
 		Command cmd = null;
