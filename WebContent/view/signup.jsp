@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title></title> 
+<title>회원가입</title> 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -61,7 +61,6 @@ $('#smain-page').click(function(){
          			<ul id="hide">
          			<br/>
          			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
-         			<li><a href="#">설문조사</a></li><br/>
          			<li><a href="#">분실물 센터</a></li><br/>
          			<li><a href="#">자유게시판</a></li><br/><br/>
          			</ul> 
@@ -70,17 +69,15 @@ $('#smain-page').click(function(){
          			<ul id="hide">
          			<br/>
          			<li><a href="#">도서관 이용 안내</a></li><br/>	
-         			<li><a href="#">도서 기부</a></li><br/>
-       
-         			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
+         			<li><a href="#">도서 기부</a></li><br/>      
+         			<li><a href="#">이 달의 행사</a></li><br/><br/>
          			</ul>          			
          		</li>
          		<li class="main_menu"><a href="#">자료검색</a><br/>
          			<ul id="hide">
          			<br/>
          			<li><a href="#">도서 자료 검색</a></li><br/>	
-         			<li><a href="#">신작 자료</a></li><br/>
-         			<li><a href="#">대출 베스트</a></li><br/><br/>
+         			<li><a href="#">신작 자료</a></li><br/><br/>
          			</ul>
          		</li>
          		<li class="main_menu"><a href="#">온라인 서비스</a><br/>
@@ -88,7 +85,6 @@ $('#smain-page').click(function(){
          			<br/>
          			<li><a href="#">대출예약</a></li><br/>	
          			<li><a href="#">대출조회/연기</a></li><br/>
-         			<li><a href="#">오디오 북</a></li><br/>
          			<li><a href="#">열람실 좌석 현황</a></li><br/>
          			<li><a href="#">택배 서비스</a></li><br/><br/>
          			</ul>
@@ -113,12 +109,7 @@ $('#smain-page').click(function(){
      </div>
      
    <div id ="wrapper2">
-   
-	   <div id="menu_bar"><br/>
-	   	 <ul>
-	        
-	    </ul>
-	   </div>
+
 	   
 	   
 	  <!-- 본문 내용 -->

@@ -30,7 +30,7 @@ String projectName = "/web_project/view";
 <!-- BootStrap CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<title>게시판 틀</title>
+<title>게시판 list</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -38,10 +38,8 @@ String projectName = "/web_project/view";
 <script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="/web_project/css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/answerlist.css" rel="stylesheet" type="text/css" media="all" />
 
 
  
@@ -72,7 +70,6 @@ String projectName = "/web_project/view";
          			<ul id="hide">
          			<br/>
          			<li><a href="#">개선 및 건의사항</a></li><br/>	        			
-         			<li><a href="#">설문조사</a></li><br/>
          			<li><a href="#">분실물 센터</a></li><br/>
          			<li><a href="#">자유게시판</a></li><br/><br/>
          			</ul> 
@@ -81,17 +78,15 @@ String projectName = "/web_project/view";
          			<ul id="hide">
          			<br/>
          			<li><a href="#">도서관 이용 안내</a></li><br/>	
-         			<li><a href="#">도서 기부</a></li><br/>
-       
-         			<li><a href="#">독서 커뮤니티</a></li><br/><br/>
+         			<li><a href="#">도서 기부</a></li><br/>      
+         			<li><a href="#">이 달의 행사</a></li><br/><br/>
          			</ul>          			
          		</li>
          		<li class="main_menu"><a href="#">자료검색</a><br/>
          			<ul id="hide">
          			<br/>
          			<li><a href="#">도서 자료 검색</a></li><br/>	
-         			<li><a href="#">신작 자료</a></li><br/>
-         			<li><a href="#">대출 베스트</a></li><br/><br/>
+         			<li><a href="#">신작 자료</a></li><br/><br/>
          			</ul>
          		</li>
          		<li class="main_menu"><a href="#">온라인 서비스</a><br/>
@@ -99,7 +94,6 @@ String projectName = "/web_project/view";
          			<br/>
          			<li><a href="#">대출예약</a></li><br/>	
          			<li><a href="#">대출조회/연기</a></li><br/>
-         			<li><a href="#">오디오 북</a></li><br/>
          			<li><a href="#">열람실 좌석 현황</a></li><br/>
          			<li><a href="#">택배 서비스</a></li><br/><br/>
          			</ul>
@@ -127,11 +121,11 @@ String projectName = "/web_project/view";
    
 	   <div id="menu_bar"><br/>
 	   	 <ul>
-	        <li><a href="#">개선 및 건의사항</a></li>
+	        <li/><li><a href="#">개선 및 건의사항</a></li>
 	        <li>|</li>
 	        <li><a href="#">자유게시판</a></li>
 	        <li>|</li>
-	        <li><a href="#">분실물센터</a></li>	        
+	        <li><a href="#">분실물센터</a></li><li/>      
 	    </ul>
 	   </div>
 	   
