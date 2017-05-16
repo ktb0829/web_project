@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="DonateMapper">
+
+<resultMap type="donate" id="donateMap">
+ 	<result column="donate_num" property="donateNum"/>
+	<result column="id" property="id"/>
+	<result column="donation" property="donation"/>
+	<result column="donate_finish" property="donateFinish"/>
+	<result column="donate_title" property="donateTitle"/>
+	<result column="donate_content" property="donateContent"/>
+	<result column="donate_read_count" property="donateReadCount"/>
+	<result column="donate_day" property="donateDay"/>
+	<result column="donate_pic_path" property="donatePicPath"/>
+</resultMap>
+
+
+
+
+<!-- 부를 때 이름 = id=" "  -->
+ <select id="selectComment"  resultMap="donateMap">
+	 SELECT *
+	 FROM DONATE
+ </select>
+
+<insert id="insertComment" parameterType="donate" >
+	
+	INSERT INTO DONATE
+	VALUES( seq_donate.nextval, 'hyun', #{donation} ,#{donateFinish}, #{donateTitle},#{donateContent}, '0', sysdate, #{donatePicPath} )
+	
+</insert>
+
+ <select id="viewComment"  resultMap="donateMap">
+	 SELECT *
+	 FROM DONATE
+	 <where>
+	 	<if test="donateNum != null">
+	 		donate_Num = #{donateNum}
+	 	</if>
+	 </where>
+ </select>
+
+ 
+ <update id="modifyComment" parameterType="donate">
+ 
+ UPDATE DONATE
+ SET donation = #{donation}, donate_finish=#{donateFinish}, donate_title = #{donateTitle}, donate_content =#{donateContent}, donate_pic_path=#{donatePicPath}
+ WHERE donate_num = #{donateNum}
+ 
+ </update>
+ 
+  <delete id="deleteComment" parameterType="donate">
+ DELETE FROM DONATE
+WHERE donate_num = #{donateNum}
+
+ 
+ </delete>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</mapper>
+
+
+
+
+

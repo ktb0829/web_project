@@ -19,6 +19,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAlias type="board.answer.mybatis.AnswerComment" alias='answer' />
 	<typeAlias type="library.model.Seat" alias='seat' />
 	<typeAlias type="library.model.Rent" alias='rent' />	
+	<typeAlias type="board.donate.mybatis.DonateComment" alias='donate' />
+	
 </typeAliases>
 
 <environments default="development">
@@ -37,5 +39,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mapper resource="board/answer/mybatis/AnswerMapper.xml"/>
 	<mapper resource="lib/mapper/CommentMapper.xml"/>
 	<mapper resource="library/mapper/BoardMapper.xml" />
+	 <mapper resource="board/donate/mybatis/DonateMapper.xml"/>
 </mappers>
 </configuration>

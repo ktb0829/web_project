@@ -32,4 +32,12 @@
     <url-pattern>*.answer</url-pattern>
   </servlet-mapping>
   
+      <servlet>
+    <servlet-name>DonateControl</servlet-name>
+    <servlet-class>board.donate.control.DonateControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DonateControl</servlet-name>
+    <url-pattern>*.donate</url-pattern>
+  </servlet-mapping>
   </web-app>
