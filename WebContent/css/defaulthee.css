@@ -74,15 +74,15 @@ a:hover
 {
 	position: absolute;
    
-    width: 580px;
-    height: 30px;
-    margin: 100px 200px;
+    width: 600px;
+    height: 36px;
+    margin: 100px 194px;
     color: #666;
     font-size: 14px;
     line-height: 25px;
-    border: 1px solid #fff;
+    border: 3px solid #ebe0be;
     z-index: 999 !important;
-    top: 90px;
+    top: 88px;
     display: inline-block;
 }
 
@@ -879,7 +879,7 @@ ul.contact li a.icon-rss:before
 {
    position: absolute;
    top: 150px;
-   right: 0;
+   right: -50px;
 }
 
 #slider .indicator
