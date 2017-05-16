@@ -468,12 +468,12 @@ ul.contact li a.icon-rss:before
 #menu_top
 {
    position: absolute;
-   top: 5.2em;
+   top: 109px;
 /*     right: 0px; */
    display:inline-block;
-   font-size: 1.5em;
+   font-size: 18pt;
 /*     padding: auto; */
-	left:50%;
+	left:48%;
 	margin-left:-390px;
 	z-index: 999 !important;
 }
@@ -640,6 +640,14 @@ ul.contact li a.icon-rss:before
 {
     margin-left: 200px;
 	width: auto;
+	font-family: 'Open Sans', sans-serif;
+/* 	font-size: 12pt; */
+}
+
+#notice div h2
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20pt;
 }
 
 /******************************************************************************** */

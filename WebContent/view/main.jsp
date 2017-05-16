@@ -425,7 +425,6 @@ $(document).ready(function() {
                
                calendar += '         </tbody>';
                calendar += '      </table>';
-               calendar += '<span>참조</span>';
                
                
                content.innerHTML = calendar;
@@ -475,7 +474,7 @@ $(document).ready(function() {
             <ul class="notice_header">
                <li class="selected">
                   <div class="boardBox_contnetns" id="mtab_notice">
-                        <span>공지사항목록</span>
+                        <h2><span>공지사항목록</span></h2>
                   </div>
                </li>
             </ul>
