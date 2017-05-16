@@ -12,7 +12,7 @@
 	padding-top:40px;
 	padding-bottom: 30px;
 }
- 
+
 </style>
 
 <meta name="keywords" content="" />
@@ -23,7 +23,7 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" />
-
+ 
 </head>
 <body>
 
