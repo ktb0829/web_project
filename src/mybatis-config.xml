@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAlias type="library.model.Book" alias='lib_book' />
 	<typeAlias type="library.model.Reserve" alias='reserve' />
 	<typeAlias type="board.answer.mybatis.AnswerComment" alias='answer' />
-	
+	<typeAlias type="library.model.Seat" alias='seat' />	
 </typeAliases>
 
 <environments default="development">

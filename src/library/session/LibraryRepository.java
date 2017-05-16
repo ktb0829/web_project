@@ -1,7 +1,6 @@
 package library.session;
 
 import java.io.InputStream;
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import library.model.Book;
 import library.model.Reserve;
+import library.model.Seat;
 
 public class LibraryRepository {
 String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespace 하고 같아야함
@@ -139,6 +139,26 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		return list;
 	}
 	
+	public List <Reserve> reserveViewById(String id) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		List list = null;
+		try{	
+			HashMap map = new HashMap();
+			map.put("id", id);
+			
+			list = (List)sqlSess.selectList(namespace+".selectReserveById", map);
+			
+			if( list.size() == 0 ) {
+				sqlSess.rollback();
+			} else {
+				sqlSess.commit();
+			}
+		} finally {
+			sqlSess.close();
+		}
+		return list;
+	}
+	
 	public void reserve(String bookNum) {
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{	
@@ -166,5 +186,63 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		} finally {
 			sqlSess.close();
 		}
+	}
+	
+	
+	public List<Seat> selectSeatByNum(String num) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		List<Seat> list = null;
+		try{	
+			HashMap map = new HashMap();
+			map.put("num", num);
+			
+			list = sqlSess.selectList(namespace+".selectSeatByNum", map);
+			
+			if( list != null ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
+		return list;
+	}
+	
+	public void insertseat(String seat, String id) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		List<Seat> list = null;
+		try{	
+			HashMap map = new HashMap();
+			map.put("seat", seat);
+			map.put("id", id);
+			System.out.println(seat+id);
+			int result = sqlSess.insert(namespace+".insertseat", map);
+			
+			if( result > 0 ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
+	}
+	
+	public String seatNum() {
+		String seatNum = null;
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{
+			seatNum = sqlSess.selectOne(namespace+".seatNum");
+			
+			if( seatNum != null ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
+		return seatNum;
 	}
 }

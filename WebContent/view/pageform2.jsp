@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% 
+	int seatNum = Integer.parseInt((String)request.getAttribute("seatNum"));
+	seatNum = 90-seatNum;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>게시판 틀</title>
+<title>열람실 좌석현황</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -114,29 +118,29 @@
      <table id="seat" width="650" border="0" cellspacing="10" cellpadding="0" align="center" class="bor_4" >
 <!--           <caption>열람실 좌석현황</caption> -->
         <tbody><tr> 
-          <td width="112"><a href="xxx.seonmi?cmd=1th-page" onclick="window.open(this.href,'1th','width=680,height=500');return false;"><img src="/web_project/images/1열람실.PNG" border="0" alt="1열람실 현황보기(새창)" value="1열람실 현황보기"></a></td>
-          <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">36</td>
+          <td width="112"><a href="library.library?cmd=1th-page&num=1" onclick="window.open(this.href,'1th','width=680,height=600');return false;"><img src="/web_project/images/1열람실.PNG" border="0" alt="1열람실 현황보기(새창)" value="1열람실 현황보기"></a></td>
+          <td class="seat_comm green"><img src="/web_project/images/잔여좌석.jpg" align="absmiddle" alt="잔여좌석"><%=seatNum %></td>
           <td width="8"><img align="absmiddle" alt=""></td>
-          <td class="seat_comm"><img align="absmiddle" alt="총좌석수">90</td>
+          <td class="seat_comm"><img src="/web_project/images/총좌석.jpg" align="absmiddle" alt="총좌석수">90</td>
         </tr>
         <tr> 
           <td colspan="4" class="line_gray" height="1"></td>
         </tr>
         <tr> 
-          <td><a href="xxx.seonmi?cmd=2th-page" onclick="window.open(this.href,'2th','width=680,height=500');return false;"><img src="/web_project/images/2열람실.PNG" border="0" alt="2열람실 현황보기(새창)"></a></td>
-          <td class="seat_comm green"><img align="absmiddle" alt="잔여좌석">49</td>
+          <td><a href="library.library?cmd=2th-page&num=2" onclick="window.open(this.href,'2th','width=680,height=600');return false;"><img src="/web_project/images/2열람실.PNG" border="0" alt="2열람실 현황보기(새창)"></a></td>
+          <td class="seat_comm green"><img src="/web_project/images/잔여좌석.jpg" align="absmiddle" alt="잔여좌석">0</td>
           <td><img  align="absmiddle" alt=""></td>
-          <td class="seat_comm"><img  align="absmiddle" alt="총좌석수">120</td>
+          <td class="seat_comm"><img src="/web_project/images/총좌석.jpg" align="absmiddle" alt="총좌석수">0</td>
         </tr>
         <tr> 
           <td colspan="4" class="line_gray" height="1"></td>
         </tr>
         <tr> 
-          <td><a href="xxx.seonmi?cmd=3th-page" onclick="window.open(this.href,'3th','width=680,height=500');return false;" onkeypress="window.open(this.href,'3th','width=680,height=500');return false;">
+          <td><a href="library.library?cmd=3th-page&num=3" onclick="window.open(this.href,'3th','width=680,height=600');return false;" onkeypress="window.open(this.href,'3th','width=680,height=500');return false;">
           <img src="/web_project/images/3열람실.PNG" border="0" alt="3열람실 현황보기(새창)"></a></td>
-          <td class="seat_comm green"><img  align="absmiddle" alt="잔여좌석">97</td>
+          <td class="seat_comm green"><img src="/web_project/images/잔여좌석.jpg" align="absmiddle" alt="잔여좌석">0</td>
           <td><img align="absmiddle" alt=""></td>
-          <td class="seat_comm"><img  align="absmiddle" alt="총좌석수">120</td>
+          <td class="seat_comm"><img src="/web_project/images/총좌석.jpg" align="absmiddle" alt="총좌석수">0</td>
         </tr>
         <tr> 
           <td colspan="4" class="line_gray" height="1"></td>

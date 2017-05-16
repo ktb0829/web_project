@@ -14,6 +14,10 @@ import library.command.CommandException;
 import library.command.CommandList;
 import library.command.CommandNull;
 import library.command.CommandReserve;
+import library.command.CommandReserveMain;
+import library.command.CommandSeat;
+import library.command.CommandSeatInput;
+import library.command.CommandSeatNum;
 
 public class LibraryControl extends HttpServlet{
 	private HashMap commandMap;
@@ -33,6 +37,10 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("search", new CommandList("searchbook.jsp") );
 		commandMap.put("reserve", new CommandReserve("reserve.jsp") );
 		commandMap.put("greeting_page", new CommandNull("greeting_page.jsp") );
+		commandMap.put("main-reserve", new CommandReserveMain("reserve.jsp") );
+		commandMap.put("study", new CommandSeatNum("pageform2.jsp") );
+		commandMap.put("1th-page", new CommandSeat("1th.jsp") );
+		commandMap.put("1seat-input", new CommandSeatInput("1th.jsp") );
 		
 //		commandMap.put("insert", new CommandInput("BoardView.jsp") );
 //		commandMap.put("list", new CommandList("BoardList.jsp") );

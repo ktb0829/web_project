@@ -25,7 +25,6 @@
 </head>
 <body>
 
-<div id="header-wrapper">
    <div id="header" class="container">
         
       <div id="logo">
@@ -161,9 +160,6 @@
 	  
 	  <!-- *********************************************************************** -->
 
-
-
-
 	 <div id="menu_service">
 		<div id="featured_" class="container">
 			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
@@ -219,9 +215,5 @@
 </div>	
 
 </div>
-  
-
-     
-     
 </body>
 </html>

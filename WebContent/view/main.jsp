@@ -258,10 +258,10 @@ $(document).ready(function() {
                <li class="main_menu"><a href="#">온라인 서비스</a><br/>
                   <ul id="hide">
                   <br/>
-                  <li><a href="#">대출예약</a></li><br/>   
+                  <li><a href="library.library?cmd=main-reserve">대출예약</a></li><br/>   
                   <li><a href="#">대출조회/연기</a></li><br/>
                   <li><a href="#">오디오 북</a></li><br/>
-                  <li><a href="#">열람실 좌석 현황</a></li><br/>
+                  <li><a href="library.library?cmd=study">열람실 좌석 현황</a></li><br/>
                   <li><a href="#">택배 서비스</a></li><br/><br/>
                   </ul>
                </li>

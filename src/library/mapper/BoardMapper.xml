@@ -4,23 +4,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="library.mapper.BoardMapper">
- 
-<!-- <resultMap type="board" id="boardMap"> -->
-<!-- 	<id column = "article_id" property = "articleId" /> -->
-<!-- 	<result column = "group_id" property = "groupId" /> -->
-<!-- 	<result column = "sequence_no" property = "sequenceNo" /> -->
-<!-- 	<result column = "posting_date" property = "postingDate" /> -->
-<!-- 	<result column = "read_count" property = "readCount" /> -->
-<!-- 	<result column = "writer_name" property = "writerName" /> -->
-<!-- 	<result column = "password" property = "password" /> -->
-<!-- 	<result column = "title" property = "title" /> -->
-<!-- 	<result column = "content" property = "content" /> -->
-<!-- </resultMap> -->
-
-<!-- <insert id="insertBoard" parameterType="board"> -->
-<!-- 	INSERT INTO article -->
-<!-- 	VALUES(SEQ_ARTICLE_ID_ARTICLE.nextval, #{groupId}, #{sequenceNo}, sysdate, 0, #{writerName}, #{password}, #{title}, #{content}) -->
-<!-- </insert> -->
 
 <select id="selectBoardByTitle" parameterType="hashmap" resultType="lib_book">
 	SELECT book_num, book_title, book_writer, book_publisher, book_genre, reco_num, rent_state
@@ -78,6 +61,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	SELECT reserve.reserve_num, reserve.id, book.book_num, book.book_title, to_char(reserve.reserve_date, 'YYYY-MM-DD') reserve_date, to_char(rent.return_schedule, 'YYYY-MM-DD') return_schedule, reserve.reserve_state
 	FROM reserve, rent, book
 	WHERE reserve.id = #{id} AND reserve.RENT_NUM = rent.RENT_NUM AND rent.num = book.BOOK_NUM
+</select>
+
+<insert id="insertseat" parameterType="hashmap" >
+	INSERT INTO seat
+	VALUES (#{seat}, #{id}, 'true')
+</insert>
+
+<select id="selectSeatByNum" parameterType="hashmap" resultType="seat">
+	SELECT *
+	FROM seat
+	WHERE seat_num like #{num}||'%' AND seat_state = 'true'
+</select>
+
+<select id="seatNum" resultType="String">
+	SELECT count(*) as cnt
+	FROM seat
+	WHERE seat_num like 01||'%' AND seat_state = 'true'
 </select>
 
 </mapper>
