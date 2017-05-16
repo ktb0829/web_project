@@ -636,18 +636,20 @@ ul.contact li a.icon-rss:before
 /* notice                                                                       */
 /******************************************************************************** */
 
-#notice
+#noticeTab
 {
-    margin-left: 200px;
-	width: auto;
-	font-family: 'Open Sans', sans-serif;
-/* 	font-size: 12pt; */
+    margin-top: 7px;
+    margin-left: -35px;
+    width: 530px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30pt;
 }
 
-#notice div h2
+
+#leftAlign a
 {
+	font-size: 13pt;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 20pt;
 }
 
 /******************************************************************************** */

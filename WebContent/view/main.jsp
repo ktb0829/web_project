@@ -30,7 +30,7 @@
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-
+<link href="/web_project/css/notice.css" rel="stylesheet" />
 </head>
 
 <script type="text/javascript">
@@ -257,7 +257,7 @@ $(document).ready(function() {
                   <ul id="hide">
                   <br/>
                   <li><a href="library.library?cmd=main-reserve">대출예약</a></li><br/>   
-                  <li><a href="library.library?cmd=rent">대출조회/연기</a></li><br/>
+                  <li><a href="#">대출조회/연기</a></li><br/>
                   <li><a href="library.library?cmd=study">열람실 좌석 현황</a></li><br/>
                   <li><a href="#">택배 서비스</a></li><br/><br/>
                   </ul>
@@ -467,64 +467,57 @@ $(document).ready(function() {
       <div id="content">
       </div>
       
-      <div id="notice">
-            <ul class="notice_header">
-               <li class="selected">
-                  <div class="boardBox_contnetns" id="mtab_notice">
-                        <h2><span>공지사항목록</span></h2>
-                  </div>
-               </li>
-            </ul>
-            <ul class="lst01">
-         <li>
-            <span><img src="" alt="공지사항"></span>
-            <a href="">국립중앙도서관 주차장 만차시 차량  통제 계획 알림</a>
-            <em>2017.04.21</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="공고/공모"></span>
-            <a href="">서지정보유통지원시스템 검색 시스템 도입 입찰 공고(재공고)</a>
-            <em>2017.05.04</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="공지사항"></span>
-            <a href="">고문헌실 휴실 안내</a>
-            <em>2017.05.04</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li>
-            <span><img src="" alt="교육안내"></span>
-            <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
-            <em>2017.05.02</em>
-         </li><br/>
-         <li class="more"><a href=""><img src="" alt="... 더보기"></a></li>
-      </ul>
-      </div>
-               
+   <div id="noticeTab" name="noticeTab" class="comment" style="display: inline-block;">
+		
+		<div class="boardBox_contnetns" id="mtab_notice">
+		    <h2><span>공지사항목록</span></h2>
+		</div>
+		
+			<div id="line">
+				<div id="leftAlign">
+					<a href="" class="unc-main">국립중앙도서관 주차장 만차시 차량  통제 계획 알림</a>
+				</div>
+				<div id="rightAlign">2017.04.21</div>
+			</div>
+		
+			<div id="line">
+				<div id="leftAlign">
+				
+					<a href="" class="unc-main">서지정보유통지원시스템 검색 시스템 도입 입찰 공고(재공고)</a>
+				</div>
+				<div id="rightAlign">2017.05.04</div>
+			</div>
+		
+			<div id="line">
+				<div id="leftAlign">
+					<a href="" class="unc-main">고문헌실 휴실 안내</a>
+				</div>
+				<div id="rightAlign">2017.05.04</div>
+			</div>
+		
+			<div id="line">
+				<div id="leftAlign">
+					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+				</div>
+				<div id="rightAlign">2017.05.02</div>
+			</div>
+		
+			<div id="line">
+				<div id="leftAlign">
+					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+				</div>
+				<div id="rightAlign">2017.05.02</div>
+			</div>
+			
+			<div id="line">
+				<div id="leftAlign">
+					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+				</div>
+				<div id="rightAlign">2017.05.02</div>
+			</div>
+						
+  </div>
+              
       <div class="flexslider">
         <ul class="slides">
           <li><img src="/web_project/images/도서관.png" /></li>
