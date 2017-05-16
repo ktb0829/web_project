@@ -11,10 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.asnwer.command.Command;
+import board.asnwer.command.CommandDelete;
+import board.asnwer.command.CommandDetail;
 import board.asnwer.command.CommandException;
+import board.asnwer.command.CommandInsert;
 import board.asnwer.command.CommandList;
+import board.asnwer.command.CommandModify;
 import board.asnwer.command.CommandNull;
-
 
 
 
@@ -25,7 +28,7 @@ import board.asnwer.command.CommandNull;
 public class AnswerControl extends HttpServlet {
        
 	private HashMap commandMap;
-	private String jspDir = "/00_board_answer/";
+	private String jspDir = "/view/";
 	private String  error = "error.jsp";
     
     public AnswerControl() {
@@ -37,9 +40,21 @@ public class AnswerControl extends HttpServlet {
 		
 		commandMap = new HashMap();
 		
-		commandMap.put("answer-main",	new CommandNull("AnswerMain.jsp") );
+		commandMap.put("answer-main",	new CommandNull("main.jsp") );
+		
 		commandMap.put("answer-list",	new CommandList("AnswerList.jsp") );
-		commandMap.put("answer-detail",	new CommandNull("AnswerView.jsp") );
+		
+		commandMap.put("answer-insert",	new CommandNull("AnswerInsert.jsp") );
+		
+		commandMap.put("answer-save",	new CommandInsert("AnswerList.jsp") );
+		
+		commandMap.put("answer-detail",	new CommandDetail("AnswerView.jsp") );
+		
+		commandMap.put("answer-modifyform",	new CommandDetail("AnswerModify.jsp") );
+		
+		commandMap.put("answer-modify",	new CommandModify("AnswerList.jsp") );
+		
+		commandMap.put("answer-delete",	new CommandDelete("AnswerList.jsp") );
 		
 	}
 

@@ -2,6 +2,8 @@
 <% 
 	System.out.println(session.getAttribute("id"));
 %>
+<% String projectName = "/web_project/view"; %>    
+
 <!DOCTYPE html>
 <html>
 
@@ -27,7 +29,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/web_project/js/jquery.slidertron-1.3.js"></script>
 <script src="/web_project/js/jquery.flexslider.js" type="text/javascript"></script>
-<script type="text/javascript" src="/web_project/js/jquery.session.js"></script>
+
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -233,7 +235,7 @@ $(document).ready(function() {
                <li class="main_menu"><a href="#">민원창구</a><br/>
                   <ul id="hide">
                   <br/>
-                  <li><a href="#">개선 및 건의사항</a></li><br/>                    
+                  <li><a href="<%=projectName%>/List.answer?cmd=answer-list">개선 및 건의사항</a></li><br/>                    
                   <li><a href="#">설문조사</a></li><br/>
                   <li><a href="#">분실물 센터</a></li><br/>
                   <li><a href="#">자유게시판</a></li><br/><br/>

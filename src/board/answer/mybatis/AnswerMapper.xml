@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="AnswerMapper">
+
+<resultMap type="answer" id="answerMap">
+ 	<result column="board_num" property="boardNum"/>
+	<result column="id" property="id"/>
+	<result column="board_type" property="boardType"/>
+	<result column="board_title" property="boardTitle"/>
+	<result column="board_content" property="boardContent"/>
+	<result column="board_day" property="boardDay"/>
+	<result column="board_read_count" property="boardReadCount"/>
+	<result column="board_pic_path" property="boardPicPath"/>
+	<result column="board_state" property="boardState"/>
+</resultMap>
+
+
+<!-- 부를 때 이름 = id=" "  -->
+ <select id="selectComment"  resultMap="answerMap">
+	 SELECT BOARD_NUM, BOARD_TYPE, BOARD_TITLE, ID, BOARD_DAY, BOARD_STATE, BOARD_READ_COUNT
+	 FROM BOARD
+ </select>
+
+<insert id="insertComment" parameterType="answer" >
+	
+	INSERT INTO BOARD
+	VALUES( seq_board.nextval, 'hyun', #{boardType} , #{boardTitle},#{boardContent}, sysdate, '0','a','접수'  )
+	
+</insert>
+
+ <select id="viewComment"  resultMap="answerMap">
+	 SELECT *
+	 FROM BOARD
+	 <where>
+	 	<if test="boardNum != null">
+	 		board_Num = #{boardNum}
+	 	</if>
+	 </where>
+ </select>
+<!-- # : PreparedStatement 형식, $ : Statement 형식  -->
+
+<!-- 부를 때 이름 = id=" "  -->
+<!--  <select id="selectComment"  parameterType="hashmap"  resultMap="commentMap"> -->
+<!-- 	 SELECT * -->
+<!-- 	 FROM comment_tab -->
+<!-- 	 <where> -->
+<!-- 	 	<if test="commentNo != null"> -->
+<!-- 	 		comment_no = #{commentNo} -->
+<!-- 	 	</if> -->
+<!-- 	 </where> -->
+<!--  </select> -->
+ 
+<!--  <delete id="deleteComment" parameterType="comment"> -->
+<!--  DELETE FROM comment_tab -->
+<!-- <where> -->
+<!-- 	<if test="commentNo != null"> -->
+<!-- 		comment_no = #{commentNo} -->
+<!-- 	</if> -->
+<!-- </where>  -->
+ 
+<!--  </delete> -->
+ 
+<!--  <update id="modifyComment" parameterType="comment"> -->
+ 
+<!--  UPDATE comment_tab -->
+<!--  SET user_id = #{userId}, comment_content = #{commentContent}  -->
+<!--  WHERE comment_no = #{commentNo} -->
+ 
+<!--  </update> -->
+ 
+ <update id="modifyComment" parameterType="answer">
+ 
+ UPDATE BOARD
+ SET board_type = #{boardType}, board_title = #{boardTitle}, board_content =#{boardContent}
+ WHERE board_num = #{boardNum}
+ 
+ </update>
+ 
+  <delete id="deleteComment" parameterType="answer">
+ DELETE FROM BOARD
+WHERE board_num = #{boardNum}
+
+ 
+ </delete>
+ 
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

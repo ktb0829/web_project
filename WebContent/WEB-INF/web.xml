@@ -23,4 +23,13 @@
     <url-pattern>*.library</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name>AnswerControl</servlet-name>
+    <servlet-class>board.answer.control.AnswerControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AnswerControl</servlet-name>
+    <url-pattern>*.answer</url-pattern>
+  </servlet-mapping>
+  
   </web-app>

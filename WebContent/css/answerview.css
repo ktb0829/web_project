@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+.table-bordered
+{
+
+	position: absolute;
+	width: 1540px;
+	
+}
+
+.table-bordered th
+{
+
+	text-align: center;
+	
+}
+
+.answerview th
+{
+
+	width: 20%;
+	
+}
+
+.answerlist
+{
+	
+	text-align: center;
+	
+}

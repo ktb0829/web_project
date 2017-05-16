@@ -16,6 +16,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAlias type="lib.model.Book" alias='book'/>
 	<typeAlias type="library.model.Book" alias='lib_book' />
 	<typeAlias type="library.model.Reserve" alias='reserve' />
+	<typeAlias type="board.answer.mybatis.AnswerComment" alias='answer' />
+	
 </typeAliases>
 
 <environments default="development">
@@ -31,6 +33,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </environments>
 <mappers>
 	<!-- 여러개의 mapper를 등록 -->
+	<mapper resource="board/answer/mybatis/AnswerMapper.xml"/>
 	<mapper resource="lib/mapper/CommentMapper.xml"/>
 	<mapper resource="library/mapper/BoardMapper.xml" />
 </mappers>
