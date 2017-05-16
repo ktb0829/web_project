@@ -1,13 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<% String projectName = "/web_project/view"; %>    
-
 <!DOCTYPE html>
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>main</title>
+<title>KOSTA LIBRARY</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -230,19 +227,19 @@ $(document).ready(function() {
 
           <div id="menu_top">    
             <ul>
-               <li class="main_menu"><a href="#">민원창구</a><br/>
+               <li class="main_menu"><a href="List.answer?cmd=answer-list">민원창구</a><br/>
                   <ul id="hide">
                   <br/>
-                  <li><a href="<%=projectName%>/List.answer?cmd=answer-list">개선 및 건의사항</a></li><br/>                    
+                  <li><a href="List.answer?cmd=answer-list">개선 및 건의사항</a></li><br/>                    
                   <li><a href="#">분실물 센터</a></li><br/>
                   <li><a href="#">자유게시판</a></li><br/><br/>
                   </ul> 
                </li>    
-               <li class="main_menu"><a href="#">참여이용안내</a><br/>
+               <li class="main_menu"><a href="donate.donate?cmd=donate-list">참여이용안내</a><br/>
                   <ul id="hide">
                   <br/>
                   <li><a href="#">도서관 이용 안내</a></li><br/>   
-                  <li><a href="<%=projectName%>/asdf.donate?cmd=donate-list">도서 기부</a></li><br/>
+                  <li><a href="donate.donate?cmd=donate-list">도서 기부</a></li><br/>
                   <li><a href="#">이 달의 행사</a></li><br/><br/>
                   </ul>
                </li>
@@ -253,11 +250,11 @@ $(document).ready(function() {
                   <li><a href="#">신작 자료</a></li><br/><br/>
                   </ul>
                </li>
-               <li class="main_menu"><a href="#">온라인 서비스</a><br/>
+               <li class="main_menu"><a href="library.library?cmd=main-reserve">온라인 서비스</a><br/>
                   <ul id="hide">
                   <br/>
-                  <li><a href="library.library?cmd=main-reserve">대출예약</a></li><br/>   
-                  <li><a href="#">대출조회/연기</a></li><br/>
+                  <li><a href="library.library?cmd=main-reserve">대여예약</a></li><br/>   
+                  <li><a href="library.library?cmd=rent">대여연기</a></li><br/>
                   <li><a href="library.library?cmd=study">열람실 좌석 현황</a></li><br/>
                   <li><a href="#">택배 서비스</a></li><br/><br/>
                   </ul>
@@ -265,10 +262,10 @@ $(document).ready(function() {
                <li class="main_menu"><a href="library.library?cmd=greeting_page">도서관소개</a><br/>
                   <ul id="hide">
                   <br/>
-                  <li><a href="#">인사말</a></li><br/>   
-                  <li><a href="#">시설현황</a></li><br/>
-                  <li><a href="#">자료현황</a></li><br/>
-                  <li><a href="#">찾아오시는 길</a></li><br/><br/>
+                  <li><a href="xxx.seonmi?cmd=greeting-page">인사말</a></li><br/>   
+                  <li><a href="xxx.seonmi?cmd=facility-page">시설현황</a></li><br/>
+                  <li><a href="xxx.seonmi?cmd=data-page">자료현황</a></li><br/>
+                  <li><a href="xxx.seonmi?cmd=load-page">찾아오시는 길</a></li><br/><br/>
                   </ul>
                </li>                                              
             </ul>            
@@ -434,22 +431,22 @@ $(document).ready(function() {
 <div id="wrapper">
    <div id="featured-wrapper">
       <div id="featured" class="container">
-         <div class="column1"> <a href=''><span class="icon icon-gift"></a></span><br/>
+         <div class="column1"> <a href='List.answer?cmd=answer-list'><span class="icon icon-gift"></a></span><br/>
             <div class="title">
                <h2>민원</h2>
             </div>
          </div>
-         <div class="column2"> <span class="icon icon-glass"></span><br/>
+         <div class="column2"><a href='library.library?cmd=main-reserve'><span class="icon icon-glass"></a></span><br/>
             <div class="title">
-               <h2>대출연장,예약</h2>
+               <h2>대여예약</h2>
             </div>
          </div>
-         <div class="column3"> <span class="icon icon-music"></span><br/>
+         <div class="column3"><a href='library.library?cmd=rent'><span class="icon icon-music"></a></span><br/>
             <div class="title">
-               <h2>희망도서신청</h2>
+               <h2>대여연장</h2>
             </div>
          </div>
-         <div class="column4"> <span class="icon icon-group"></span><br/>
+         <div class="column4"><a href='library.library?cmd=study'><span class="icon icon-group"></a></span><br/>
             <div class="title">
                <h2>열람실좌석정보</h2>
             </div>
