@@ -30,7 +30,7 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaultsearch.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="/web_project/css/loginpopup.css">
+<link rel="stylesheet" href="/web_project/css/popupReserve.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
