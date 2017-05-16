@@ -1,5 +1,7 @@
 package board.asnwer.command;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import board.answer.mybatis.AnswerComment;
@@ -25,7 +27,9 @@ public class CommandDelete implements Command {
 			AnswerRepository repo = new AnswerRepository();
 			repo.deleteComment(answerinsert); //repo로 넘겨줌 
 
-
+	
+			List<AnswerComment> list = repo.selectComment();
+			request.setAttribute("list", list);
 
 		}catch( Exception ex ){
 			throw new CommandException("CommandInput.java < 입력시 > " + ex.toString() ); 

@@ -1,5 +1,7 @@
 package board.asnwer.command;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import board.answer.mybatis.AnswerComment;
@@ -23,6 +25,8 @@ public class CommandDetail implements Command{
 			AnswerComment result = repo.viewComment(num);
 			request.setAttribute("detail", result);
 			
+			List<AnswerComment> list = repo.selectComment();
+			request.setAttribute("list", list);
 		}catch( Exception ex ){
 			throw new CommandException("CommandDetail.java < 입력시 > " + ex.toString() ); 
 		}

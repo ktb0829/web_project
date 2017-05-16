@@ -1,5 +1,7 @@
 package board.asnwer.command;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -41,6 +43,8 @@ public class CommandInsert implements Command{
 			repo.insertCommnet(answerinsert); //repo로 넘겨줌 
 			System.out.println("12341234");
 			
+			List<AnswerComment> list = repo.selectComment();
+			request.setAttribute("list", list);
 		}catch( Exception ex ){
 			throw new CommandException("CommandInput.java < 입력시 > " + ex.toString() ); 
 		}
