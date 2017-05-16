@@ -234,7 +234,6 @@ $(document).ready(function() {
                   <ul id="hide">
                   <br/>
                   <li><a href="<%=projectName%>/List.answer?cmd=answer-list">개선 및 건의사항</a></li><br/>                    
-                  <li><a href="#">설문조사</a></li><br/>
                   <li><a href="#">분실물 센터</a></li><br/>
                   <li><a href="#">자유게시판</a></li><br/><br/>
                   </ul> 
@@ -244,15 +243,14 @@ $(document).ready(function() {
                   <br/>
                   <li><a href="#">도서관 이용 안내</a></li><br/>   
                   <li><a href="#">도서 기부</a></li><br/>
-                  <li><a href="#">독서 커뮤니티</a></li><br/><br/>
+                  <li><a href="#">이 달의 행사</a></li><br/><br/>
                   </ul>
                </li>
                <li class="main_menu"><a href="library.library?cmd=main-search">자료검색</a><br/>
                   <ul id="hide">
                   <br/>
                   <li><a href="#">도서 자료 검색</a></li><br/>   
-                  <li><a href="#">신작 자료</a></li><br/>
-                  <li><a href="#">대출 베스트</a></li><br/><br/>
+                  <li><a href="#">신작 자료</a></li><br/><br/>
                   </ul>
                </li>
                <li class="main_menu"><a href="#">온라인 서비스</a><br/>
@@ -260,7 +258,6 @@ $(document).ready(function() {
                   <br/>
                   <li><a href="library.library?cmd=main-reserve">대출예약</a></li><br/>   
                   <li><a href="#">대출조회/연기</a></li><br/>
-                  <li><a href="#">오디오 북</a></li><br/>
                   <li><a href="library.library?cmd=study">열람실 좌석 현황</a></li><br/>
                   <li><a href="#">택배 서비스</a></li><br/><br/>
                   </ul>
@@ -524,7 +521,7 @@ $(document).ready(function() {
             <a href="">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
             <em>2017.05.02</em>
          </li><br/>
-         <li class="more"><a href=""><img src="" alt="공지사항 더보기"></a></li>
+         <li class="more"><a href=""><img src="" alt="... 더보기"></a></li>
       </ul>
       </div>
                
