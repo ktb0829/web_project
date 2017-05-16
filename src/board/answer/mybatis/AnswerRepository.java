@@ -149,6 +149,27 @@ public class AnswerRepository {
 	
 	
 	
+public Integer readComment( String num ){
+		
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{
+			String statements = namespace + ".readComment";
+			
+			int results = sqlSess.update(statements, num);
+			
+			if( results > 0 ){
+				sqlSess.commit();
+				// JDBC : auto-commit, Mybatis : 아님
+			}else{
+				sqlSess.rollback();
+			}
+		}finally{
+			sqlSess.close();
+		}
+		return 0;
+	}
+	
+	
 	
 	
 	

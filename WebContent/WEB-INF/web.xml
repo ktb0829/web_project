@@ -40,4 +40,13 @@
     <servlet-name>DonateControl</servlet-name>
     <url-pattern>*.donate</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>NoControl</servlet-name>
+    <servlet-class>board.notice.control.NoControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NoControl</servlet-name>
+    <url-pattern>*.notice</url-pattern>
+  </servlet-mapping>
   </web-app>

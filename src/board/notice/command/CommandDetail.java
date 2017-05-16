@@ -1,11 +1,10 @@
-package board.asnwer.command;
-
-import java.util.List;
+package board.notice.command;
 
 import javax.servlet.http.HttpServletRequest;
 
-import board.answer.mybatis.AnswerComment;
-import board.answer.mybatis.AnswerRepository;
+import board.notice.mybatis.NoticeComment;
+import board.notice.mybatis.NoticeRepository;
+
 
 public class CommandDetail implements Command{
 
@@ -21,16 +20,23 @@ public class CommandDetail implements Command{
 			System.out.println("커맨드1");
 			
 			String num = request.getParameter("num");
-			AnswerRepository repo = new AnswerRepository();
-			AnswerComment result = repo.viewComment(num);
+			System.out.println(num);
+			NoticeRepository repo = new NoticeRepository();
+			System.out.println(num);
+			NoticeComment result = repo.viewComment(num);
 			repo.readComment(num);
+			System.out.println(num);
 			request.setAttribute("detail", result);
+
 			
-			List<AnswerComment> list = repo.selectComment();
-			request.setAttribute("list", list);
+			
+			
 		}catch( Exception ex ){
 			throw new CommandException("CommandDetail.java < 입력시 > " + ex.toString() ); 
 		}
 		return next;
 	}
+	
+	
+	
 }

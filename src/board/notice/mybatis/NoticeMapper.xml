@@ -4,9 +4,9 @@
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="AnswerMapper">
+<mapper namespace="NoticeMapper">
 
-<resultMap type="answer" id="answerMap">
+<resultMap type="notice" id="noticeMap">
  	<result column="board_num" property="boardNum"/>
 	<result column="id" property="id"/>
 	<result column="board_type" property="boardType"/>
@@ -20,19 +20,19 @@
 
 
 <!-- 부를 때 이름 = id=" "  -->
- <select id="selectComment"  resultMap="answerMap">
+ <select id="selectComment"  resultMap="noticeMap">
 	 SELECT BOARD_NUM, BOARD_TYPE, BOARD_TITLE, ID, BOARD_DAY, BOARD_STATE, BOARD_READ_COUNT
 	 FROM BOARD
  </select>
 
-<insert id="insertComment" parameterType="answer" >
+<insert id="insertComment" parameterType="notice" >
 	
 	INSERT INTO BOARD
 	VALUES( seq_board.nextval, 'hyun', #{boardType} , #{boardTitle},#{boardContent}, sysdate, '0','a','접수'  )
 	
 </insert>
 
- <select id="viewComment"  resultMap="answerMap">
+ <select id="viewComment"  resultMap="noticeMap">
 	 SELECT *
 	 FROM BOARD
 	 <where>
@@ -41,38 +41,8 @@
 	 	</if>
 	 </where>
  </select>
-<!-- # : PreparedStatement 형식, $ : Statement 형식  -->
 
-<!-- 부를 때 이름 = id=" "  -->
-<!--  <select id="selectComment"  parameterType="hashmap"  resultMap="commentMap"> -->
-<!-- 	 SELECT * -->
-<!-- 	 FROM comment_tab -->
-<!-- 	 <where> -->
-<!-- 	 	<if test="commentNo != null"> -->
-<!-- 	 		comment_no = #{commentNo} -->
-<!-- 	 	</if> -->
-<!-- 	 </where> -->
-<!--  </select> -->
- 
-<!--  <delete id="deleteComment" parameterType="comment"> -->
-<!--  DELETE FROM comment_tab -->
-<!-- <where> -->
-<!-- 	<if test="commentNo != null"> -->
-<!-- 		comment_no = #{commentNo} -->
-<!-- 	</if> -->
-<!-- </where>  -->
- 
-<!--  </delete> -->
- 
-<!--  <update id="modifyComment" parameterType="comment"> -->
- 
-<!--  UPDATE comment_tab -->
-<!--  SET user_id = #{userId}, comment_content = #{commentContent}  -->
-<!--  WHERE comment_no = #{commentNo} -->
- 
-<!--  </update> -->
- 
- <update id="modifyComment" parameterType="answer">
+ <update id="modifyComment" parameterType="notice">
  
  UPDATE BOARD
  SET board_type = #{boardType}, board_title = #{boardTitle}, board_content =#{boardContent}
@@ -80,22 +50,20 @@
  
  </update>
  
-  <delete id="deleteComment" parameterType="answer">
+  <delete id="deleteComment" parameterType="notice">
  DELETE FROM BOARD
 WHERE board_num = #{boardNum}
 
  
  </delete>
  
-   <update id="readComment" parameterType="String">
+  <update id="readComment" parameterType="String">
  
  UPDATE BOARD
  SET board_read_count = board_read_count+1
  WHERE board_num = #{boardNum}
  
  </update>
- 
- 
  
  
  

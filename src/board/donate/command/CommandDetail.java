@@ -23,6 +23,7 @@ public class CommandDetail implements Command{
 			String num = request.getParameter("num");
 			DonateRepository repo = new DonateRepository();
 			DonateComment result = repo.viewComment(num);
+			repo.readComment(num);
 			request.setAttribute("detail", result);
 			
 		}catch( Exception ex ){

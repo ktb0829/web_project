@@ -63,7 +63,13 @@ WHERE donate_num = #{donateNum}
  
  
  
+<update id="readComment" parameterType="String">
  
+ UPDATE DONATE
+ SET donate_read_count = donate_read_count+1
+ WHERE donate_num = #{donateNum}
+ 
+ </update>
  
  
  

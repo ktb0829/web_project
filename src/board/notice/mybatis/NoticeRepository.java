@@ -1,4 +1,4 @@
-package board.donate.mybatis;
+package board.notice.mybatis;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -11,9 +11,10 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 
 
-public class DonateRepository {
 
-	String namespace = "DonateMapper";
+public class NoticeRepository {
+
+	String namespace = "NoticeMapper";
 	
 	private SqlSessionFactory getSelSessionFactory(){
 		
@@ -30,14 +31,13 @@ public class DonateRepository {
 		return factory;
 	}
 	
-	
-	public DonateComment viewComment( String num ){
+	public NoticeComment viewComment( String num ){
 		SqlSession sqlSess = getSelSessionFactory().openSession();
-		DonateComment result = null;
+		NoticeComment result = null;
 		try{
 			HashMap map = new HashMap();
-			map.put("donateNum", num);
-			result = (DonateComment) sqlSess.selectOne(namespace+".viewComment", map);
+			map.put("boardNum", num);
+			result = (NoticeComment)sqlSess.selectOne(namespace+".viewComment", map);
 			if( result != null ){
 				sqlSess.commit();
 				// JDBC : auto-commit, Mybatis : 아님
@@ -52,7 +52,7 @@ public class DonateRepository {
 		
 	}
 	
-	public List<DonateComment> selectComment(){
+	public List<NoticeComment> selectComment(){
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		List list = null;
 		try{
@@ -71,13 +71,13 @@ public class DonateRepository {
 		return list;
 	}
 	
-	public Integer insertCommnet ( DonateComment donate ){
+	public Integer insertCommnet ( NoticeComment notice ){
 		
 		//JDBC : Connection, Mybatis : sqlSession
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{
 			String statement = namespace + ".insertComment";
-			int result = sqlSess.insert(statement, donate);
+			int result = sqlSess.insert(statement, notice);
 			if( result > 0 ){
 				sqlSess.commit();
 				// JDBC : auto-commit, Mybatis : 아님
@@ -95,12 +95,12 @@ public class DonateRepository {
 	}
 	
 
-	public Integer deleteComment( DonateComment donateinsert ){
+	public Integer deleteComment( NoticeComment notice ){
 		
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{
 			String statement = namespace + ".deleteComment";
-			int result = sqlSess.delete(statement, donateinsert);
+			int result = sqlSess.delete(statement, notice);
 			if( result > 0 ){
 				sqlSess.commit();
 				// JDBC : auto-commit, Mybatis : 아님
@@ -114,13 +114,13 @@ public class DonateRepository {
 	}
 
 	
-	public Integer modifyComment( DonateComment donateinsert ){
+	public Integer modifyComment( NoticeComment notice ){
 		
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{
 			String statements = namespace + ".modifyComment";
 			
-			int results = sqlSess.update(statements, donateinsert);
+			int results = sqlSess.update(statements, notice);
 			
 			if( results > 0 ){
 				sqlSess.commit();
@@ -133,7 +133,6 @@ public class DonateRepository {
 		}
 		return 0;
 	}
-	
 	
 public Integer readComment( String num ){
 		
@@ -159,19 +158,35 @@ public Integer readComment( String num ){
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

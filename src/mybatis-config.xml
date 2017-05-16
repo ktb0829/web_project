@@ -20,6 +20,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAlias type="library.model.Seat" alias='seat' />
 	<typeAlias type="library.model.Rent" alias='rent' />	
 	<typeAlias type="board.donate.mybatis.DonateComment" alias='donate' />
+	<typeAlias type="board.notice.mybatis.NoticeComment" alias='notice' />
 	
 </typeAliases>
 
@@ -39,6 +40,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mapper resource="board/answer/mybatis/AnswerMapper.xml"/>
 	<mapper resource="lib/mapper/CommentMapper.xml"/>
 	<mapper resource="library/mapper/BoardMapper.xml" />
-	 <mapper resource="board/donate/mybatis/DonateMapper.xml"/>
+	<mapper resource="board/donate/mybatis/DonateMapper.xml"/>
+	<mapper resource="board/notice/mybatis/NoticeMapper.xml"/>
+	 
 </mappers>
 </configuration>
