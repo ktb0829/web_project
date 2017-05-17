@@ -441,7 +441,7 @@ $(document).ready(function() {
                <h2>대여예약</h2>
             </div>
          </div>
-         <div class="column3"><a href='library.library?cmd=rent'><span class="icon icon-music"></a></span><br/>
+         <div class="column3"><a href='library.library?cmd=rent-main'><span class="icon icon-music"></a></span><br/>
             <div class="title">
                <h2>대여연장</h2>
             </div>
