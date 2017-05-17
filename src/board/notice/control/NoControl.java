@@ -55,6 +55,8 @@ public class NoControl extends HttpServlet {
 		
 		commandMap.put("notice-delete",	new CommandDelete("NoticeList.jsp") );
 		
+		commandMap.put("main",	new CommandList("main.jsp") );
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -75,7 +77,7 @@ public class NoControl extends HttpServlet {
 		String nextPage = "";
 		String cmdKey	= request.getParameter("cmd");
 		if( cmdKey == null ){
-			cmdKey = "notice-main";
+			cmdKey = "main";
 		}
 		
 		

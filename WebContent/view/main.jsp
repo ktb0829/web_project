@@ -1,4 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="board.notice.model.Notice"%>
+
+<%@ page import="java.util.*"%>
+<%@ page import="java.text.*"%>
+<%@ page import="board.notice.*" %>
+<%@ page import="board.notice.mybatis.*" %>
+
+<%
+	List<NoticeComment> mList = (List<NoticeComment>)request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html>
 
@@ -472,45 +482,45 @@ $(document).ready(function() {
 		
 			<div id="line">
 				<div id="leftAlign">
-					<a href="" class="unc-main">국립중앙도서관 주차장 만차시 차량  통제 계획 알림</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(0).getBoardNum()%>" class="unc-main"><%=mList.get(0).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.04.21</div>
+				<div id="rightAlign"><%=mList.get(0).getBoardDay() %></div>
 			</div>
 		
 			<div id="line">
 				<div id="leftAlign">
 				
-					<a href="" class="unc-main">서지정보유통지원시스템 검색 시스템 도입 입찰 공고(재공고)</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(1).getBoardNum()%>" class="unc-main"><%=mList.get(1).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.05.04</div>
+				<div id="rightAlign"><%=mList.get(1).getBoardDay() %></div>
 			</div>
 		
 			<div id="line">
 				<div id="leftAlign">
-					<a href="" class="unc-main">고문헌실 휴실 안내</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(2).getBoardNum()%>" class="unc-main"><%=mList.get(2).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.05.04</div>
+				<div id="rightAlign"><%=mList.get(2).getBoardDay() %></div>
 			</div>
 		
 			<div id="line">
 				<div id="leftAlign">
-					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(3).getBoardNum()%>" class="unc-main"><%=mList.get(3).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.05.02</div>
+				<div id="rightAlign"><%=mList.get(3).getBoardDay() %></div>
 			</div>
 		
 			<div id="line">
 				<div id="leftAlign">
-					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(4).getBoardNum()%>" class="unc-main"><%=mList.get(4).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.05.02</div>
+				<div id="rightAlign"><%=mList.get(4).getBoardDay() %></div>
 			</div>
 			
 			<div id="line">
 				<div id="leftAlign">
-					<a href="" class="unc-main">남북협상 수석대표에게 듣는 통일과 북한 이야기</a>
+					<a href="list.notice?cmd=notice-detail&num=<%=mList.get(5).getBoardNum()%>" class="unc-main"><%=mList.get(5).getBoardTitle() %></a>
 				</div>
-				<div id="rightAlign">2017.05.02</div>
+				<div id="rightAlign"><%=mList.get(5).getBoardDay() %></div>
 			</div>
 						
   </div>

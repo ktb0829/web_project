@@ -21,7 +21,7 @@
 
 <!-- 부를 때 이름 = id=" "  -->
  <select id="selectComment"  resultMap="noticeMap">
-	 SELECT BOARD_NUM, BOARD_TYPE, BOARD_TITLE, ID, BOARD_DAY, BOARD_STATE, BOARD_READ_COUNT
+	 SELECT BOARD_NUM, BOARD_TYPE, BOARD_TITLE, ID, to_char(BOARD_DAY, 'YYYY.MM.DD') BOARD_DAY, BOARD_STATE, BOARD_READ_COUNT
 	 FROM BOARD
  </select>
 
