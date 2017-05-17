@@ -41,7 +41,8 @@ String projectName = "/web_project/view";
 <link href="/web_project/css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/answerlist.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/allboard.css" rel="stylesheet" type="text/css" media="all" />
+
 
 
  
@@ -139,8 +140,8 @@ String projectName = "/web_project/view";
 	  <!-- 본문 내용 -->
 	  <!-- *********************************************************************** -->
 	  
-	  	<div class="answerboardback">
-		<div class="answerboard">
+	  	<div class="">
+		<div class="board">
 
 
 			<h1>개선 및 건의사항</h1>
@@ -151,7 +152,7 @@ String projectName = "/web_project/view";
 				<tr>
 					<th>번호</th>
 					<th>말머리</th>
-					<th >제목</th>
+					<th class="table_title">제목</th>
 					<th>이름</th>
 					<th>일자</th>
 					<th>상태</th>
@@ -166,7 +167,7 @@ String projectName = "/web_project/view";
 				<tr>
 					<td><%= rec.getBoardNum() %></td>
 					<td><%= rec.getBoardType() %></td>
-					<td><a href="<%=projectName%>/list.notice?cmd=notice-detail&num=<%=rec.getBoardNum()%>"><%= rec.getBoardTitle() %></a></td>
+					<td class="table_title table_title_td"><a href="<%=projectName%>/list.notice?cmd=notice-detail&num=<%=rec.getBoardNum()%>"><%= rec.getBoardTitle() %></a></td>
 					<td><%= rec.getId() %></td>		
 					<td><%= rec.getBoardDay() %></td>
 					<td><%= rec.getBoardState() %></td>
@@ -192,29 +193,29 @@ String projectName = "/web_project/view";
 
 	 <div id="menu_service">
 		<div id="featured_" class="container">
-			<div class="column_1"> <a href=''><span class="icon icon-gift"></a></span><br/>
+				<div class="column_1"><img id="icon1" src="/web_project/images/민원.PNG"> <br/>
 				<div class="title">
 					<h2>민원</h2>					
 				</div>
 			</div>
-			<div class="column_2"> <span class="icon icon-glass"></span><br/>
+			<div class="column_2"> <img id="icon2" src="/web_project/images/대여.PNG"><br/>
 				<div class="title
 				">
 					<h2>대출연장,예약</h2>
 				</div>
 			</div>
-			<div class="column_3"> <span class="icon icon-music"></span><br/>
+			<div class="column_3"><img id="icon3" src="/web_project/images/대여연장.PNG"><br/>
 				<div class="title">
 					<h2>희망도서신청</h2>
 				</div>
 			</div>
-			<div class="column_4"> <span class="icon icon-group"></span><br/>
+			<div class="column_4"> <img id="icon4" src="/web_project/images/열람실좌석정보.PNG"><br/>
 				<div class="title">
 					<h2>열람실좌석정보</h2>
 				</div>
 			</div>
 			
-			<div class="column_5"> <span class="icon icon-book"></span><br/>
+			<div class="column_5"><img id="icon5" src="/web_project/images/택배서비스.PNG"><br/>
 				<div class="title">
 					<h2>택배서비스</h2>
 				</div>

@@ -3,6 +3,49 @@
 {
 	
 	position: absolute;
+	width: 1800px;
 	
 }
 
+.board h1
+{
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 32px;
+    padding-left: 200px;
+}
+
+.board th     
+{
+   text-align: center;
+   font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* .answerboard a */
+/* { */
+/*    position: absolute; */
+/* } */
+
+.board table 
+{
+    width: 100%;
+    max-width: 70%;
+    margin-top:20px;
+    margin-left: 190px;
+    margin-bottom: 20px;
+}
+
+.board table td
+{
+   font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.table_title
+{
+	
+	width: 40%;
+	
+}
