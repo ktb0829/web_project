@@ -1002,6 +1002,35 @@ ul.contact li a.icon-rss:before
 	position: center;
 }
 
+#featured_1 {
+    border: 6px double #34b8bf;
+    block-size: 700px;
+    width: 10%;
+    position: absolute;
+    margin: 0;
+    right: 5%;
+    top: 512px;
+}
+
+#featured_1 .icon
+{
+   position: relative;
+   display: grid;
+   width: 60px;
+   height: 60px;
+   background: #0C696E;
+   margin: 0px auto 20px auto;
+   line-height:  60px;
+   font-size: 2em;
+   text-align: center;
+   color: #FFF;
+}
+
+#featured_1 span
+{
+	position: center;
+}
+
 .title h2
 {
 	font-size: 10pt;
@@ -1015,23 +1044,23 @@ ul.contact li a.icon-rss:before
 
 
 .column_1 img{
-	margin-left : 37px;
+	margin-left : 53px;
 }
 
 .column_2 img{
-	margin-left : 37px;
+	margin-left : 53px;
 }
 
 .column_3 img{
-	margin-left : 37px;
+	margin-left : 53px;
 }
 
 .column_4 img{
-	margin-left : 37px;
+	margin-left : 53px;
 }
 
 .column_5 img{
-	margin-left : 37px;
+	margin-left : 53px;
 }
 
 
