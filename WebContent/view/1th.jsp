@@ -3,7 +3,7 @@
 <%@ page import ="library.model.Seat" %>
 <%
 	List list = (List)request.getAttribute("seat");
-%>
+%> 
 <!DOCTYPE html>
 <html>
 <head>
