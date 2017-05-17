@@ -29,8 +29,7 @@ String projectName = "/web_project/view";
 	type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet"
 	type="text/css" media="all" />
-<link href="/web_project/css/answerinsert.css" rel="stylesheet"
-	type="text/css" media="all" />
+<link href="/web_project/css/allboard.css" rel="stylesheet" type="text/css" media="all" />
 
 
 </head>

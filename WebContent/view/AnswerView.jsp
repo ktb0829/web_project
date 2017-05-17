@@ -28,7 +28,7 @@ AnswerComment rec = (AnswerComment)request.getAttribute("detail");
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/answerview.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/allboard.css" rel="stylesheet" type="text/css" media="all" />
 
 
  

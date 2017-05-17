@@ -40,6 +40,7 @@ String projectName = "/web_project/view";
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/web_project/css/allboard.css" rel="stylesheet" type="text/css" media="all" />
 
 
  
@@ -133,8 +134,8 @@ String projectName = "/web_project/view";
 	  <!-- 본문 내용 -->
 	  <!-- *********************************************************************** -->
 	  
-	  	<div class="answerboardback">
-		<div class="answerboard">
+	  	<div class="">
+		<div class="board">
 
 
 			<h1>개선 및 건의사항</h1>
@@ -145,7 +146,7 @@ String projectName = "/web_project/view";
 				<tr>
 					<th>번호</th>
 					<th>말머리</th>
-					<th >제목</th>
+					<th class="table_title">제목</th>
 					<th>이름</th>
 					<th>일자</th>
 					<th>상태</th>
@@ -162,7 +163,7 @@ String projectName = "/web_project/view";
 				<tr>
 					<td><%= rec.getBoardNum() %></td>
 					<td><%= rec.getBoardType() %></td>
-					<td><a href="<%=projectName%>/list.answer?cmd=answer-detail&num=<%=rec.getBoardNum()%>"><%= rec.getBoardTitle() %></a></td>
+					<td class="table_title table_title_td"><a href="<%=projectName%>/list.answer?cmd=answer-detail&num=<%=rec.getBoardNum()%>"><%= rec.getBoardTitle() %></a></td>
 					<td><%= rec.getId() %></td>		
 					<td><%= rec.getBoardDay() %></td>
 					<td><%= rec.getBoardState() %></td>
