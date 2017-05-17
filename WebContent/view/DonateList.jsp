@@ -139,7 +139,7 @@ String projectName = "/web_project/view";
 		<div class="board">
 
 
-			<h1>개선 및 건의사항</h1>
+			<h1>도서기부게시판</h1>
 			<br/>
 <!-- 			<button class="btn btn-primary" style="float: right;" -->
 <!-- 				onclick="location.href='/board/post'">작성</button> -->
