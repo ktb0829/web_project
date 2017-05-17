@@ -39,14 +39,14 @@ AnswerComment rec = (AnswerComment)request.getAttribute("detail");
    <div id="header" class="container">
         
       <div id="logo">
-         <h1><a href="library.library?cmd=home">KOSTA library</a></h1>
+         <h1><a href=".notice">KOSTA library</a></h1>
       </div>
       
       <div id="menu">
       
          <div id="menu_form">
          <ul>
-            <li><a href="library.library?cmd=home" accesskey="2" title="">HOME</a></li>
+            <li><a href=".notice" accesskey="2" title="">HOME</a></li>
             <li><a href="#" accesskey="3" title="">LOGIN</a></li>
             <li><a href="#" accesskey="4" title="">SIGN UP</a></li>
             <li><a href="#" accesskey="5" title="">ENG</a></li>

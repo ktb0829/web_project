@@ -39,7 +39,7 @@ DonateComment rec = (DonateComment)request.getAttribute("detail");
    <div id="header" class="container">
         
       <div id="logo">
-         <h1><a href="library.library?cmd=home">KOSTA library</a></h1>
+         <h1><a href=".notice">KOSTA library</a></h1>
       </div>
       
       <div id="menu">

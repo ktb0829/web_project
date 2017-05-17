@@ -51,11 +51,16 @@ h2{
 
 h3{
 	font-family: "dotum";
-	font-size: 9pt;
+	font-size: 15pt;
 	color: #000000;
 	margin: 0px;
 	padding: 0px;
 	font-weight: normal;
+}
+
+#more
+{
+	margin-left: 360px;
 }
 
 h4{
