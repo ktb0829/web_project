@@ -15,7 +15,7 @@
 	<result column="board_day" property="boardDay"/>
 	<result column="board_read_count" property="boardReadCount"/>
 	<result column="board_pic_path" property="boardPicPath"/>
-	<result column="board_state" property="boardState"/>
+    	<result column="board_state" property="boardState"/>
 </resultMap>
 
 
