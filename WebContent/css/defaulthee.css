@@ -975,7 +975,7 @@ ul.contact li a.icon-rss:before
 
 #featured_ {
     border: 6px double #34b8bf;
-    block-size: 800px;
+    block-size: 700px;
     width: 10%;
     position: absolute;
     margin: 0;
@@ -1012,6 +1012,28 @@ ul.contact li a.icon-rss:before
 {
     margin-top: 15px;
 }
+
+
+.column_1 img{
+	margin-left : 37px;
+}
+
+.column_2 img{
+	margin-left : 37px;
+}
+
+.column_3 img{
+	margin-left : 37px;
+}
+
+.column_4 img{
+	margin-left : 37px;
+}
+
+.column_5 img{
+	margin-left : 37px;
+}
+
 
 table
 {
