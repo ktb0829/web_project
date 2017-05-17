@@ -1,4 +1,13 @@
-.answerboard h1
+@CHARSET "UTF-8";
+.board
+{
+	
+	position: absolute;
+	width: 1800px;
+	
+}
+
+.board h1
 {
     font-size: 26px;
     font-family: 'Open Sans', sans-serif;
@@ -6,7 +15,7 @@
     padding-left: 200px;
 }
 
-.answerboardback th     
+.board th     
 {
    text-align: center;
    font-size: 14px;
@@ -18,7 +27,7 @@
 /*    position: absolute; */
 /* } */
 
-.answerboard table 
+.board table 
 {
     width: 100%;
     max-width: 70%;
@@ -27,8 +36,16 @@
     margin-bottom: 20px;
 }
 
-.answerboard table td
+.board table td
 {
    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.table_title
+{
+	
+	width: 40%;
+	
 }

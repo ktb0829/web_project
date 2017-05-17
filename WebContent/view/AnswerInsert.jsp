@@ -27,7 +27,8 @@ String projectName = "/web_project/view";
 	type="text/css" media="all" />
 <link href="/web_project/css/answerinsert.css" rel="stylesheet"
 	type="text/css" media="all" />
-
+<link href="/web_project/css/allboard.css" rel="stylesheet"
+	type="text/css" media="all" />
 
 </head>
 <body>
@@ -139,7 +140,7 @@ String projectName = "/web_project/view";
 				<!-- 본문 내용 -->
 				<!-- *********************************************************************** -->
 
-				<div class="container">
+				<div class="board">
 					<table class="table table-bordered">
 						<thead>
 						<h1>글쓰기</h1>
@@ -151,8 +152,8 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>제  목:</th>
-									<td><input type="text" placeholder="제목을 입력하세요. "
-										name="boardTitle" class="form-control" /></td>
+									<td><input type="text" placeholder="제목을 입력하세요. 20글자 이하입니다." 
+										name="boardTitle" class="form-control" maxlength="20" /></td>
 								</tr>
 								
 								<tr>
@@ -163,7 +164,7 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>내  용:</th>
-									<td><textarea cols="120" rows="20" placeholder="내용을 입력하세요. "
+									<td><textarea cols="40" rows="20" placeholder="내용을 입력하세요. "
 											name="boardContent" class="form-control"></textarea></td>
 								</tr>
 							
@@ -186,38 +187,34 @@ String projectName = "/web_project/view";
 
 
 
-				<div id="menu_service">
+			    	<div id="menu_service">
 					<div id="featured_" class="container">
-						<div class="column_1">
-							<a href='List.answer?cmd=answer-list'><span class="icon icon-gift"></a></span><br />
-							<div class="title">
-								<h2>민원</h2>
-							</div>
-						</div>
-						<div class="column_2">
-							<a href='library.library?cmd=main-reserve'><span class="icon icon-glass"></a></span><br />
-							<div class="title">
-								<h2>대여예약</h2>
-							</div>
-						</div>
-						<div class="column_3">
-							<a href='library.library?cmd=rent'><span class="icon icon-music"></a></span><br />
-							<div class="title">
-								<h2>대여연장</h2>
-							</div>
-						</div>
-						<div class="column_4">
-							<a href='library.library?cmd=study'><span class="icon icon-group"></a></span><br />
-							<div class="title">
-								<h2>열람실좌석정보</h2>
-							</div>
-						</div>
-
-						<div class="column_5">
-							<span class="icon icon-book"></span><br />
-							<div class="title">
-								<h2>택배서비스</h2>
-							</div>
+				<div class="column_1"><img id="icon1" src="/web_project/images/민원.PNG"> <br/>
+				<div class="title">
+					<h2>민원</h2>					
+				</div>
+			</div>
+			<div class="column_2"> <img id="icon2" src="/web_project/images/대여.PNG"><br/>
+				<div class="title
+				">
+					<h2>대출연장,예약</h2>
+				</div>
+			</div>
+			<div class="column_3"><img id="icon3" src="/web_project/images/대여연장.PNG"><br/>
+				<div class="title">
+					<h2>희망도서신청</h2>
+				</div>
+			</div>
+			<div class="column_4"> <img id="icon4" src="/web_project/images/열람실좌석정보.PNG"><br/>
+				<div class="title">
+					<h2>열람실좌석정보</h2>
+				</div>
+			</div>
+			
+			<div class="column_5"><img id="icon5" src="/web_project/images/택배서비스.PNG"><br/>
+				<div class="title">
+					<h2>택배서비스</h2>
+				</div>
 						</div>
 					</div>
 				</div>

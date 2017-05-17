@@ -46,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="reserve" parameterType="hashmap">
 	INSERT INTO reserve
-	VALUES (seq_reserve.nextval, '태범', #{rentNum}, to_char(sysdate, 'YYYY-mm-dd'), '예약중')
+	VALUES (seq_reserve.nextval, #{id}, #{rentNum}, to_char(sysdate, 'YYYY-mm-dd'), '예약중')
 </insert>
 
 <select id="selectRentNumByBookNum" parameterType="hashmap" resultType="String">

@@ -3,6 +3,7 @@ package library.command;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import library.session.LibraryRepository;
 import library.model.Reserve;
@@ -17,10 +18,14 @@ public class CommandReserve implements Command
 
 	public String execute( HttpServletRequest request ) throws CommandException {
 		try {
+			HttpSession session = request.getSession();
+			String id = (String)session.getAttribute("id");
+			
 			String bookNum = request.getParameter("bookNum");
 			LibraryRepository repo = new LibraryRepository();
 			repo.updateRentStateReserve(bookNum);
-			repo.reserve(bookNum);
+			
+			repo.reserve(bookNum, id);
 			
 			List<Reserve> list = null;
 			list = repo.reserveView(bookNum);

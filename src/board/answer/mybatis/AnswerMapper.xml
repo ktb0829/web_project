@@ -23,6 +23,8 @@
  <select id="selectComment"  resultMap="answerMap">
 	 SELECT BOARD_NUM, BOARD_TYPE, BOARD_TITLE, ID, BOARD_DAY, BOARD_STATE, BOARD_READ_COUNT
 	 FROM BOARD
+	  WHERE BOARD_TYPE ='건의합니다'
+	 ORDER BY BOARD_NUM DESC
  </select>
 
 <insert id="insertComment" parameterType="answer" >

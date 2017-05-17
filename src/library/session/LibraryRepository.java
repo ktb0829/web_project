@@ -160,7 +160,7 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 		return list;
 	}
 	
-	public void reserve(String bookNum) {
+	public void reserve(String bookNum, String id) {
 		SqlSession sqlSess = getSelSessionFactory().openSession();
 		try{	
 			HashMap map = new HashMap();
@@ -176,6 +176,7 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 			
 			
 			map.put("rentNum", rentNum);
+			map.put("id", id);
 			
 			int result = sqlSess.insert(namespace+".reserve", map);
 			
