@@ -250,7 +250,7 @@ $(document).ready(function() {
                   <br/>
                   <li><a href="#">도서관 이용 안내</a></li><br/>   
                   <li><a href="donate.donate?cmd=donate-list">도서 기부</a></li><br/>
-                  <li><a href="#">이 달의 행사</a></li><br/><br/>
+                  <li><a href="library.library?cmd=calender">이 달의 행사</a></li><br/><br/>
                   </ul>
                </li>
                <li class="main_menu"><a href="library.library?cmd=main-search">자료검색</a><br/>

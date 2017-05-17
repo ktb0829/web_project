@@ -47,6 +47,7 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("rent-main", new CommandRentView("extend.jsp") );
 		commandMap.put("rent", new CommandRent("extend.jsp") );
 		commandMap.put("extend", new CommandExtend("extend.jsp") );
+		commandMap.put("calender", new CommandNull("calender_page.jsp") );
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
