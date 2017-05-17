@@ -1,9 +1,13 @@
 package lib.command;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 
+import board.notice.mybatis.NoticeComment;
+import board.notice.mybatis.NoticeRepository;
 import lib.model.Book;
 import lib.session.CommentRepository;
 
@@ -31,6 +35,10 @@ public class CommandInput implements Command {
 			
 			CommentRepository repo = new CommentRepository();
 			repo.insertComment(book); //repo로 넘겨줌 
+			
+			NoticeRepository repo1 = new NoticeRepository();
+			List<NoticeComment> list = repo1.selectComment();
+			request.setAttribute("list", list);
 			
 		}catch( Exception ex ){
 			throw new CommandException("CommandInput.java < 입력시 > " + ex.toString() ); 

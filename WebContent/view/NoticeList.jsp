@@ -53,7 +53,7 @@ String projectName = "/web_project/view";
    <div id="header" class="container">
         
       <div id="logo">
-         <h1><a href="#">KOSTA library</a></h1>
+         <h1><a href=".notice">KOSTA library</a></h1>
       </div>
       
       <div id="menu">

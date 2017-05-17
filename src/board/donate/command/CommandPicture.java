@@ -24,7 +24,8 @@ public class CommandPicture implements Command{
 		
 		try{
 
-		String savePath = "C:/Users/kosta/git/web_project/WebContent/images";
+		String savePath = "C:/Users/kosta/git/second/web_project/WebContent/images";
+		
 		int sizeLimit = 1024*1024*15;
 		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
 	

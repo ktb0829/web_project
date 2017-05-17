@@ -63,7 +63,7 @@ function loginCheck(){
       },
       dataType:'text',
       success:function(data){
-         if( data.trim() =='loginFaile'){
+         if( data.trim() =='loginFail'){
             alert('로그인 실패');
          }else{
             $('#mask , .login-popup').fadeOut(300 , function() {
@@ -522,6 +522,7 @@ $(document).ready(function() {
 				</div>
 				<div id="rightAlign"><%=mList.get(5).getBoardDay() %></div>
 			</div>
+			<h3 id="more"><span><a href="list.notice?cmd=notice-list">공지사항 더보기</a></span></h3>
 						
   </div>
               

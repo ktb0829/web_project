@@ -40,7 +40,7 @@ String projectName = "/web_project/view";
 
 			<div id="logo">
 				<h1>
-					<a href="#">KOSTA library</a>
+					<a href=".notice">KOSTA library</a>
 				</h1>
 			</div>
 

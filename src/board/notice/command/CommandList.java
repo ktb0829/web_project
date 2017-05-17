@@ -25,10 +25,6 @@ public class CommandList implements Command{
 
 			System.out.println("출력");
 			
-
-
-			
-			
 			NoticeRepository repo = new NoticeRepository();
 			List<NoticeComment> list = repo.selectComment();
 			request.setAttribute("list", list);

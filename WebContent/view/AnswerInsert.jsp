@@ -38,7 +38,7 @@ String projectName = "/web_project/view";
 
 			<div id="logo">
 				<h1>
-					<a href="library.library?cmd=home">KOSTA library</a>
+					<a href=".notice">KOSTA library</a>
 				</h1>
 			</div>
 
@@ -158,8 +158,12 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>말 머 리:</th>
-									<td><input type="text" placeholder="말머리를 입력하세요 "
-										name="boardType" class="form-control" /></td>
+									<td>
+									<select name="boardType" class="form-control"  >
+										<option>건의합니다</option>
+										
+									</select>
+									</td>
 								</tr>
 								
 								<tr>
