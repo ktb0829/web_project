@@ -187,7 +187,7 @@ String projectName = "/web_project/view";
 
 
 
-				<div id="menu_service">
+			    	<div id="menu_service">
 					<div id="featured_" class="container">
 				<div class="column_1"><img id="icon1" src="/web_project/images/민원.PNG"> <br/>
 				<div class="title">
