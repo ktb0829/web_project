@@ -144,6 +144,7 @@ $(document).ready(function() {
 
      <table width="700" border="0" cellspacing="0" cellpadding="2" id="sub_print">
         <tr> 
+        <br/><br/>
           <td id="sub_print_1"><img src="/web_project/images/인사말.PNG" alt="" /></td>
         </tr>
 
