@@ -15,6 +15,7 @@ import library.command.CommandExtend;
 import library.command.CommandList;
 import library.command.CommandNull;
 import library.command.CommandRent;
+import library.command.CommandRentView;
 import library.command.CommandReserve;
 import library.command.CommandReserveMain;
 import library.command.CommandSeat;
@@ -43,6 +44,7 @@ public class LibraryControl extends HttpServlet{
 		commandMap.put("study", new CommandSeatNum("pageform2.jsp") );
 		commandMap.put("1th-page", new CommandSeat("1th.jsp") );
 		commandMap.put("1seat-input", new CommandSeatInput("1th.jsp") );
+		commandMap.put("rent-main", new CommandRentView("extend.jsp") );
 		commandMap.put("rent", new CommandRent("extend.jsp") );
 		commandMap.put("extend", new CommandExtend("extend.jsp") );
 	}

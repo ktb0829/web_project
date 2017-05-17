@@ -51,30 +51,32 @@ $(document).ready(function() {
     });
     
     $('.reserve').click(function() {
-    		$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
-    		$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
-    		$('#bookWriter').val($(this).parent().parent().find('td:eq(2)').text());
-    		$('#bookPublisher').val($(this).parent().parent().find('td:eq(3)').text());
-    		$('#bookGenre').val($(this).parent().parent().find('td:eq(4)').text());
+    	$('#reserve').text('RESERVE');
+    	$('.signin').attr('action', 'library.library?cmd=reserve');
+    	$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
+    	$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
+    	$('#bookWriter').val($(this).parent().parent().find('td:eq(2)').text());
+    	$('#bookPublisher').val($(this).parent().parent().find('td:eq(3)').text());
+    	$('#bookGenre').val($(this).parent().parent().find('td:eq(4)').text());
     		
-        	//Getting the variable's value from a link
-        	var loginBox = $(this).attr('href');
+        //Getting the variable's value from a link
+        var loginBox = $(this).attr('href');
       
-        	//Fade in the Popup
-        	$('.login-popup').fadeIn(300);
+        //Fade in the Popup
+        $('.login-popup').fadeIn(300);
                
-        	//Set the center alignment padding + border see css style
-        	var popMargTop = ($(loginBox).height() + 24) / 2; 
-       	 	var popMargLeft = ($(loginBox).width() + 24) / 2; 
+        //Set the center alignment padding + border see css style
+        var popMargTop = ($(loginBox).height() + 24) / 2; 
+       	var popMargLeft = ($(loginBox).width() + 24) / 2; 
         
-        	$(loginBox).css({ 
-            	'margin-top' : -popMargTop,
-            	'margin-left' : -popMargLeft
-        	});
+        $(loginBox).css({ 
+           	'margin-top' : -popMargTop,
+          	'margin-left' : -popMargLeft
+        });
         
-        	// Add the mask to body
-        	$('body').append('<div id="mask"></div>');
-        	$('#mask').fadeIn(300);
+        // Add the mask to body
+        $('body').append('<div id="mask"></div>');
+        $('#mask').fadeIn(300);
     });
     // When clicking on the button close or the mask layer the popup closed
     $('.close, #mask').bind('click', function() { 
@@ -83,6 +85,42 @@ $(document).ready(function() {
     });
     return false;
     });
+    
+    $('.rent').click(function() {
+    	$('#reserve').text('RENT');
+    	$('.signin').attr('action', 'library.library?cmd=rent');
+		$('#bookNum').val($(this).parent().parent().find('td:eq(0)').text());
+		$('#bookTitle').val($(this).parent().parent().find('td:eq(1)').text());
+		$('#bookWriter').val($(this).parent().parent().find('td:eq(2)').text());
+		$('#bookPublisher').val($(this).parent().parent().find('td:eq(3)').text());
+		$('#bookGenre').val($(this).parent().parent().find('td:eq(4)').text());
+		
+    	//Getting the variable's value from a link
+    	var loginBox = $(this).attr('href');
+  
+    	//Fade in the Popup
+    	$('.login-popup').fadeIn(300);
+           
+    	//Set the center alignment padding + border see css style
+    	var popMargTop = ($(loginBox).height() + 24) / 2; 
+   	 	var popMargLeft = ($(loginBox).width() + 24) / 2; 
+    
+    	$(loginBox).css({ 
+        	'margin-top' : -popMargTop,
+        	'margin-left' : -popMargLeft
+    	});
+    
+    	// Add the mask to body
+    	$('body').append('<div id="mask"></div>');
+    	$('#mask').fadeIn(300);
+	});
+	// When clicking on the button close or the mask layer the popup closed
+	$('.close, #mask').bind('click', function() { 
+  		$('#mask, .login-popup').fadeOut(300 , function() {
+   	 	$('#mask').remove();
+	});
+return false;
+});
 });
 </script>
 
@@ -92,7 +130,7 @@ $(document).ready(function() {
 
 <div id="login-box" class="login-popup">
 <a class="close"><img class="btn_close" title="Close Window" alt="Close" /></a>
-  <form method="post" class="signin" action="library.library?cmd=reserve">
+  <form method="post" id="signin" class="signin">
         <fieldset class="textbox">
         <label class="bookNum">
         <span>책번호</span>
@@ -114,8 +152,7 @@ $(document).ready(function() {
         <span>장르</span>
         <input id="bookGenre" name="bookGenre" value="" type="text" autocomplete="on">
         </label>
-             
-        <button class="submit button" id="reserve" type="button">Reserve</button>
+        <button class="submit button" id="reserve" type="button">RESERVE</button>
         </fieldset>
   </form>
 </div>
@@ -267,6 +304,7 @@ $(document).ready(function() {
             			<th> 출판사 </th>
             			<th> 장  르 </th>
             			<th> 상  태 </th>
+            			<th> 대  여 </th>
             			<th> 예  약 </th>
          			</tr>
          			</thead>       
@@ -283,8 +321,16 @@ $(document).ready(function() {
             			<td><%=book.getBookPublisher() %></td>
             			<td><%=book.getBookGenre() %></td>
             			<td><%=state %></td>
-            			<%  if ( state.equals("대여중") ) { %><td><input type='button' class='reserve' value="예약" /></td>
+            			<td>
+            			<% if ( state.equals("대여가능") ) { %>
+            				<input type='button' class='rent' value="대여" />
             			<% } %>
+            			</td>
+            			<td>
+            			<%  if ( state.equals("대여중") ) { %>
+            				<input type='button' class='reserve' value="예약" />
+            			<% } %>
+            			</td>
          			</tr>
                   <% } } %>
                   </table>

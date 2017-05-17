@@ -92,4 +92,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE rent_num = #{rentNum}
 </update>
 
+<insert id="rent" parameterType="hashmap">
+	INSERT INTO rent
+	VALUES (seq_rent.nextval, #{id}, #{bookNum}, to_char(sysdate, 'YYYY-mm-dd'), to_char(sysdate+14, 'YYYY-mm-dd'), null, '가능', 'false', '대여중')
+</insert>
+
 </mapper>

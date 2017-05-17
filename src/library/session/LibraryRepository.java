@@ -281,4 +281,21 @@ String namespace = "library.mapper.BoardMapper"; // CommentMapper.xml의 namespa
 			sqlSess.close();
 		}
 	}
+	
+	public void rent(String id, String bookNum) {
+		SqlSession sqlSess = getSelSessionFactory().openSession();
+		try{	
+			HashMap map = new HashMap();
+			map.put("id", id);
+			map.put("bookNum", bookNum);
+			int result = sqlSess.update(namespace+".rent", map);
+			if( result > 0 ) {
+				sqlSess.commit();
+			} else {
+				sqlSess.rollback();
+			}
+		} finally {
+			sqlSess.close();
+		}
+	}
 }

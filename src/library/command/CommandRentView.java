@@ -8,11 +8,11 @@ import javax.servlet.http.HttpSession;
 import library.model.Rent;
 import library.session.LibraryRepository;
 
-public class CommandRent implements Command 
+public class CommandRentView implements Command 
 {
 	private String next;
 	
-	public CommandRent( String _next ){
+	public CommandRentView( String _next ){
 		next = _next;
 	}
 
@@ -20,19 +20,15 @@ public class CommandRent implements Command
 		try {
 			HttpSession session = request.getSession();
 			String id = (String)session.getAttribute("id");
-			String bookNum = request.getParameter("bookNum");
-			
-			LibraryRepository repo = new LibraryRepository();
-			repo.rent(id, bookNum);
 			
 			List<Rent> list = null;
-			
+			LibraryRepository repo = new LibraryRepository();
 			list = repo.rentListById(id);
 			
 			request.setAttribute("rent", list);
 			
 		}catch( Exception ex ){
-			throw new CommandException("CommandRent.java < 예약시 > " + ex.toString() ); 
+			throw new CommandException("CommandRentView.java < 예약시 > " + ex.toString() ); 
 		}
 		return next;
 	}
