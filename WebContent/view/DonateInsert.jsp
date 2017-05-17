@@ -27,7 +27,7 @@ String projectName = "/web_project/view";
 	type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet"
 	type="text/css" media="all" />
-<link href="/web_project/css/answerinsert.css" rel="stylesheet"
+<link href="/web_project/css/allboard.css" rel="stylesheet"
 	type="text/css" media="all" />
 
 
@@ -125,7 +125,7 @@ String projectName = "/web_project/view";
 				<!-- 본문 내용 -->
 				<!-- *********************************************************************** -->
 
-				<div class="container">
+				<div class="board">
 					<table class="table table-bordered">
 						<thead>
 						<h1>글쓰기</h1>
@@ -137,14 +137,18 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>제  목:</th>
-									<td><input type="text" placeholder="제목을 입력하세요. "
-										name="donateTitle" class="form-control" /></td>
+									<td><input type="text" placeholder="제목을 입력하세요. 20글자 이하입니다."
+										name="donateTitle" class="form-control" maxlength="20" /></td>
 								</tr>
 								
 										<tr>
 									<th>말 머 리 :</th>
-									<td><input type="text" placeholder="제목을 입력하세요. "
-										name="donation" class="form-control" /></td>
+									<td>
+									<select name="donation" class="form-control"  >
+										<option>기부</option>
+										<option>수혜</option>
+									</select>
+										</td>
 								</tr>
 								<tr>
 									<th>진행 상황:</th>
@@ -154,7 +158,7 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>내 용:</th>
-									<td><textarea cols="120" rows="20" placeholder="내용을 입력하세요. "
+									<td><textarea cols="40" rows="20" placeholder="내용을 입력하세요. "
 											name="donateContent" class="form-control"></textarea></td>
 								</tr>
 								

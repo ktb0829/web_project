@@ -28,8 +28,8 @@ AnswerComment rec = (AnswerComment)request.getAttribute("detail");
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/answerview.css" rel="stylesheet" type="text/css" media="all" />
-
+<link href="/web_project/css/allboard.css" rel="stylesheet"
+	type="text/css" media="all" />
 
  
 </head>
@@ -122,9 +122,9 @@ AnswerComment rec = (AnswerComment)request.getAttribute("detail");
 	  <!-- 본문 내용 -->
 	  <!-- *********************************************************************** -->
 	  
-				<div class="container">
-				<div class="ros">
-				<div class="col-xs-8">
+				<div class="">
+				<div class="board">
+				<div class="board_table_view">
 					<table class="table table-bordered answerview">
 						<thead>
 						<div class="form-group">
@@ -132,29 +132,29 @@ AnswerComment rec = (AnswerComment)request.getAttribute("detail");
 						</div>
 						</thead>
 						<tbody>
-						
+							
 							<form action="<%=projectName%>/insert.answer?cmd=answer-delete" method="post"
 								encType="multiplart/form-data">
 								<input type="hidden" name="boardNum" value="<%=rec.getBoardNum()%>"/>
 								
 								<tr>
-									<th>제  목:</th>
+									<th>제  목 :</th>
 									<td><%=rec.getBoardTitle() %></td>
 								</tr>
 								
 								<tr>
-									<th>말 머 리:</th>
+									<th>말 머 리 :</th>
 									<td><%=rec.getBoardType() %></td>
 								</tr>
 								
 								<tr>
-									<th>내  용:</th>
+									<th>내  용 :</th>
 									<td><%=rec.getBoardContent() %></td>
 								</tr>
 							
 								
 								<tr>
-									<td colspan="2" class="answerlist">
+									<td colspan="2" class="board_table_btn">
 									<a class="btn btn-default" href="<%=projectName%>/list.answer?cmd=answer-list">목록보기</a>
 									<a class="btn btn-default" href="<%=projectName%>/modify.answer?cmd=answer-modifyform&num=<%=rec.getBoardNum()%>">수정하기</a>
 <%-- 									<a class="btn btn-default" href="<%=projectName%>/delete.answer?cmd=answer-delete&num=<%=rec.getBoardNum()%>">삭제하기 </a> --%>

@@ -29,7 +29,7 @@ String projectName = "/web_project/view";
 	type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet"
 	type="text/css" media="all" />
-<link href="/web_project/css/answerinsert.css" rel="stylesheet"
+<link href="/web_project/css/allboard.css" rel="stylesheet"
 	type="text/css" media="all" />
 
 
@@ -150,7 +150,7 @@ String projectName = "/web_project/view";
 				<!-- 본문 내용 -->
 				<!-- *********************************************************************** -->
 
-				<div class="container">
+				<div class="board">
 					<table class="table table-bordered">
 						<thead>
 						<h1>글쓰기</h1>
@@ -162,8 +162,8 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>제  목:</th>
-									<td><input type="text" placeholder="제목을 입력하세요. "
-										name="boardTitle" class="form-control" /></td>
+									<td><input type="text" placeholder="제목을 입력하세요. 20글자 이하입니다."
+										name="boardTitle" class="form-control"  maxlength="20"/></td>
 								</tr>
 								
 								<tr>
@@ -177,7 +177,7 @@ String projectName = "/web_project/view";
 								
 								<tr>
 									<th>내  용:</th>
-									<td><textarea cols="120" rows="20" placeholder="내용을 입력하세요. "
+									<td><textarea cols="40" rows="20" placeholder="내용을 입력하세요. "
 											name="boardContent" class="form-control"></textarea></td>
 								</tr>
 							

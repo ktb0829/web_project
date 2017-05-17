@@ -17,14 +17,16 @@
 	<result column="donate_day" property="donateDay"/>
 	<result column="donate_pic_path" property="donatePicPath"/>
 </resultMap>
-
+ 
 
 
 
 <!-- 부를 때 이름 = id=" "  -->
  <select id="selectComment"  resultMap="donateMap">
-	 SELECT *
+	 SELECT DONATE_NUM, DONATE_PIC_PATH, DONATION, DONATE_TITLE, ID, TO_CHAR(DONATE_DAY,'YYYY-MM-DD') DONATE_DAY, DONATE_FINISH, DONATE_READ_COUNT
 	 FROM DONATE
+	 
+	 ORDER BY DONATE_NUM DESC
  </select>
 
 <insert id="insertComment" parameterType="donate" >

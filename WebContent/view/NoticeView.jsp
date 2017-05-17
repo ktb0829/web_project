@@ -29,8 +29,8 @@ NoticeComment rec = (NoticeComment)request.getAttribute("detail");
 <link href="/web_project/css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/defaulthee.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/web_project/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/web_project/css/answerview.css" rel="stylesheet" type="text/css" media="all" />
-
+<link href="/web_project/css/allboard.css" rel="stylesheet"
+	type="text/css" media="all" />
 
  
 </head>

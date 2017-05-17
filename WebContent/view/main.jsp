@@ -410,7 +410,7 @@ $(document).ready(function() {
                   for(var j = 0; j < 7; j++, dateNum++) {
                      if( dateNum < 1 || dateNum > currentLastDate ) {
                         calendar += '            <td class="' + dateString[j] + '"> </td>';
-                        continue;
+                       continue;
                      }
                      calendar += '            <td class="' + dateString[j] + '">' + dateNum + '</td>';
                   }
